@@ -1,0 +1,1251 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <title>Student Corner - PN Institute</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../dist/slick.css" />
+    <link rel="stylesheet" href="../dist/style.css" />
+    <style>
+      
+      .openButton {
+        display: flex;
+        justify-content: center;
+        /* justify-content: left; */
+        background-color: #0068bd;
+        color: #fff;
+        border-radius: 12px;
+
+       
+      }
+      .dwn{
+        background-color: #0068bd;
+        color: #fff;
+        border-radius: 15px;
+        font-weight: bold;
+      }
+      .dwn:hover{
+        background-color: #fff;
+        color: #0068bd;
+        border:lightskyblue 2px solid;
+      }
+      .openButton:hover{
+        background-color: #fff;
+        color: #0068bd;
+        border: #0068bd 2px solid;
+      }
+      
+      .loginPopup,.loginPopup1 ,.loginPopup2,.loginPopup3,.loginPopup4,.loginPopup5,.loginPopup6,.loginPopup7,.loginPopup8{
+        position: relative;
+        text-align: center;
+        width: 100%;
+      }
+      .formPopup,.formPopup1,.formPopup2,.formPopup3,.formPopup4,.formPopup5,.formPopup6,.formPopup7,.formPopup8 {
+        display: none;
+        position: fixed;
+        left: 45%;
+        top: 5%;
+        transform: translate(-50%, 5%);
+        /* border: 3px solid #999999; */
+        z-index: 9;
+      }
+      .formContainer {
+        max-width: 600px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 25px;
+      }
+      .formContainer input[type=text],
+      .formContainer input[type=number] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 20px 0;
+        border: none;
+        background: #eee;
+      }
+      .formContainer input[type=text]:focus,
+      .formContainer input[type=number]:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+      .formContainer .btn {
+        padding: 12px 20px;
+        border: none;
+        background-color: #8ebf42;
+        color: #fff;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom: 15px;
+        opacity: 0.8;
+      }
+      .formContainer .cancel {
+        background-color: #cc0000;
+        border-radius: 30px;
+      }
+      .formContainer .btn:hover,
+      .openButton:hover {
+        opacity: 1;
+      }
+      #form-class{
+        width: 250px;
+      }
+      /* review form */
+      input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px 5px;
+  resize: vertical;
+}
+
+input[type=tel], input[type=email] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px 5px;
+  resize: vertical;
+}
+
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-weight: bolder;
+  font-size: 17px;
+ 
+} 
+
+input[type=submit] {
+  background-color: #0068bd;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 150px;
+
+  
+}
+
+input[type=submit]:hover {
+  background-color: #fff;
+  color: #0068bd;
+  border: #0068bd 2px solid;
+  font-weight: bolder;
+}
+
+.container {
+  border-radius: 5px;
+  /* background-color: #f2f2f2; */
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+    </style>
+  </head>
+
+  <body>
+    <div class="loginPopup">
+      <div class="formPopup" id="popupForm">
+        <form action="/action_page.php" class="formContainer">
+          <i class="fa fa-close" onclick="closeForm()"style="font-size:38px;color:red ; float: right;"></i>
+          <h2>Get in Touch</h2>
+         
+          <label >
+            <strong>Name</strong>
+          </label>
+          <input type="text" id="name" placeholder="Your name"  required>
+          <label>
+            <strong>E-mail</strong>
+          </label>
+          <input type="text" id="email" placeholder="Your Email" name="email" required>
+          <label>
+            <strong>Contact</strong>
+          </label>
+          <input type="text" id="number" placeholder="Your contact number" name="email" required>
+          
+          <select class="form-class" name="Select Class" id="form-class">
+            <option value>Select Class</option>
+            <option value="class6">Class 6</option>
+            <option value="class7">Class 7</option>
+            <option value="class8">Class 8</option>
+            <option value="class9">Class 9</option>
+            <option value="class10">Class 10</option>
+           
+            <option value="class11C">Class 11 Commerce</option>
+            <option value="class11S">Class 11 Science</option>
+          
+            <option value="class12C">Class 12 Commerce</option>
+            <option value="class12S">Class 12 Science</option>
+          </select><br><br>
+          
+          <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
+         <a href="" id="download"><button class="dwn"> Download</button></a>
+        </form>
+      </div>
+    </div>
+    <div class="loginPopup1">
+      <div class="formPopup1" id="popupForm1">
+        <form action="/action_page.php" class="formContainer">
+          <i class="fa fa-close" onclick="closeForm1()"style="font-size:38px;color:red ; float: right;"></i>
+          <h2>Get in Touch</h2>
+         
+          <label >
+            <strong>Name</strong>
+          </label>
+          <input type="text" id="name" placeholder="Your name"  required>
+          <label>
+            <strong>E-mail</strong>
+          </label>
+          <input type="text" id="email" placeholder="Your Email" name="email" required>
+          <label>
+            <strong>Contact</strong>
+          </label>
+          <input type="text" id="number" placeholder="Your contact number" name="email" required>
+          
+          <select class="form-class" name="Select Class" id="form-class">
+            <option value>Select Class</option>
+            <option value="class6">Class 6</option>
+            <option value="class7">Class 7</option>
+            <option value="class8">Class 8</option>
+            <option value="class9">Class 9</option>
+            <option value="class10">Class 10</option>
+          
+            <option value="class11C">Class 11 Commerce</option>
+            <option value="class11S">Class 11 Science</option>
+         
+            <option value="class12C">Class 12 Commerce</option>
+            <option value="class12S">Class 12 Science</option>
+          </select><br><br>
+          
+          <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
+         <a href="" id="download1"><button class="dwn"> Download</button></a>
+        </form>
+      </div>
+    </div>
+    <div class="loginPopup2">
+      <div class="formPopup2" id="popupForm2">
+        <form action="/action_page.php" class="formContainer">
+          <i class="fa fa-close" onclick="closeForm2()"style="font-size:38px;color:red ; float: right;"></i>
+          <h2>Get in Touch</h2>
+         
+          <label >
+            <strong>Name</strong>
+          </label>
+          <input type="text" id="name" placeholder="Your name"  required>
+          <label>
+            <strong>E-mail</strong>
+          </label>
+          <input type="text" id="email" placeholder="Your Email" name="email" required>
+          <label>
+            <strong>Contact</strong>
+          </label>
+          <input type="text" id="number" placeholder="Your contact number" name="email" required>
+          
+          <select class="form-class" name="Select Class" id="form-class">
+            <option value>Select Class</option>
+            <option value="class6">Class 6</option>
+            <option value="class7">Class 7</option>
+            <option value="class8">Class 8</option>
+            <option value="class9">Class 9</option>
+            <option value="class10">Class 10</option>
+           
+            <option value="class11C">Class 11 Commerce</option>
+            <option value="class11S">Class 11 Science</option>
+          
+            <option value="class12C">Class 12 Commerce</option>
+            <option value="class12S">Class 12 Science</option>
+          </select><br><br>
+          
+          <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
+         <a href="" id="download2"><button class="dwn"> Download</button></a>
+        </form>
+      </div>
+    </div>
+    <div class="loginPopup3">
+      <div class="formPopup3" id="popupForm3">
+        <form action="/action_page.php" class="formContainer">
+          <i class="fa fa-close" onclick="closeForm3()"style="font-size:38px;color:red ; float: right;"></i>
+          <h2>Get in Touch</h2>
+         
+          <label >
+            <strong>Name</strong>
+          </label>
+          <input type="text" id="name" placeholder="Your name"  required>
+          <label>
+            <strong>E-mail</strong>
+          </label>
+          <input type="text" id="email" placeholder="Your Email" name="email" required>
+          <label>
+            <strong>Contact</strong>
+          </label>
+          <input type="text" id="number" placeholder="Your contact number" name="email" required>
+          
+          <select class="form-class" name="Select Class" id="form-class">
+            <option value>Select Class</option>
+            <option value="class6">Class 6</option>
+            <option value="class7">Class 7</option>
+            <option value="class8">Class 8</option>
+            <option value="class9">Class 9</option>
+            <option value="class10">Class 10</option>
+           
+            <option value="class11C">Class 11 Commerce</option>
+            <option value="class11S">Class 11 Science</option>
+          
+            <option value="class12C">Class 12 Commerce</option>
+            <option value="class12S">Class 12 Science</option>
+          </select><br><br>
+          
+          <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
+         <a href="" id="download3"><button class="dwn"> Download</button></a>
+        </form>
+      </div>
+    </div>
+    <div class="loginPopup4">
+      <div class="formPopup4" id="popupForm4">
+        <form action="/action_page.php" class="formContainer">
+          <i class="fa fa-close" onclick="closeForm4()"style="font-size:38px;color:red ; float: right;"></i>
+          <h2>Get in Touch</h2>
+         
+          <label >
+            <strong>Name</strong>
+          </label>
+          <input type="text" id="name" placeholder="Your name"  required>
+          <label>
+            <strong>E-mail</strong>
+          </label>
+          <input type="text" id="email" placeholder="Your Email" name="email" required>
+          <label>
+            <strong>Contact</strong>
+          </label>
+          <input type="text" id="number" placeholder="Your contact number" name="email" required>
+          
+          <select class="form-class" name="Select Class" id="form-class">
+            <option value>Select Class</option>
+            <option value="class6">Class 6</option>
+            <option value="class7">Class 7</option>
+            <option value="class8">Class 8</option>
+            <option value="class9">Class 9</option>
+            <option value="class10">Class 10</option>
+           
+            <option value="class11C">Class 11 Commerce</option>
+            <option value="class11S">Class 11 Science</option>
+           
+            <option value="class12C">Class 12 Commerce</option>
+            <option value="class12S">Class 12 Science</option>
+          </select><br><br>
+          
+          <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
+         <a href="" id="download4"><button class="dwn"> Download</button></a>
+        </form>
+      </div>
+    </div>
+    <div class="loginPopup5">
+      <div class="formPopup5" id="popupForm5">
+        <form action="/action_page.php" class="formContainer">
+          <i class="fa fa-close" onclick="closeForm5()"style="font-size:38px;color:red ; float: right;"></i>
+          <h2>Get in Touch</h2>
+         
+          <label >
+            <strong>Name</strong>
+          </label>
+          <input type="text" id="name" placeholder="Your name"  required>
+          <label>
+            <strong>E-mail</strong>
+          </label>
+          <input type="text" id="email" placeholder="Your Email" name="email" required>
+          <label>
+            <strong>Contact</strong>
+          </label>
+          <input type="text" id="number" placeholder="Your contact number" name="email" required>
+          
+          <select class="form-class" name="Select Class" id="form-class">
+            <option value>Select Class</option>
+            <option value="class6">Class 6</option>
+            <option value="class7">Class 7</option>
+            <option value="class8">Class 8</option>
+            <option value="class9">Class 9</option>
+            <option value="class10">Class 10</option>
+            
+            <option value="class11C">Class 11 Commerce</option>
+            <option value="class11S">Class 11 Science</option>
+            
+            <option value="class12C">Class 12 Commerce</option>
+            <option value="class12S">Class 12 Science</option>
+          </select><br><br>
+          
+          <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
+         <a href="" id="download5"><button class="dwn"> Download</button></a>
+        </form>
+      </div>
+    </div>
+    <div class="loginPopup6">
+      <div class="formPopup6" id="popupForm6">
+        <form action="/action_page.php" class="formContainer">
+          <i class="fa fa-close" onclick="closeForm6()"style="font-size:38px;color:red ; float: right;"></i>
+          <h2>Get in Touch</h2>
+         
+          <label >
+            <strong>Name</strong>
+          </label>
+          <input type="text" id="name" placeholder="Your name"  required>
+          <label>
+            <strong>E-mail</strong>
+          </label>
+          <input type="text" id="email" placeholder="Your Email" name="email" required>
+          <label>
+            <strong>Contact</strong>
+          </label>
+          <input type="text" id="number" placeholder="Your contact number" name="email" required>
+          
+          <select class="form-class" name="Select Class" id="form-class">
+            <option value>Select Class</option>
+            <option value="class6">Class 6</option>
+            <option value="class7">Class 7</option>
+            <option value="class8">Class 8</option>
+            <option value="class9">Class 9</option>
+            <option value="class10">Class 10</option>
+            
+            <option value="class11C">Class 11 Commerce</option>
+            <option value="class11S">Class 11 Science</option>
+            
+            <option value="class12C">Class 12 Commerce</option>
+            <option value="class12S">Class 12 Science</option>
+          </select><br><br>
+          
+          <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
+         <a href="" id="download6"><button class="dwn"> Download</button></a>
+        </form>
+      </div>
+    </div>
+    <div class="loginPopup7">
+      <div class="formPopup7" id="popupForm7">
+        <form action="/action_page.php" class="formContainer">
+          <i class="fa fa-close" onclick="closeForm7()"style="font-size:38px;color:red ; float: right;"></i>
+          <h2>Get in Touch</h2>
+         
+          <label >
+            <strong>Name</strong>
+          </label>
+          <input type="text" id="name" placeholder="Your name"  required>
+          <label>
+            <strong>E-mail</strong>
+          </label>
+          <input type="text" id="email" placeholder="Your Email" name="email" required>
+          <label>
+            <strong>Contact</strong>
+          </label>
+          <input type="text" id="number" placeholder="Your contact number" name="email" required>
+          
+          <select class="form-class" name="Select Class" id="form-class">
+            <option value>Select Class</option>
+            <option value="class6">Class 6</option>
+            <option value="class7">Class 7</option>
+            <option value="class8">Class 8</option>
+            <option value="class9">Class 9</option>
+            <option value="class10">Class 10</option>
+           
+            <option value="class11C">Class 11 Commerce</option>
+            <option value="class11S">Class 11 Science</option>
+            
+            <option value="class12C">Class 12 Commerce</option>
+            <option value="class12S">Class 12 Science</option>
+          </select><br><br>
+          
+          <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
+         <a href="" id="download7"><button class="dwn"> Download</button></a>
+        </form>
+      </div>
+    </div>
+    <!-- <div class="loginPopup8">
+      <div class="formPopup8" id="popupForm8">
+        <form action="/action_page.php" class="formContainer">
+          <i class="fa fa-close" onclick="closeForm8()"style="font-size:38px;color:red ; float: right;"></i>
+          <h2>Get in Touch</h2>
+         
+          <label >
+            <strong>Name</strong>
+          </label>
+          <input type="text" id="name" placeholder="Your name"  required>
+          <label>
+            <strong>E-mail</strong>
+          </label>
+          <input type="text" id="email" placeholder="Your Email" name="email" required>
+          <label>
+            <strong>Contact</strong>
+          </label>
+          <input type="text" id="number" placeholder="Your contact number" name="email" required>
+          
+          <select class="form-class" name="Select Class" id="form-class">
+            <option value>Select Class</option>
+            <option value="class6">Class 6</option>
+            <option value="class7">Class 7</option>
+            <option value="class8">Class 8</option>
+            <option value="class9">Class 9</option>
+            <option value="class10">Class 10</option>
+            <option value="class11A">Class 11 Arts</option>
+            <option value="class11C">Class 11 Commerce</option>
+            <option value="class11S">Class 11 Science</option>
+            <option value="class12A">Class 12 Arts</option>
+            <option value="class12C">Class 12 Commerce</option>
+            <option value="class12S">Class 12 Science</option>
+          </select><br><br>
+          
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button> 
+         <a href="" id="download8"><button class="dwn"> Download</button></a>
+        </form>
+      </div>
+    </div> -->
+    <section class="navsec">
+      <nav class="navbar">
+        <div class="hamburger" id="hamburger"></div>
+        <div class="nav-logo">
+          <img src="../assets/images/logo-1.png" alt="" />
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <a href="../index.html">
+            <li class="nav__link">Home</li>
+          </a>
+          <a href="#">
+            <li class="nav__link sub-list-parent" id="subListHandle">
+              Pay Fees <span class="down-arrow">&gt;</span>
+              <ul class="sub-list" id="subList">
+                <li class="sub-list-item">
+                  <a href="https://rzp.io/l/iwk8p7doE">Primary</a>
+                </li>
+                <li class="sub-list-item">
+                  <a href="https://rzp.io/l/iwk8p7doE">Secondary</a>
+                </li>
+                <li class="sub-list-item">
+                  <a href="https://pages.razorpay.com/pl_LBs3XM2DHZjmJU/view">Higher Secondary</a>
+                </li>
+              </ul>
+            </li>
+          </a>
+          <a href="overview.html">
+            <li class="nav__link">Overview</li>
+          </a>
+          <a href="admission.html">
+            <li class="nav__link">Admissions</li>
+          </a>
+          <a href="courses.html">
+            <li class="nav__link">Courses</li>
+          </a>
+          <a href="#">
+            <li class="nav__link sub-list-parent" id="subListHandle">
+              Student Corner <span class="down-arrow">&gt;</span>
+              <ul class="sub-list" id="subList">
+                <!-- <li class="sub-list-item">
+                           <a href="#material">Study Material</a>
+                        </li> -->
+                <li class="sub-list-item">
+                  <a href="#pnAdvantages">PN Advantages</a>
+                </li>
+                <li class="sub-list-item">
+                  <a href="#alumni">Alumni Registration</a>
+                </li>
+                <li class="sub-list-item">
+                  <a href="#review">Give Us Review</a>
+                </li>
+                <li class="sub-list-item">
+                  <a href="#testimonials">Testimonials</a>
+                </li>
+              </ul>
+            </li>
+          </a>
+          <a href="result.html">
+            <li class="nav__link">Results</li>
+          </a>
+          <a href="career.html">
+            <li class="nav__link">Career</li>
+          </a>
+          <a href="contact.html">
+            <li class="nav__link">Contact Us</li>
+          </a>
+          <a href="https://pace.pninstitute.in">
+            <li class="nav__link button"> &nbsp &nbsp &nbsp PACE &nbsp &nbsp &nbsp</li>
+          </a>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="student__title page__title">
+      <div class="container">
+        <h1 class="title__header">Student Corner</h1>
+      </div>
+    </section>
+
+    <section class="material" id="material">
+         <h2 class="section__title">Study Material</h2>
+         <div class="container material__container">
+            <form action="" class="material-form">
+               <select name="selectBoard" id="">
+                  <option value="">Select Board</option>
+                  <option value="GSEB">GSEB</option>
+                  <option value="CBSE">CBSE</option>
+               </select>
+               <select name="selectMedium" id="">
+                  <option value="">Select Medium</option>
+                  <option value="GSEB">Gujarati</option>
+                  <option value="CBSE">English</option>
+               </select>
+               <select name="selectClass" id="">
+                  <option value="">Select Class</option>
+                  <option value="">Class 6</option>
+                  <option value="">Class 7</option>
+                  <option value="">Class 8</option>
+                  <option value="">Class 9</option>
+                  <option value="">Class 10</option>
+                  <option value="">Class 11 (Commerce)</option>
+                  <option value="">Class 11 (Science)</option>
+               
+                  <option value="">Class 12 (Commerce)</option>
+                  
+                  <option value="">Class 12 (Science)</option>
+               </select>
+               <select name="selectSubject" id="">
+                  <option value="">Select Subject</option>
+                  <option value="">Subject</option>
+                  <option value="">Subject</option>
+                  <option value="">Subject</option>
+                  <option value="">Subject</option>
+                  <option value="">Subject</option>
+                  <option value="">Subject</option>
+                  <option value="">Subject</option>
+               </select>
+               <button type="submit" class="button"><a href= "mailto: admisssion@pninstitite.in">Submit</a></button>
+            </form>
+        
+            <table class="material-table">
+               <tr>
+                  <th>Sr No</th>
+                  <th>Topic</th>
+                  <th>Link</th>
+               </tr>
+               <tr>
+                  <td>01</td>
+                  <td>10th CBSE Sample paper cdr</td>
+                  <td><button class="openButton" onclick="openForm()"><strong>Download</strong></button></td>
+               </tr>
+               <tr>
+                  <td>02</td>
+                  <td>Class 10th Maths IMP</td>
+                  <td><button class="openButton" onclick="openForm1()"><strong>Download</strong></button></td>
+               </tr>
+               <tr>
+                  <td>03</td>
+                  <td>Class 10th Sci IMP</td>
+                  <td><button class="openButton" onclick="openForm2()"><strong>Download</strong></button></td>
+               </tr>
+               <tr>
+                  <td>04</td>
+                  <td>Class 12th Math formula list</td>
+                  <td><button class="openButton" onclick="openForm3()"><strong>Download</strong></button></td>
+               </tr>
+               <tr>
+                  <td>05</td>
+                  <td>Class 10th formula list</td>
+                  <td><button class="openButton" onclick="openForm4()"><strong>Download</strong></button></td>
+               </tr>
+               <tr>
+                  <td>06</td>
+                  <td>Class 10th SS IMP Question</td>
+                  <td><button class="openButton" onclick="openForm5()"><strong>Download</strong></button></td>
+               </tr>
+               <tr>
+                  <td>08</td>
+                  <td>Class 10th Theorems </td>
+                  <td> <button class="openButton" onclick="openForm6()"><strong>Download</strong></button></td>
+               </tr>
+               <tr>
+                  <td>09</td>
+                  <td>Class 12th Formula part 2</td>
+                  <td> <button class="openButton" onclick="openForm7()"><strong>Download</strong></button></td>
+               </tr>
+             
+            </table>
+         </div>
+      </section> 
+
+    <section class="real" id="pnAdvantages">
+      <div class="section__title container">PN Advantages</div>
+      <div class="container real__container">
+        <div class="realcat">
+          <p class="realcat__title">Study Material</p>
+          <p class="realcat__des">
+            It provides students a stepwise/level wise learning tool in every subject so that students’ transformation
+            from concept learning to application & analytical learning can be ensured.
+          </p>
+        </div>
+        <div class="realcat">
+          <p class="realcat__title">Advanced Learning - iTutor</p>
+          <p class="realcat__des">
+            A complete educational solution for all groups that combines the best of classroom education, self-study
+            with distraction-free learning experience, is provided to the students.
+          </p>
+        </div>
+        <div class="realcat">
+          <p class="realcat__title">Integrated Approach</p>
+          <p class="realcat__des">
+            PNI students of class IX to XII learn both School Curriculum as well as Entrance Aids as the study material
+            and teaching approach delivers both quantitatively & qualitatively.
+          </p>
+        </div>
+        <div class="realcat">
+          <p class="realcat__title">Assessment</p>
+          <p class="realcat__des">
+            Testing methodology is evolved from years of experience and updated with the latest pattern of examination.
+          </p>
+        </div>
+        <div class="realcat">
+          <p class="realcat__title">Question Banks</p>
+          <p class="realcat__des">
+            We, at PN Institute, provide various question banks for targeted exams to ensure that the students are
+            having
+          </p>
+        </div>
+        <div class="realcat">
+          <p class="realcat__title">Back-up Classes</p>
+          <p class="realcat__des">
+            Extra-classes for average students or for those, who miss the regular classes on genuine grounds with prior
+            approval, are arranged.
+          </p>
+        </div>
+        <div class="realcat">
+          <p class="realcat__title">Superior Supervision</p>
+          <p class="realcat__des">Excellent management with stringent discipline in every department is ensured.</p>
+        </div>
+        <div class="realcat">
+          <p class="realcat__title">Grievances</p>
+          <p class="realcat__des">
+            Student Grievances are well taken care of through dedicated grievance management services.
+          </p>
+        </div>
+        <div class="realcat">
+          <p class="realcat__title">Workshops</p>
+          <p class="realcat__des">
+            Workshops are conducted for NTSE, KVPY, JSTS, National and International Olympiads.
+          </p>
+        </div>
+        <div class="realcat">
+          <p class="realcat__title">Doubt Session</p>
+          <p class="realcat__des">
+            If some part of the subject is not clear to a student, he / she can take extra guidance from the respective
+            subject teachers in doubt clearing sessions so as to compensate and understand the missed topics.
+          </p>
+        </div>
+        <div class="realcat">
+          <p class="realcat__title">Notification</p>
+          <p class="realcat__des">
+            All the relevant information such as results, date-sheet, pattern, eligibility criteria for appearing in
+            NTSE/ Olympiads/ Medical/ Engineering Entrance Exams are provided well in advance.
+          </p>
+        </div>
+        <div class="realcat">
+          <p class="realcat__title">Motivational Lecture</p>
+          <p class="realcat__des">
+            Respected Parth Bansal sir personally takes Motivational Classes to motivate students and to boost their
+            morale for better results with an emphasis on character building.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="alumni" id="alumni">
+      <div class="container alumni__container">
+        <h2 class="section__title">Alumni Registration</h2>
+        <form action="https://formspree.io/f/xvoevqrz" method="POST" class="alumni-reg">
+          <h2>Personal Info</h2>
+          <div>
+            <input type="text" name="firstName" id="" placeholder="First Name" />
+            <input type="text" name="lastName" id="" placeholder="Last Name" />
+            <input type="tel" name="mobileNumber" id="" placeholder="Mobile Number" />
+            <input type="email" name="email" id="" placeholder="Email Address" />
+          </div>
+
+          <h2>Association with PN</h2>
+          <div>
+            <input type="text" name="class" id="" placeholder="Class" />
+            <input type="text" name="year" id="" placeholder="Year" />
+          </div>
+
+          <h2>Other Information (Optional)</h2>
+          <div>
+            <select name="current" id="">
+              <option value="">Currently Pursuing</option>
+              <option value="selfEmployed">Self Employed</option>
+              <option value="serviceJob">Service/Job</option>
+              <option value="student">Student</option>
+            </select>
+            <input type="text" name="employer" id="" placeholder="If Service/Job - Name of Organisation" />
+            <input type="text" name="designation" id="" placeholder="Designation" />
+            <input type="text" name="seftWhat" id="" placeholder="If Self Employed - Doing what?" />
+            <input type="text" name="studentWhat" id="" placeholder="If Student - Pursuing what?" />
+          </div>
+
+          <button type="submit" class="button">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="add-review" id="review">
+      <div class="container add-review__container">
+        <h2 class="section__title">Give Us a Review</h2>
+        <form action="https://formspree.io/f/xvoevqrz" method="POST" class="registration-form" data-aos="fade-left">
+          <div class="row">
+            <div class="col-25">
+              <label for="fname">Name</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="" name="firstname" placeholder="Your name..">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="">Class</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="" name="" placeholder="class">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="">Contact</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="" name="" placeholder="Mobile number">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="">Year</label>
+            </div>
+            <div class="col-75">
+              <input type="text" name="" id="ryear" placeholder="Year" />
+            </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="">Photo</label>
+            </div>
+            <div class="col-75">
+             
+          <input type="file" name="revPhoto" id="revPhoto" placeholder="Upload a Photo" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="subject">Message</label>
+            </div>
+            <div class="col-75">
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            </div>
+          </div> <br><br>
+          <div class="row">
+           <center><button type="submit" class="form-submit button" id="form-submit">Submit</button></center>
+          </div>
+        </form>
+        <!-- <form action="" class="review-form">
+          <div>
+            <input type="text" name="revName" id="rname" placeholder="Your Name" />
+            <input type="text" name="revClass" id="rclass" placeholder="Class" />
+            <input type="text" name="revYear" id="ryear" placeholder="Year" />
+            <input type="tel" name="revTel" id="rnum" placeholder="Mobile Number" />
+          </div>
+          <label for="revPhoto" id="revPhotoLab">Photo:</label>
+          <input type="file" name="revPhoto" id="revPhoto" placeholder="Upload a Photo" />
+           <input type="text" name="revRev" id="revRev" placeholder="Enter Your Message">
+          <textarea name="revRev" id="revRev" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
+          <button type="submit" class="button">Submit</button>
+        </form>
+      </div> -->
+    </section>
+
+    <section class="reviews" id="testimonials">
+      <h2 class="section__title">Testimonials</h2>
+      <div class="container reviews__container">
+        <div class="review">
+          <img src="../assets/images/testimonial/Adhira Sawant.webp" alt="" class="review-img" />
+          <p class="review-name">Adhira Sawant</p>
+          <p class="review-text">
+            I used to regularly revise the class notes and solve practice tests provided by (P. N. Institute/ our class
+            teacher). This helped me to boost my confidence and also kept me on track to achieve my goal of scoring best
+            marks in board exams.
+          </p>
+          <!-- <p class="review-class-year">Class 10 - 2015</p> -->
+        </div>
+        <div class="review">
+          <img src="../assets/images/testimonial/Dhairya Mistry.webp" alt="" class="review-img" />
+          <p class="review-name">Dhairya Mistry</p>
+          <p class="review-text">
+            I used to make a lot of silly and careless mistakes earlier, which have improved now after attending doubt
+            solving sessions of P. N. Institute. It helped me a lot to boost my academic performance.
+          </p>
+          <!-- <p class="review-class-year">Class 10 - 2015</p> -->
+        </div>
+        <div class="review">
+          <img src="../assets/images/testimonial/Dhyey Patel.webp" alt="" class="review-img" />
+          <p class="review-name">Dhyey Patel</p>
+          <p class="review-text">
+            All credit goes to my excellent faculties for clearing my doubts in physics right before the board exams, as
+            some of the topics were too much complicated and difficult. They made it simpler by explaining it in the
+            easiest way and by giving real life examples.
+          </p>
+          <!-- <p class="review-class-year">Class 10 - 2015</p> -->
+        </div>
+        <div class="review">
+          <img src="../assets/images/testimonial/Riddhi Nagre.webp" alt="" class="review-img" />
+          <p class="review-name">Riddhi Nagre</p>
+          <p class="review-text">
+            I love the teachers at P. N. Institute! They all make things easier to understand and thus we enjoy
+            learning. Practice tests helps us in the best way to prepare us for better performance in exams.
+          </p>
+          <!-- <p class="review-class-year">Class 10 - 2015</p> -->
+        </div>
+        <div class="review">
+          <img src="../assets/images/testimonial/Mugdha Kadwekar.webp" alt="" class="review-img" />
+          <p class="review-name">Mugdha Kadwekar</p>
+          <p class="review-text">
+            What helped me to score great marks in my board exams was the large number of practice tests, quizzes that I
+            solved at P. N. Institute. The class notes provided to me helped me to understand the concepts easily.
+          </p>
+          <!-- <p class="review-class-year">Class 10 - 2015</p> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="success">
+      <div class="container success__container">
+        <div class="success-left" data-aos="fade-right">
+          <a href="https://youtu.be/d_E0O2G3R2E" target="_blank" class="img__con">
+            <img src="../assets/images/courses/image.jpg" alt="" class="left__image" data-aos="fade-up" />
+          </a>
+          <div class="left__numbers" data-aos="fade-up">
+            <div class="numbers__number">
+              <p class="number">500+</p>
+              <p class="number-cat">Students</p>
+            </div>
+            <div class="numbers__number">
+              <p class="number">50+</p>
+              <p class="number-cat">Staff</p>
+            </div>
+            <!-- <div class="numbers__number">
+						<p class="number">88</p>
+						<p class="number-cat">Locations</p>
+					</div> -->
+          </div>
+        </div>
+        <div class="success-right" data-aos="fade-left">
+          <p class="section__description">Success Stories</p>
+          <h2 class="section__title">Our Students</h2>
+          <div class="success__carousels">
+            <div class="carousel">
+              <p class="success_text">
+                I used to regularly revise the class notes and solve practice tests provided by (P. N. Institute/ our
+                class teacher). This helped me to boost my confidence and also kept me on track to achieve my goal of
+                scoring best marks in board exams.
+              </p>
+              <div class="nameandphoto">
+                <img src="../assets/images/testimonial/Adhira Sawant.webp" alt="" class="photo" />
+                <div class="nameandpost">
+                  <p class="name">Adhira Sawant</p>
+                  <p class="post">Student</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel">
+              <p class="success_text">
+                I used to make a lot of silly and careless mistakes earlier, which have improved now after attending
+                doubt solving sessions of P. N. Institute. It helped me a lot to boost my academic performance.
+              </p>
+              <div class="nameandphoto">
+                <img src="../assets/images/testimonial/Dhairya Mistry.webp" alt="" class="photo" />
+                <div class="nameandpost">
+                  <p class="name">Dhairya Mistry</p>
+                  <p class="post">Student</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel">
+              <p class="success_text">
+                All credit goes to my excellent faculties for clearing my doubts in physics right before the board
+                exams, as some of the topics were too much complicated and difficult. They made it simpler by explaining
+                it in the easiest way and by giving real life examples.
+              </p>
+              <div class="nameandphoto">
+                <img src="../assets/images/testimonial/Gaurav Jha.webp" alt="" class="photo" />
+                <div class="nameandpost">
+                  <p class="name">Gaurav Jha</p>
+                  <p class="post">Student</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel">
+              <p class="success_text">
+                I love the teachers at P. N. Institute! They all make things easier to understand and thus we enjoy
+                learning. Practice tests helps us in the best way to prepare us for better performance in exams.
+              </p>
+              <div class="nameandphoto">
+                <img src="../assets/images/testimonial/Krishna Shah.webp" alt="" class="photo" />
+                <div class="nameandpost">
+                  <p class="name">Krishna Shah</p>
+                  <p class="post">Student</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="container footer-top">
+        <div class="ft-left">
+          <p class="left-up">Apply For The Largest Scholarship Exam Of Gujarat</p>
+          <p class="left-down">
+            PACE is a State level brilliance discovering exam that helps students to bring out the best in themselves
+            and to recognize their hidden abilities.
+          </p>
+        </div>
+        <div class="ft-right">
+          <a href="https://pace.pninstitute.in/" target="_blank"> <div class="ft-con">Apply Now</div></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container bottom__container">
+          <div class="tp">
+            <div class="footer__about">
+              <img src="../assets/images/P. N. INSTITUTE.png" alt="" />
+              <p class="footer__about_des">
+                P. N. Institute, educates its students in the fields of Science, Commerce to
+                discover and transmit knowledge.
+              </p>
+              <div class="social">
+                <a href="https://www.facebook.com/pninstitute/" target="_blank"
+                  ><img src="../assets/images/social/fb.png" alt=""
+                /></a>
+                <a href="https://twitter.com/PNInstitute1" target="_blank"
+                  ><img src="../assets/images/social/twitter.png" alt=""
+                /></a>
+                <a href="https://www.instagram.com/p.n.institute/" target="_blank"
+                  ><img src="../assets/images/social/insta.png" alt=""
+                /></a>
+                <a href="https://www.youtube.com/channel/UCSm1heeqEbCKyTRlH7L5C-g" target="_blank"
+                  ><img src="../assets/images/social/youtube.png" alt=""
+                /></a>
+              </div>
+            </div>
+            <div class="footer__address">
+              <p class="footer__section__title">Address</p>
+              <a href="https://www.google.com/search?client=ms-android-oppo-rvo3&sca_esv=554056951&cs=1&output=search&q=P.+N.+Institute+-+The+Concept+School&ludocid=7457291958241785280&ibp=gwp;0,7&lsig=AB86z5VBH6s79v5xtOf3bbugE8ho&kgs=5718370f1f7e39cf&shndl=-1&shem=lbsc,lsp&source=sh/x/kp/local/m1/2">
+                <p class="addressline"><i class="fas fa-map-marker-alt"></i>&nbsp&nbspGajanan Heights,</p>
+                <p class="addressline">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNr Darbar Chokdi,</p>
+                <p class="addressline">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspManjalpur, Vadodara - 390011</p>
+              </a>
+              <br />
+              <p class="addressline">
+                <i class="fas fa-phone-alt"></i><a href="tel:+919099255528">&nbsp&nbsp+91 9099255528 </a>
+              </p>
+              <p class="addressline">
+                <i class="fas fa-phone-alt"></i><a href="tel:+917433986083">&nbsp&nbsp+91 7433986083 </a>
+              </p>
+              <p class="addressline">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:contact@pninstitute.in">&nbsp&nbspcontact@pninstitute.in </a>
+              </p>
+            </div>
+            <div class="footer__links__con">
+              <p class="footer__section__title">Explore</p>
+              <ul class="footer__links divide">
+                <a href="pages/admission.html" class="footer__link">
+                  <li>Admission</li>
+                </a>
+                <a href="pages/courses.html" class="footer__link">
+                  <li>Courses</li>
+                </a>
+                <a href="pages/student.html" class="footer__link">
+                  <li>Student Corner</li>
+                </a>
+                <a href="pages/result.html" class="footer__link">
+                  <li>Result</li>
+                </a>
+              </ul>
+              <ul class="footer__links divide">
+                <a href="pages/overview.html" class="footer__link">
+                  <li>Overview</li>
+                </a>
+                <a href="pages/career.html" class="footer__link">
+                  <li>Career</li>
+                </a>
+                <a href="pages/faq.html" class="footer__link">
+                  <li>FAQs</li>
+                 <a href="https://rzp.io/l/hggdoWxMO" class="footer__link"> 
+                  <li>Pay fees</li></a>
+                </a>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="copyright">
+      <div class="container">&copy; PN Institute</div>
+    </section>
+
+    <script src="../dist/jquery.min.js"></script>
+    <script src="../dist/jquery-migrate.min.js"></script>
+    <script src="../dist/slick.min.js"></script>
+    <script src="../dist/slick-slide.js"></script>
+    <script src="../dist/script.js"></script>
+  </body>
+</html>
+<script>
+  function openForm() {
+    document.getElementById("popupForm").style.display = "block";
+  }
+  function closeForm() {
+    document.getElementById("popupForm").style.display = "none";
+  }
+  function openForm1() {
+    document.getElementById("popupForm1").style.display = "block";
+  }
+  function closeForm1() {
+    document.getElementById("popupForm1").style.display = "none";
+  }
+  function openForm2() {
+    document.getElementById("popupForm2").style.display = "block";
+  }
+  function closeForm2() {
+    document.getElementById("popupForm2").style.display = "none";
+  }
+  function openForm3() {
+    document.getElementById("popupForm3").style.display = "block";
+  }
+  function closeForm3() {
+    document.getElementById("popupForm3").style.display = "none";
+  }
+  function openForm4() {
+    document.getElementById("popupForm4").style.display = "block";
+  }
+  function closeForm4() {
+    document.getElementById("popupForm4").style.display = "none";
+  }
+  function openForm5() {
+    document.getElementById("popupForm5").style.display = "block";
+  }
+  function closeForm5() {
+    document.getElementById("popupForm5").style.display = "none";
+  }
+  function openForm6() {
+    document.getElementById("popupForm6").style.display = "block";
+  }
+  function closeForm6() {
+    document.getElementById("popupForm6").style.display = "none";
+  }
+  function openForm7() {
+    document.getElementById("popupForm7").style.display = "block";
+  }
+  function closeForm7() {
+    document.getElementById("popupForm7").style.display = "none";
+  }
+  function openForm8() {
+    document.getElementById("popupForm8").style.display = "block";
+  }
+  function closeForm8() {
+    document.getElementById("popupForm8").style.display = "none";
+  }
+
+  $(document).ready(function(){
+       $('#download').click(function(e){
+         e.preventDefault()
+         window.location.href="Class 10 CBSE Sample Paper CDR.pdf"
+       });
+     });
+     $(document).ready(function(){
+       $('#download1').click(function(e){
+         e.preventDefault()
+         window.location.href="10th  Matha  IMP 2020-2021.pdf"
+       });
+     });
+     $(document).ready(function(){
+       $('#download2').click(function(e){
+         e.preventDefault()
+         window.location.href="10th Science IMP 2020-2021.pdf"
+       });
+     });
+     $(document).ready(function(){
+       $('#download3').click(function(e){
+         e.preventDefault()
+         window.location.href="12TH Maths Formulas list.pdf"
+       });
+     });
+     $(document).ready(function(){
+       $('#download4').click(function(e){
+         e.preventDefault()
+         window.location.href="Class 10 Maths Formula List (2)cdr.pdf"
+       });
+     });
+    
+     $(document).ready(function(){
+       $('#download5').click(function(e){
+         e.preventDefault()
+         window.location.href="Class 10th S.S Imp Question.pdf"
+       });
+     });
+     
+    
+     $(document).ready(function(){
+       $('#download6').click(function(e){
+         e.preventDefault()
+         window.location.href="Class 10th Theorems 15-3-21.pdf"
+       });
+     });
+    
+     $(document).ready(function(){
+       $('#download7').click(function(e){
+         e.preventDefault()
+         window.location.href="Class 12th Formula part 2.pdf"
+       });
+     });
+    
+
+     
+
+    
+
+  
+</script>

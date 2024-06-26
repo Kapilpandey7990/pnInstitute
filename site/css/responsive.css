@@ -1,0 +1,180 @@
+
+
+@media screen and (max-width:1300px) {
+    
+    /* Header */
+    header .desktop-menu .mpage-link{
+        padding: 10px;
+    }
+    
+}
+
+
+
+@media screen and (max-width:1200px) {
+
+    .header-slider img{
+        height: 800px;
+    }
+    
+}
+
+
+
+@media screen and (max-width:1150px) {
+
+    /* Header */
+    .logo img{
+        width: 140px;
+    }
+    
+    .login-btn{
+        padding: 4px 20px;
+    }
+
+    div.login {
+        padding: 0 0 0 10px !important;
+    }
+
+
+}
+
+
+
+@media screen and (max-width:1100px) {
+    
+    /* Header */
+    .header-slider img{
+        height: 600px;
+    }
+
+    
+}
+
+
+
+
+@media screen and (max-width:992px) {
+    
+    /* Header */
+    .desktop-menu{
+        display: none;
+    }
+    
+    .menu992{
+        display: block;
+    }
+    
+    
+    
+}
+
+
+
+
+
+
+@media screen and (max-width:768px) {
+
+    .heading h2{
+        font-size: 36px;
+    }
+
+    .header-slider img{
+        height: 500px;
+    }
+
+    .div-site-button{
+        top: -80px;
+    }
+
+    .slider-data{
+        bottom: 130px;
+    }
+
+    
+}
+
+
+
+
+
+
+@media screen and (max-width:576px) {
+
+    /* Header */
+    .header-slider img{
+        height: 400px;
+    }
+
+    .page-header{
+        background-size: 100% 100%;
+    }
+    
+}
+
+
+
+    
+    
+@media screen and (max-width:470px) {
+
+    .page-header .line2{
+        display: inline-block;
+        max-width: none;
+    }
+    
+}
+
+    
+
+    
+    
+    
+@media screen and (max-width:400px) {
+
+    /* Header */
+    .logo img{
+        width: 80px;
+    }
+
+    .login-btn{
+        font-size: 12px;
+        padding: 2px 10px;
+    }
+
+    .sidemenu {
+        left: 0;
+    }
+    .sidemenu .ul-side1{
+        min-width: auto;
+        width: 100%;
+    }
+
+    .header-slider img{
+        height: 280px;
+    }
+
+    .div-site-button a{
+        font-size: 10px;
+        border-radius: 0;
+        padding: 6px 12px;
+    }
+
+    .div-site-button a::after{
+        padding: 36px 27px;
+    }
+
+    .div-site-button{
+        top: -45px;
+    }
+
+    .slider-data{
+        bottom: 80px;
+    }
+
+    .slider-data .text{
+        font-size: 13px;
+    }
+    
+}
