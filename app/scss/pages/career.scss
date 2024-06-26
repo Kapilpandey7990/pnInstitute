@@ -1,0 +1,195 @@
+@use "../util" as *;
+
+.career__title {
+   background: url("../assets/images/title-back/career-title.webp"), rgba(20, 20, 20, 0.8);
+   background-blend-mode: darken;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+}
+
+.car-why-pn {
+   background: url("../assets/images/title-back/title-back.webp");
+   margin: 0;
+   padding: 4em 0;
+   background-size: cover;
+   .why-pn__container {
+      max-width: 900px;
+   }
+   .section__title1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      text-align: center;
+      color: white;
+   }
+   .section__description {
+      color: #eee;
+   }
+}
+
+.our-ethos {
+   padding: 3em 0;
+   background: var(--some-background);
+   .our-ethos__container {
+      .etho {
+         text-align: center;
+         .etho-img {
+            width: 40%;
+            margin: 1em auto;
+         }
+      }
+      @include breakpoint(medium) {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+      }
+      @include breakpoint(large) {
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+   }
+}
+
+.positions {
+   padding: 2em 0;
+   .positions__container {
+      @include breakpoint(large) {
+         display: grid;
+         gap: 2em;
+         grid-template-columns: 1fr 1fr;
+      }
+      .positions-left {
+         margin-bottom: 2em;
+         .role-class {
+            border-bottom: 1px solid rgba(20, 20, 20, 0.2);
+            padding: 1.5em 0;
+            .role-summary {
+               font-size: 1.2rem;
+               font-weight: 600;
+            }
+            .responsibilities {
+               margin: 1em 0;
+               font-size: 1.1rem;
+               font-weight: 500;
+            }
+            .res-list {
+               margin-block: 0;
+               // .res-item {
+               // }
+            }
+            .competencies {
+               margin: 1em 0;
+               font-size: 1.1rem;
+               font-weight: 500;
+            }
+            .comp-list {
+               margin-block: 0;
+               // .comp-item {
+               // }
+            }
+            .button {
+               display: inline-block;
+               margin-top: 1em;
+            }
+         }
+         @include breakpoint(large) {
+            margin-bottom: 0;
+         }
+      }
+      .positions-right {
+         .car-form {
+            margin-top: 1.5em;
+            .basic-info {
+               @include breakpoint(large) {
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+                  gap: 1.5em;
+               }
+            }
+            input {
+               display: block;
+               padding: 0.5em;
+               border: none;
+               border-bottom: 1px solid rgba(20, 20, 20, 0.2);
+               width: 100%;
+               margin-bottom: 1.5em;
+               @include breakpoint(large) {
+                  margin-bottom: 0;
+               }
+            }
+            label {
+               padding: 0 0.5em;
+               display: inline-block;
+               margin-top: 1.5em;
+            }
+            .button {
+               margin-top: 1.5em;
+            }
+         }
+      }
+   }
+}
+
+
+// .career {
+//     padding: 3em 0;
+//     .section__description {
+//         margin-top: 2em;
+//     }
+//     .form__container {
+//         margin-top: 2em;
+//         color: #313131;
+//         font-weight: 500;
+//         select {
+//             background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+//                 linear-gradient(135deg, gray 50%, transparent 50%), radial-gradient(#ddd 70%, transparent 72%);
+//             background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px),
+//                 calc(100% - 0.5em) 0.5em;
+//             background-size: 5px 5px, 5px 5px, 1.5em 1.5em;
+//             background-repeat: no-repeat;
+//             -webkit-appearance: none;
+//             -moz-appearance: none;
+//             color: #313131;
+//             font-weight: 500;
+//             option {
+//                 color: #313131;
+//             }
+//         }
+//         select:focus {
+//             background-image: linear-gradient(45deg, white 50%, transparent 50%),
+//                 linear-gradient(135deg, transparent 50%, white 50%), radial-gradient(gray 70%, transparent 72%);
+//             background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - 0.5em) 0.5em;
+//             background-size: 5px 5px, 5px 5px, 1.5em 1.5em;
+//             background-repeat: no-repeat;
+//             outline: 0;
+//         }
+//         .button {
+//             width: 50%;
+//             background: linear-gradient(to right, var(--blue), var(--light-blue));
+//         }
+//         .car-cv-upload {
+//             label {
+//                 margin-right: 1em;
+//             }
+//         }
+//         @include breakpoint(medium) {
+//             display: grid;
+//             grid-template-columns: 1fr 1fr;
+//             gap: 1.5em;
+//         }
+//     }
+//     .form__container > * {
+//         width: 100%;
+//         padding: 0.8em;
+//         margin: 0.5em auto;
+//         border: 2px solid var(--light-blue);
+//         border-radius: 5px;
+//         outline: none;
+//         background: #f5f5f5;
+//         &:focus-visible {
+//             border: 2px solid var(--blue);
+//         }
+//         @include breakpoint(medium) {
+//             margin: 0 auto;
+//         }
+//     }
+// }

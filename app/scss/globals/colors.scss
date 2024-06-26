@@ -1,0 +1,14 @@
+:root {
+   --white: hsl(0, 0%, 100%);
+   --black: hsl(0, 0%, 0%);
+   --blue: hsl(207, 100%, 37%);
+   --light-blue: hsl(201, 100%, 47%);
+   --blue-rgb: #0068bd;
+   --light-blue-rgb: #009cf0;
+   --red: hsl(14, 87%, 58%);
+   --body-text: hsl(0, 0%, 20%);
+   --title-text: hsl(219, 100%, 8%);
+   --some-background: hsl(236, 65%, 95%);
+   --gradient: linear-gradient(to right, var(--blue), var(--light-blue));
+   --gradient-reverse: linear-gradient(to right, var(--light-blue), var(--blue));
+}

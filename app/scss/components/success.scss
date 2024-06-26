@@ -1,0 +1,116 @@
+@use "../util" as *;
+
+.success {
+   background: #ecedfb;
+   padding: 3em 0;
+   .success__container {
+      .success-left {
+         .left__image {
+            border-radius: 10px;
+            &:hover {
+               filter: grayscale(100%);
+            }
+         }
+         // video {
+         //    max-width: 100%;
+         //    border-radius: 10px;
+         //    z-index: -111;
+         // }
+         .left__numbers {
+            z-index: 1111;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            text-align: center;
+            margin: 0 1em;
+            margin-top: -2em;
+            gap: 1em;
+            .numbers__number {
+               background: white;
+               border-radius: 10px;
+               padding: 1.5em 0;
+               box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+               .number {
+                  color: var(--blue);
+                  font-size: 1.2rem;
+                  font-weight: 700;
+                  @include breakpoint(medium) {
+                     font-size: 1.8rem;
+                  }
+               }
+               .number-cat {
+                  text-transform: uppercase;
+                  font-size: 0.8rem;
+                  color: var(--light-blue);
+                  font-weight: 500;
+                  margin-top: 0.5em;
+                  @include breakpoint(medium) {
+                     font-size: 1rem;
+                  }
+               }
+            }
+         }
+      }
+      .success-right {
+         margin-top: 2.5em;
+
+         .section__description {
+            margin: 0;
+            color: var(--light-blue);
+            text-transform: uppercase;
+            font-weight: 500;
+            @include breakpoint(medium) {
+               text-align: left;
+            }
+         }
+         .section__title {
+            font-weight: 700;
+            margin: 0.3em 0;
+            @include breakpoint(medium) {
+               text-align: left;
+            }
+         }
+         .success__carousels {
+            .carousel {
+               height: auto;
+               width: 100%;
+               .success_text {
+                  text-align: center;
+                  font-style: italic;
+                  font-size: 1.1rem;
+                  margin-bottom: 1.3em;
+               }
+               .nameandphoto {
+                  width: 70%;
+                  display: grid;
+                  margin: auto;
+                  grid-template-columns: 15% 85%;
+                  gap: 1em;
+                  align-items: center;
+                  .photo {
+                     border-radius: 100px;
+                  }
+                  .nameandpost {
+                     .name {
+                        font-weight: 600;
+                        color: #212121;
+                     }
+                  }
+               }
+            }
+         }
+         @include breakpoint(large) {
+            margin-top: 0;
+            background: url("../assets/images/success_right_bg.webp");
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+         }
+      }
+      @include breakpoint(large) {
+         display: grid;
+         gap: 2.5em;
+         grid-template-columns: 65% 35%;
+      }
+   }
+}

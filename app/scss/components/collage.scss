@@ -1,0 +1,104 @@
+@use "../util" as *;
+
+.collage {
+  padding: 2em 0;
+  padding-top: 0;
+  .collage-title-container {
+    text-align: center;
+    .section__description {
+      margin-bottom: 1em;
+      font-size: 1.2rem;
+      color: black;
+    }
+  }
+  .collage-container {
+    display: grid;
+    align-items: stretch;
+    .collage-image {
+      overflow: none;
+      position: relative;
+      align-self: stretch;
+      // object-fit: fill;
+      img {
+        height: 100%;
+      }
+      // &:hover {
+      //    transform: scale(1.1);
+      // }
+      // &:hover::after {
+      //    content: "See More";
+      //    text-align: center;
+      //    display: grid;
+      //    justify-content: center;
+      //    align-items: center;
+      //    color: White;
+      //    position: absolute;
+      //    inset: 0;
+      //    background: rgba(11, 11, 11, 0.6);
+      // }
+      a {
+        z-index: 111;
+      }
+    }
+    .collage-image-1 {
+      grid-area: img1;
+    }
+    .collage-image-2 {
+      grid-area: img2;
+    }
+    .collage-image-3 {
+      grid-area: img3;
+    }
+    .collage-image-4 {
+      grid-area: img4;
+    }
+    .collage-image-5 {
+      grid-area: img5;
+    }
+    .collage-image-6 {
+      grid-area: img6;
+    }
+    .collage-image-7 {
+      grid-area: img7;
+    }
+    grid-template-areas:
+      "img1 img1"
+      "img4 img5"
+      "img2 img2"
+      "img6 img7"
+      "img3 img3";
+  }
+}
+
+@include breakpoint(large) {
+  .collage {
+    .collage-container {
+      display: grid;
+      .collage-image-1 {
+        grid-area: img1;
+      }
+      .collage-image-2 {
+        grid-area: img2;
+      }
+      .collage-image-3 {
+        grid-area: img3;
+      }
+      .collage-image-4 {
+        grid-area: img4;
+      }
+      .collage-image-5 {
+        grid-area: img5;
+      }
+      .collage-image-6 {
+        grid-area: img6;
+      }
+      .collage-image-7 {
+        grid-area: img7;
+      }
+      grid-template-areas:
+        "img1 img1 img3"
+        "img4 img5 img6"
+        "img7 img2 img2";
+    }
+  }
+}

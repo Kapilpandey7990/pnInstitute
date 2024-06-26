@@ -1,0 +1,56 @@
+@use "../util" as *;
+
+.faq__title {
+   background: url("../assets/images/title-back/faq-title.webp"), rgba(50, 50, 50, 0.9);
+   background-blend-mode: darken;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position-x: 0% 0%;
+   background-attachment: fixed;
+}
+
+.faq {
+   background: hsl(0, 0%, 97%);
+   padding: 2em 0;
+   .faq__container {
+      .faq__description {
+         margin-bottom: 2em;
+      }
+      .question-answer-container {
+         max-width: 1000px;
+         margin: auto;
+         box-shadow: 5px 0px 10px 5px rgba(0, 0, 0, 0.1);
+         cursor: pointer;
+         user-select: none;
+         .question-answer {
+            border-bottom: 1px solid var(--light-blue);
+            background: white;
+            &:last-child {
+               border: none;
+            }
+            .question {
+               list-style-type: none;
+               padding: 1em;
+               color: var(--blue);
+               font-weight: 500;
+               font-size: 1.2rem;
+               &::after {
+                  content: "+";
+                  margin-right: 1em;
+                  float: right;
+               }
+               &:focus-within {
+                  font-weight: 600;
+               }
+               @include breakpoint(medium) {
+                  padding: 1em 2em;
+               }
+            }
+            .answer {
+               padding: 0.5em 3em;
+               padding-bottom: 1em;
+            }
+         }
+      }
+   }
+}

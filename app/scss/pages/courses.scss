@@ -1,0 +1,198 @@
+@use "../util" as *;
+
+.courses__title {
+   background: url("../assets/images/title-back/courses-title.webp"), rgba(20, 20, 20, 0.8);
+   background-blend-mode: darken;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+}
+
+.course {
+   padding: 3em 0;
+   background: var(--some-background);
+   .section__title {
+      margin-bottom: 0.8em;
+   }
+   .card__container {
+      @include breakpoint(medium) {
+         display: grid;
+         max-width: 90%;
+         grid-template-columns: 1fr 1fr;
+         gap: 1.5em;
+      }
+      @include breakpoint(large) {
+         max-width: rem(1200);
+         grid-template-columns: 1fr 1fr 1fr;
+      }
+      .card {
+         border: 1px solid rgba(50, 50, 50, 0.1);
+         box-shadow: 5px 5px 10px 5px rgba(50, 50, 50, 0.1);
+         border-radius: 10px;
+         overflow: hidden;
+         margin-bottom: 2em;
+         padding-bottom: 1em;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         background: var(--white);
+         .image-container {
+            max-width: 100%;
+            overflow: hidden;
+            .image {
+               transition: all 0.25s;
+               &:hover {
+                  transform: scale(1.125);
+                  transition: all 0.25s;
+               }
+            }
+         }
+         .description-container {
+            padding: 1em;
+            background: var(--white);
+            .card-title {
+               color: var(--blue);
+               font-size: 1.3rem;
+               font-weight: 600;
+               margin-bottom: 0.8em;
+            }
+            .languages {
+               font-weight: 800;
+               margin-bottom: 0.8em;
+               letter-spacing: 0.1em;
+               .html {
+                  color: #212121;
+                  margin-right: 0.5em;
+               }
+            }
+            .description {
+               font-family: var(--font-body);
+               color: hsl(0, 0%, 40%);
+               font-size: 0.95rem;
+               margin-bottom: 1em;
+            }
+         }
+         .action-buttons {
+            padding: 0 1em;
+            margin-bottom: 1em;
+            background: var(--white);
+         }
+         @include breakpoint(medium) {
+            margin-bottom: 0;
+         }
+      }
+   }
+}
+
+.star-teacher {
+   padding: 3em 0;
+   .section__title {
+      margin-bottom: 0.8em;
+   }
+   .star-teacher__container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2em;
+      text-align: center;
+      .teacher {
+         box-shadow: 3px 3px 7px 5px rgba(50, 50, 50, 0.1);
+         border-radius: 10px;
+         border: 1px solid rgba(50, 50, 50, 0.1);
+         .teach-img {
+            border-radius: 10px 10px 0 0;
+         }
+         .teach-name {
+            color: var(--blue);
+            margin: 0.5em 0.2em;
+            font-weight: 600;
+            font-size: 1.2rem;
+         }
+         .teach-ed {
+            color: #212121;
+            margin: 0.5em 0.2em;
+            font-weight: 500;
+         }
+      }
+      @include breakpoint(medium) {
+         grid-template-columns: 1fr 1fr 1fr;
+      }
+      @include breakpoint(large) {
+         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      }
+   }
+}
+
+// .course {
+//     margin-block: 2em;
+//     .course__container {
+//         .section__title {
+//             margin-bottom: 0.5em;
+//         }
+//         .section__description {
+//             margin-top: 0;
+//             color: var(--blue);
+//             font-size: 1.3rem;
+//             font-weight: 600;
+//             text-transform: uppercase;
+//         }
+//         .course__content {
+//             .course__image {
+//                 width: 90%;
+//                 margin: auto;
+//                 border-radius: 0px 15px 0px 15px;
+//                 @include breakpoint(medium) {
+//                     width: 80%;
+//                 }
+//             }
+//             .subteach {
+//                 color: var(--blue);
+//                 margin-block: 1em;
+//                 font-size: 1.2rem;
+//                 text-align: center;
+//             }
+//             .course__description {
+//                 text-align: center;
+//                 @include breakpoint(medium) {
+//                     width: 70%;
+//                     margin: auto;
+//                 }
+//             }
+//             .sub {
+//                 text-align: center;
+//                 .sub-ul {
+//                     list-style-type: none;
+//                     padding: 0;
+//                     margin-top: 0;
+//                 }
+//             }
+//             .teacher {
+//                 text-align: center;
+//                 display: grid;
+//                 grid-template-columns: 1fr 1fr;
+//                 justify-content: space-around;
+//                 align-items: center;
+//                 gap: 1em;
+//                 .teacher-person {
+//                     padding: 0;
+//                     margin: 0;
+//                     .teacher-image {
+//                         border-radius: 1000px;
+//                         margin: auto;
+//                     }
+//                     .teacher-name {
+//                         font-weight: 500;
+//                         color: #212121;
+//                         margin-top: 0.5em;
+//                     }
+//                 }
+//                 @include breakpoint(medium) {
+//                     grid-template-columns: 1fr 1fr 1fr 1fr;
+//                     margin-bottom: 0;
+//                 }
+//                 @include breakpoint(large) {
+//                     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+//                 }
+//             }
+//         }
+//     }
+// }

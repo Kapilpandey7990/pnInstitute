@@ -1,0 +1,58 @@
+@use "../util" as *;
+
+.real {
+   padding: 2em 0;
+   background: #ecedfb;
+   .section__title {
+      line-height: 1;
+      margin-bottom: 1em;
+   }
+   .real__container {
+      .realcat {
+         background: white;
+         padding: 2em;
+         margin-bottom: 1em;
+         border-radius: 5px;
+         box-shadow: 3px 3px 10px 3px rgba(50, 50, 50, 0.2);
+         &:hover {
+            background: linear-gradient(to right, var(--blue), var(--light-blue));
+            color: white;
+         }
+         &:hover .realcat__title {
+            color: white;
+         }
+         &:hover .button {
+            background: white;
+            color: var(--blue);
+         }
+         .realcat__title {
+            font-size: 1.3rem;
+            color: black;
+            font-weight: 600;
+            margin-bottom: 0.5em;
+         }
+         .realcat__des {
+            margin-bottom: 1em;
+         }
+         .button {
+            cursor: pointer;
+            @include breakpoint(medium) {
+               align-self: end;
+            }
+         }
+         @include breakpoint(medium) {
+            display: grid;
+            grid-auto-flow: row;
+         }
+      }
+      @include breakpoint(medium) {
+         display: grid;
+         gap: 1em;
+         grid-template-columns: 1fr 1fr;
+      }
+      @include breakpoint(large) {
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+      }
+   }
+}

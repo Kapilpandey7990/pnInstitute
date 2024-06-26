@@ -1,0 +1,36 @@
+@use "../util" as *;
+
+.std-form {
+   padding: 2em 0;
+   .std-container {
+      display: grid;
+      grid-auto-flow: row;
+      gap: 1em;
+      @include breakpoint(large) {
+         grid-template-columns: 1fr 1fr;
+         gap: 2em;
+      }
+      .std-left {
+         .std-description {
+            padding: 0 1em;
+            @include breakpoint(large) {
+               padding: 0 2em;
+            }
+         }
+      }
+      .std-right {
+         .std-form {
+            display: grid;
+            grid-auto-flow: row;
+            gap: 1em;
+            input,
+            textarea {
+               padding: 0.8em;
+               border-radius: 5px;
+               border: 1px solid rgba(20, 20, 20, 0.3);
+               box-shadow: 2px 2px 2px 2px rgba(20, 20, 20, 0.2);
+            }
+         }
+      }
+   }
+}

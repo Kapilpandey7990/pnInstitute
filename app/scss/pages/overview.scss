@@ -1,0 +1,178 @@
+@use "../util" as *;
+
+.about__title {
+   background: url("../assets/images/title-back/about-title.webp"), rgba(50, 50, 50, 0.9);
+   background-blend-mode: darken;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+}
+
+.vsmsmt {
+   background: url("../assets/images/title-back/title-back.webp");
+   background-size: cover;
+   padding: 4em 0;
+   margin: 2em 0;
+   margin-bottom: 0;
+   .vsmsmt__container {
+      .vsm {
+         background: white;
+         padding: 2em;
+         margin-bottom: 1em;
+         border-radius: 10px;
+         .vsm__title {
+            color: #212121;
+            margin-bottom: 0.5em;
+         }
+      }
+      @include breakpoint(medium) {
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+         gap: 2em;
+         .vsm {
+            margin-bottom: 0;
+         }
+      }
+   }
+}
+
+.president {
+   padding: 3em 0em;
+   background: var(--some-background);
+   // .section__title {
+   //     margin-top: 0;
+   // }
+   .president__container {
+      .about__right {
+         .about__name {
+            text-transform: uppercase;
+            margin-bottom: 1em;
+            color: #555;
+         }
+         .about__tag {
+            font-size: 1.5rem;
+            color: var(--blue);
+            font-weight: 600;
+            margin-bottom: 1em;
+         }
+         .about__des {
+            margin-bottom: 1em;
+         }
+         img {
+            width: 20%;
+         }
+      }
+      @include breakpoint(medium) {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         gap: 2em;
+         align-items: start;
+      }
+   }
+}
+// .vision-des {
+//     .vision-des__container {
+//         padding: 2em 0;
+//         @include breakpoint(medium) {
+//             display: grid;
+//             grid-template-columns: 2fr 1fr;
+//             justify-content: center;
+//             align-items: center;
+//             gap: 3em;
+//             line-height: 2;
+//             color: #212121;
+//         }
+//         .vision-des__text {
+//             margin-bottom: 2em;
+//             @include breakpoint(medium) {
+//                 margin-bottom: 0;
+//             }
+//             .first-word {
+//                 display: inline-block;
+//                 font-size: 2rem;
+//                 color: var(--blue);
+//                 font-weight: 600;
+//             }
+//         }
+//     }
+// }
+
+// .president {
+//     .president__container {
+//         padding: 2em 0;
+//         .section__title {
+//             margin-bottom: 1em;
+//         }
+//         .president__talk {
+//             @include breakpoint(medium) {
+//                 display: grid;
+//                 grid-template-columns: 1fr 2fr;
+//                 justify-content: center;
+//                 align-items: center;
+//                 gap: 3em;
+//                 line-height: 2;
+//                 color: #212121;
+//             }
+//             .president__image {
+//                 border-radius: 10px;
+//             }
+//             .talk {
+//                 margin-bottom: 2em;
+//                 @include breakpoint(medium) {
+//                     margin-bottom: 0;
+//                 }
+//                 .first-word {
+//                     display: inline-block;
+//                     font-size: 2rem;
+//                     color: var(--blue);
+//                     font-weight: 600;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+.srcell {
+   .secell__container {
+      padding: 2em 0;
+      .section__title {
+         margin-bottom: 1em;
+      }
+      .srcell__text {
+         @include breakpoint(medium) {
+            display: grid;
+            grid-template-columns: 60% 40%;
+            justify-content: center;
+            align-items: center;
+            gap: 3em;
+            line-height: 2;
+            color: #212121;
+         }
+         .srcell__image {
+            border-radius: 10px;
+         }
+         .about__tag {
+            font-size: 1.5rem;
+            color: var(--blue);
+            font-weight: 600;
+            margin-bottom: 1em;
+         }
+         .srcell__text-text {
+            margin-bottom: 2em;
+            @include breakpoint(medium) {
+               margin-bottom: 0;
+            }
+            .first-word {
+               display: inline-block;
+               font-size: 2rem;
+               color: var(--blue);
+               font-weight: 600;
+            }
+            .button {
+               width: 50%;
+               margin-top: 1em;
+            }
+         }
+      }
+   }
+}

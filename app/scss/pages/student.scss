@@ -1,0 +1,184 @@
+@use "../util" as *;
+
+.student__title {
+   background: url("../assets/images/title-back/student-title.webp"), rgba(20, 20, 20, 0.8);
+   background-blend-mode: darken;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+}
+
+.material {
+   padding: 2em 0;
+   .material__container {
+      .material-form {
+         display: grid;
+         grid-auto-flow: row;
+         gap: 1em;
+         margin: 2em auto;
+         select {
+            padding: 0.5em;
+            border: 1px solid rgba(20, 20, 20, 0.2);
+         }
+         @include breakpoint(medium) {
+            grid-auto-flow: column;
+            gap: 2em;
+         }
+      }
+      .material-table {
+         width: 100%;
+         max-width: 800px;
+         margin: 0 auto;
+         th,
+         td {
+            border: 1px solid rgba(20, 20, 20, 0.2);
+            padding: 0.3em 0;
+         }
+      }
+   }
+}
+
+.alumni {
+   padding: 2em 0;
+   .alumni__container {
+      .alumni-reg {
+         padding-block: 1em;
+         // display: grid;
+         // grid-auto-flow: row;
+         // gap: 1em;
+         max-width: 900px;
+         margin-inline: auto;
+         margin-bottom: 1em;
+         h2 {
+            margin-block: 1.5rem 0.8rem;
+         }
+         div {
+            display: grid;
+            gap: 1rem;
+            @include breakpoint(medium) {
+               grid-template-columns: 1fr 1fr;
+            }
+            input,
+            select {
+               padding: 0.5rem 1rem;
+               width: 100%;
+               margin-inline: auto;
+            }
+         }
+         button.button {
+            text-align: center;
+            display: inline-block;
+            margin-inline: auto;
+            margin-top: 1rem;
+         }
+         // input,
+         // select {
+         //    padding: 0.5em 0.2em;
+         //    border: none;
+         //    border: 1px solid rgba(20, 20, 20, 0.5);
+         // }
+         // @include breakpoint(medium) {
+         //    grid-template-columns: 1fr 1fr;
+         // }
+      }
+   }
+}
+
+.add-review {
+   background: hsl(236, 65%, 99%);
+   padding: 2em 0;
+   .add-review__container {
+      .section__title {
+         margin-bottom: 1em;
+      }
+      .review-form {
+         max-width: 900px;
+         margin: auto auto;
+         div {
+            display: grid;
+            grid-auto-flow: row;
+            gap: 1em;
+            @include breakpoint(medium) {
+               grid-template-columns: 1fr 1fr;
+            }
+         }
+         input,
+         select {
+            padding: 0.5em 0.2em;
+         }
+         #revPhotoLab {
+            display: inline-block;
+            margin-top: 1em;
+         }
+         #revRev {
+            display: block;
+            margin: 1em 0;
+            width: 100%;
+            height: 140px;
+         }
+         .button {
+            margin-top: 0.5em;
+         }
+      }
+   }
+}
+
+.reviews {
+   background: hsl(236, 65%, 96%);
+   padding: 2em 0;
+   .section__title {
+      margin-bottom: 0.8em;
+   }
+   .reviews__container {
+      display: grid;
+      grid-auto-flow: row;
+      gap: 2em;
+      @include breakpoint(medium) {
+         grid-template-columns: 1fr 1fr;
+      }
+      @include breakpoint(large) {
+         grid-template-columns: 1fr 1fr 1fr;
+      }
+      .review {
+         display: grid;
+         grid-auto-flow: row;
+         gap: 1em;
+         padding: 2em;
+         background: white;
+         border-radius: 10px;
+         border-bottom: 5px solid var(--blue);
+         box-shadow: 3px 3px 10px 3px rgba(20, 20, 20, 0.15);
+         .review-img {
+            width: 40%;
+            border-radius: 1000px;
+            border: 4px solid hsl(236, 65%, 90%);
+            margin: auto;
+         }
+         .review-name {
+            font-weight: 600;
+            margin: auto;
+         }
+         .review-text {
+            max-height: 150px;
+            overflow: auto;
+            color: #777;
+            font-size: 0.9rem;
+            text-align: justify;
+            &::-webkit-scrollbar {
+               width: 0.5em;
+               height: 0.5em;
+            }
+            &::-webkit-scrollbar-thumb {
+               background-color: rgba(255, 255, 255, 0.1);
+               border-radius: 3px;
+            }
+            &:hover {
+               background: rgba(255, 255, 255, 0.2);
+            }
+         }
+         .review-class-year {
+            font-weight: 600;
+         }
+      }
+   }
+}

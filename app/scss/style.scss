@@ -1,0 +1,41 @@
+@use "globals";
+@use "components";
+@use "pages";
+
+.wa {
+   animation: MoveUpDown 2s linear infinite;
+   position: fixed;
+   left: 20px;
+   width: 40px;
+   margin-bottom: 20px;
+}
+
+.brochure {
+   animation: MoveUpDown 2s linear infinite;
+   position: fixed;
+   right: 20px;
+   margin-bottom: 20px;
+}
+
+.copyright {
+   background: var(--blue);
+   margin: 0;
+   .container {
+      margin: 0 auto;
+      text-align: center;
+      color: white;
+      padding: 0.7em 0;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+   }
+}
+
+@keyframes MoveUpDown {
+   0%,
+   100% {
+      bottom: 0;
+   }
+   50% {
+      bottom: 5px;
+   }
+}

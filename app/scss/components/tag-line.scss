@@ -1,0 +1,53 @@
+@use "../util" as *;
+
+.tag-line {
+   background-image: linear-gradient(to bottom, hsl(207, 100%, 37%), hsl(201, 100%, 47%));
+   .tag-line__container {
+      position: relative;
+      padding: 3em 1em;
+      .tag {
+         font-size: 1.5rem;
+         color: #eeeeee;
+         b {
+            color: #ffffff;
+         }
+      }
+      .join-button {
+         display: inline-block;
+         text-align: center;
+         font-size: 1.1rem;
+         background: white;
+         color: var(--blue);
+         font-weight: 600;
+         padding: 0.5em 1.5em;
+         margin-top: 1em;
+         border-radius: 5px;
+         &:hover {
+            background: var(--red);
+            color: white;
+         }
+      }
+   }
+   @include breakpoint(large) {
+      .tag-line__container {
+         padding: 3em 1em;
+         display: flex;
+         flex-direction: row;
+         gap: 2em;
+         align-items: center;
+         .join-button {
+            align-self: flex-end;
+            text-align: right;
+            margin-top: 0;
+            float: right;
+            margin-right: 2em;
+         }
+         .tag {
+            width: 60%;
+         }
+         .col {
+            width: 40%;
+         }
+      }
+   }
+}

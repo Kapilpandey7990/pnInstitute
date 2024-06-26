@@ -1,0 +1,88 @@
+@use "../util" as *;
+
+.future {
+   .future__top {
+      padding: 6em 0;
+      background-image: url("../assets/images/fbg1.webp");
+      background-position: 40% center;
+      .section__title {
+         color: white;
+         margin-bottom: 0.5em;
+      }
+      .section__description {
+         color: #eee;
+      }
+      @include breakpoint(medium) {
+         margin-bottom: 0;
+         padding-bottom: 10em;
+      }
+      @include breakpoint(large) {
+         padding-bottom: 15em;
+      }
+   }
+   .future__bottom {
+      .bottom__cat {
+         text-align: center;
+         margin: 2em 0;
+         border: 1px solid rgba(11, 11, 11, 0.2);
+         border-radius: 10px;
+         .img__con {
+            position: relative;
+            cursor: pointer;
+            &:hover::after {
+               content: "Read More";
+               color: white;
+               display: grid;
+               justify-content: center;
+               align-items: center;
+               position: absolute;
+               inset: 0;
+               border-radius: 10px 10px 0 0;
+               background: rgba(0, 0, 0, 0.75);
+            }
+         }
+         .future__img {
+            border-radius: 10px 10px 0 0;
+            position: relative;
+         }
+         .future__title {
+            color: black;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1em 1em 0.5em 1em;
+            text-align: start;
+            .title__num {
+               color: #aaa;
+            }
+         }
+         .future__des {
+            text-align: start;
+            font-size: 1rem;
+            margin: 0.5em 2em 1em 2em;
+         }
+         .button {
+            margin: 1em 2em;
+            @include breakpoint(medium) {
+               align-self: end;
+            }
+         }
+         @include breakpoint(medium) {
+            display: grid;
+            grid-auto-flow: row;
+         }
+         @include breakpoint(medium) {
+            margin-top: 0;
+         }
+      }
+      @include breakpoint(medium) {
+         display: grid;
+         grid-template-columns: 210px 210px 210px;
+         justify-content: space-around;
+         margin-top: -117px;
+      }
+      @include breakpoint(large) {
+         grid-template-columns: 350px 350px 350px;
+         margin-top: -197px;
+      }
+   }
+}

@@ -1,0 +1,85 @@
+@use "../util" as *;
+
+.registration {
+  background: url("../assets/images/collage/02.webp"), rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-size: cover;
+  padding: 3em 0;
+  h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 1em;
+    font-size: 2.2rem;
+  }
+  .registration__container {
+    .registration-flex {
+      .reg__title {
+        color: white;
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-align: center;
+        margin: 0.3em auto;
+      }
+      .section__description {
+        color: #e2e2e2;
+      }
+      .benefits {
+        color: #ddd;
+        list-style-type: none;
+        margin: auto;
+        .benefit {
+          font-weight: 500;
+          margin: 1.3em 0;
+          margin-left: 1em;
+          padding-left: 1em;
+          font-size: 1rem;
+          &::marker {
+            content: "📕";
+          }
+        }
+      }
+    }
+    .registration-form {
+      background: white;
+      padding: 1.5em;
+      border-radius: 10px;
+      max-width: 600px;
+      margin-inline: auto;
+      input,
+      select,
+      textarea {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 1em;
+        padding: 0.8em 1em;
+        border: none;
+        border-bottom: 1px solid hsla(207, 100%, 37%, 0.2);
+        color: hsl(0, 0%, 60%);
+        &::placeholder {
+          color: hsl(0, 0%, 60%);
+        }
+      }
+      .section__title {
+        margin-bottom: 0.5em;
+      }
+      .form-message {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include breakpoint(medium) {
+  .registration {
+    .registration__container {
+      display: flex;
+      gap: 2em;
+      .registration-flex {
+        width: 100%;
+      }
+      .registration-form {
+        width: 100%;
+      }
+    }
+  }
+}

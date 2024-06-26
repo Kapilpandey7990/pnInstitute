@@ -1,0 +1,65 @@
+@use "../util" as *;
+
+.admission__title {
+   background: url("../assets/images/title-back/admission-title.webp"), rgba(20, 20, 20, 0.8);
+   background-blend-mode: darken;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+}
+
+.books {
+   padding: 2em 0;
+   .books__container {
+      .material-form {
+         display: grid;
+         grid-auto-flow: row;
+         gap: 1em;
+         margin: 2em auto;
+         select {
+            padding: 0.5em;
+            border: 1px solid rgba(20, 20, 20, 0.2);
+         }
+         @include breakpoint(medium) {
+            grid-auto-flow: column;
+            gap: 2em;
+         }
+      }
+      .section__title {
+         margin-top: 0;
+      }
+      .material-table {
+         width: 100%;
+         max-width: 800px;
+         margin: 0 auto;
+         margin-bottom: 2em;
+         th,
+         td {
+            border: 1px solid rgba(20, 20, 20, 0.3);
+            padding: 0.5em;
+         }
+         .book-name {
+            text-align: center;
+         }
+      }
+      div {
+         text-align: center;
+      }
+      .button {
+         display: inline-block;
+         text-align: center;
+         margin: 1em auto;
+      }
+   }
+}
+
+.download-form {
+   padding: 2em 0;
+   .section__description {
+      margin-bottom: 0.8em;
+   }
+   .download-form__container {
+      margin-top: 2em;
+      text-align: center;
+   }
+}

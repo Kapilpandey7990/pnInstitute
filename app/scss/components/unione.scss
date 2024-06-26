@@ -1,0 +1,34 @@
+@use "../util" as *;
+
+.unione {
+   .unione__container {
+      .unionecat {
+         display: grid;
+         grid-template-columns: 1fr 3fr;
+         gap: 2em;
+         padding: 2em 1em;
+         background-image: linear-gradient(to bottom, var(--blue), var(--light-blue));
+         @include breakpoint(large) {
+            padding: 2em 3em;
+         }
+         &:hover {
+            background-image: linear-gradient(to bottom, var(--light-blue), var(--blue));
+         }
+         .unionecat__text {
+            .unionecat__title {
+               color: white;
+               font-size: 1.2rem;
+               font-weight: 600;
+            }
+            .unionecat__des {
+               color: #ddd;
+               font-size: 0.9rem;
+            }
+         }
+      }
+      @include breakpoint(medium) {
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+      }
+   }
+}

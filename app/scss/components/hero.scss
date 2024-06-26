@@ -1,0 +1,26 @@
+@use "../util" as *;
+
+.hero {
+  display: none;
+  @include breakpoint(medium) {
+    display: block;
+    .slick-arrow {
+      position: absolute;
+      z-index: 111;
+    }
+    .slick-prev {
+      left: 2%;
+      top: 45%;
+    }
+    .slick-next {
+      right: 2%;
+      top: 45%;
+    }
+  }
+}
+.hero-mobile {
+  display: block;
+  @include breakpoint(medium) {
+    display: none;
+  }
+}
