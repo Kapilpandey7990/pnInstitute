@@ -1057,7 +1057,7 @@ a:visited {
 }
 
 .collage {
-    padding: 0 0 2em
+    padding: 2em 0 2em
 }
 
 .collage .collage-title-container {
@@ -1211,7 +1211,10 @@ a:visited {
 }
 
 .success .success__container .success-right {
-    margin-top: 2.5em
+    margin-top: 2.5em;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 60%;
 }
 
 .success .success__container .success-right .section__description {
@@ -1247,7 +1250,7 @@ a:visited {
     font-size: 1.1rem;
     font-style: italic;
     margin-bottom: 1.3em;
-    text-align: center
+    text-align: center;
 }
 
 .success .success__container .success-right .success__carousels .carousel .nameandphoto {
@@ -1270,11 +1273,11 @@ a:visited {
 
 @media (min-width:71.875em) {
     .success .success__container .success-right {
-        background: url(../assets/images/success_right_bg.webp);
+        /* background: url(../assets/images/success_right_bg.webp);
         background-position: bottom;
         background-repeat: no-repeat;
         background-size: 50%;
-        margin-top: 0
+        margin-top: 0 */
     }
 
     .success .success__container {
@@ -1382,21 +1385,27 @@ a:visited {
 }
 
 .footer .footer-bottom .bottom__container .tp .footer__about {
-    background: #fff;
+    /* background: #fff;
     border-radius: 20px;
     box-shadow: 10px 10px 40px 0 rgba(0, 0, 0, .4);
-    padding: 1em 2em
+    padding: 1em 2em */ 
+    margin-top: 30px;
 }
 
 .footer .footer-bottom .bottom__container .tp .footer__about .footer__about_des {
     font-weight: 400;
-    margin-top: 1em
+    margin-top: 1em;
+    color: white;
 }
 
 .footer .footer-bottom .bottom__container .tp .footer__about .social {
-    margin-top: 1em
+    margin-top: 1em;
+    display: flex;
 }
-
+.my_social_gap{
+    margin:0 8px;
+}
+    
 .footer .footer-bottom .bottom__container .tp .footer__about .social img {
     display: inline-block;
     margin: 0 1em;
@@ -1409,7 +1418,8 @@ a:visited {
 
 .footer .footer-bottom .bottom__container .tp .footer__address .addressline {
     color: #e2e2e2;
-    font-weight: 500
+    font-weight: 500;
+    margin-bottom: 4px;
 }
 
 .footer .footer-bottom .bottom__container .tp .footer__address .addressline a {
@@ -1444,8 +1454,8 @@ a:visited {
 @media (min-width:40em) {
     .footer .footer-bottom .bottom__container .tp {
         display: grid;
-        gap: 2em;
-        grid-template-columns: 1fr 1fr .8fr
+        gap: 1.5rem;
+        grid-template-columns: 1.5fr 1fr 0.5fr 0.5fr;
     }
 
     .footer .footer-bottom {
@@ -2590,7 +2600,8 @@ a:visited {
 
 .copyright .container {
     color: #fff;
-    font-weight: 600;
+    font-weight: 200;
+    font-size: 12px;
     letter-spacing: .1em;
     margin: 0 auto;
     padding: .7em 0;
@@ -2620,4 +2631,3 @@ a:visited {
         bottom: 5px
     }
 }
-
