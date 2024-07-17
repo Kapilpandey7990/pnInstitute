@@ -27,10 +27,20 @@
     font-weight: 700;
     src: local(""), url(../assets/font/poppins-v15-latin-700.woff) format("woff")
 }
+.myarrow{
+    background:none;
+    border: none;
 
+}
+.myarrow:hover{
+    border: 1px solid;
+    border-radius: 4px;
+    position: relative;
+}
 
 .popup{
-    width: 600px;
+    width: 320px;
+    /* border-radius:50px; */
     position: absolute;
     transform: translate(-50%,-50%);
     left: 50%;
@@ -45,7 +55,7 @@
 }
 .popup button{
     display: block;
-    margin:  0 0 20px auto;
+    margin:  0 0 auto auto;
     background-color: transparent;
     font-size: 30px;
     color: #000000;
@@ -246,10 +256,15 @@ a:visited {
 .navsec {
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .3);
     position: relative;
+    z-index: 1;   
 }
 
 .navsec .navbar {
+    position: fixed;
+    background-color: #fff;
+    
     align-items: center;
+    
     display: grid;
     grid-template-areas: "ham logo .""link link link";
     margin: auto;
@@ -477,7 +492,7 @@ a:visited {
 }
 
 .hero {
-    display: none
+    display: none;
 }
 
 @media (min-width:40em) {
@@ -1255,10 +1270,12 @@ a:visited {
 }
 
 .success .success__container .success-right .success__carousels .carousel .success_text {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     font-style: italic;
+    padding: 10px;
     margin-bottom: 1.3em;
-    text-align: center;
+    text-align: start;
+    /* text-align: center; */
 }
 
 .success .success__container .success-right .success__carousels .carousel .nameandphoto {
@@ -1266,7 +1283,9 @@ a:visited {
     display: grid;
     gap: 1em;
     grid-template-columns: 15% 85%;
-    margin: auto;
+    margin: auto 0;
+    padding-left:10px;
+    /* padding: 10px; */
     width: 70%
 }
 
