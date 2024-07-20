@@ -256,15 +256,14 @@ a:visited {
 .navsec {
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .3);
     position: relative;
-    z-index: 1;   
+    /* z-index: 1;    */
 }
 
 .navsec .navbar {
-    position: fixed;
+
+    /* position: fixed; */
     background-color: #fff;
-    
     align-items: center;
-    
     display: grid;
     grid-template-areas: "ham logo .""link link link";
     margin: auto;
