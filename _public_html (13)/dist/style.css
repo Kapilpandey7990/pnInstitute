@@ -1429,6 +1429,11 @@ a:visited {
     margin-top: 30px;
 }
 
+.footer__about img{
+    height: 50px;
+    width: auto;
+}
+
 .footer .footer-bottom .bottom__container .tp .footer__about .footer__about_des {
     font-weight: 400;
     margin-top: 1em;
