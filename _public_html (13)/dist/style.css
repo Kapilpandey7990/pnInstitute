@@ -38,9 +38,9 @@
     position: relative;
 }
 
+
 .popup{
-    width: 320px;
-    /* border-radius:50px; */
+    width: 600px;
     position: absolute;
     transform: translate(-50%,-50%);
     left: 50%;
@@ -55,7 +55,7 @@
 }
 .popup button{
     display: block;
-    margin:  0 0 auto auto;
+    margin:  0 0 20px auto;
     background-color: transparent;
     font-size: 30px;
     color: #000000;
@@ -256,19 +256,21 @@ a:visited {
 .navsec {
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .3);
     position: relative;
-    /* z-index: 1;    */
+    
 }
 
-.navsec .navbar {
 
-    /* position: fixed; */
+.navsec .navbar {
+    z-index:1;
+    position: fixed;
     background-color: #fff;
     align-items: center;
     display: grid;
     grid-template-areas: "ham logo .""link link link";
     margin: auto;
-    max-width: 1400px;
-    padding: .3em 1em
+    width: 100%;
+    max-width: 5400px;
+    padding: .3em 1em;
 }
 
 .navsec .navbar .hamburger {
@@ -277,7 +279,7 @@ a:visited {
     grid-area: ham;
     height: 3px;
     transition: all .25s;
-    width: 25px
+    width: 25px;
 }
 
 .navsec .navbar .hamburger:after,
@@ -289,6 +291,7 @@ a:visited {
     height: 3px;
     transition: all .25s;
     width: 115%
+    
 }
 
 .navsec .navbar .hamburger:after {
@@ -489,6 +492,12 @@ a:visited {
         padding: .5em
     }
 }
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+  
 
 .hero {
     display: none;
@@ -526,7 +535,8 @@ a:visited {
 }
 
 .unione .unione__container .unionecat {
-    background-image: linear-gradient(to bottom, var(--blue), var(--light-blue));
+    background: #004D73;
+    /* background-image: linear-gradient(to bottom, var(--blue), var(--light-blue)); */
     display: grid;
     gap: 2em;
     grid-template-columns: 1fr 3fr;
@@ -540,7 +550,8 @@ a:visited {
 }
 
 .unione .unione__container .unionecat:hover {
-    background-image: linear-gradient(to bottom, var(--light-blue), var(--blue))
+    /* background-image: linear-gradient(to bottom, var(--light-blue), var(--blue)) */
+    background: #006289;
 }
 
 .unione .unione__container .unionecat .unionecat__text .unionecat__title {
@@ -1561,7 +1572,7 @@ a:visited {
         margin-bottom: 0
     }
 }
-
+/* 
 .president {
     background: var(--some-background);
     padding: 3em 0
@@ -1595,7 +1606,135 @@ a:visited {
         gap: 2em;
         grid-template-columns: 1fr 1fr
     }
+} */
+
+.president-message {
+    background-color: #f0f8ff; /* Adjust the background color as needed */
+    padding: 60px 0;
 }
+
+.president-message .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.president-message-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.president-message-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.president-message-text {
+    flex: 2;
+    padding: 20px;
+}
+
+.president-message .img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Adjust border radius as needed */
+}
+
+.president-message h3 {
+    font-size: 1.2rem;
+    color: #555; /* Adjust color as needed */
+    margin-bottom: 10px;
+}
+
+.president-message h2 {
+    font-size: 2rem;
+    color: #333; /* Adjust color as needed */
+    margin-bottom: 20px;
+}
+
+.president-message p {
+    font-size: 1rem;
+    color: #666; /* Adjust color as needed */
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.president-message .logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between logos */
+    margin-bottom: 20px;
+}
+
+.president-message .logos img {
+    max-width: 100px;
+}
+
+.president-message .social-icons {
+    display: flex;
+    gap: 15px; /* Adjust the gap between social icons */
+}
+
+.president-message .social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    .president-message-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .president-message-text {
+        padding-top: 0;
+    }
+}
+
+.ap_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.form-left, .ft-left {
+    flex: 1;
+}
+
+.ap_left-up {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ap_left-down {
+    font-size: 16px;
+    color: #555;
+}
+
+.form-right, .ft-right {
+    flex: 0;
+}
+
+.form-con, .ft-con {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.form-con:hover, .ft-con:hover {
+    background-color: #0056b3;
+}
+
 
 .srcell .secell__container {
     padding: 2em 0
