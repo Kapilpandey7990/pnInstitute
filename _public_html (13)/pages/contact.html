@@ -133,8 +133,8 @@
               <a href="https://www.instagram.com/p.n.institute/"
                 ><img src="../assets/images/social/insta.png" alt=""
               /></a>
-              <a href="http://www.twitter.com/PNInstitute1"><img src="../assets/images/social/twitter.png" alt="" /></a>
-              <a href="https://www.youtube.com/channel/UCSm1heeqEbCKyTRlH7L5C-g"
+              <a href="https://twitter.com/PNInstitute1"><img src="../assets/images/social/twitter.png" alt="" /></a>
+              <a href="https://www.youtube.com/@P.N.Institute"
                 ><img src="../assets/images/social/youtube.png" alt=""
               /></a>
             </div>
@@ -148,11 +148,11 @@
         <form action="https://formspree.io/f/xvoevqrz" method="POST" class="registration-form" data-aos="fade-left">
         <h2 class="section__title">Get in touch</h2>
         <p class="section__description">WE ARE ALWAYS OPEN TO YOUR IDEAS</p>
-        <input type="text" placeholder="Name" name="name" id="name"/>
-        <input type="email" name="email" id="email" placeholder="Email" />
-        <input type="tel" name="contact" id="contact" placeholder="Contact number" />
+        <input type="text" placeholder="Name" name="name" id="name" required />
+        <input type="email" name="email" id="email" placeholder="Email"  required />
+        <input type="tel" name="contact" id="contact" placeholder="Contact number"  required/>
         <!-- <input type="text" placeholder="Subject" /> -->
-        <select class="form-class" name="Select_Class" id="form-class">
+        <select class="form-class" name="Select_Class" id="form-class" required> 
           <option value>Select Class</option>
           <option value="class6">Class 6</option>
           <option value="class7">Class 7</option>
@@ -167,7 +167,7 @@
           <option value="class12S">Class 12 Science</option>
         </select>
         <!-- <input type="text" placeholder="Message" /> -->
-        <textarea name="message" placeholder="Message" id="message" cols="30" rows="5"></textarea>
+        <textarea name="message" placeholder="Message" id="message" cols="30" rows="5" required></textarea>
         <button type="submit" class="button">Send Message</button> 
       </form>
       </div>
