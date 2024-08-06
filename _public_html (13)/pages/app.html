@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Details Form</title>
+    <link rel="stylesheet" href="../dist/app.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <section class="applicat">
+    <div class="section-head text-center">
+        <h2 class="text-uppercase">
+            Application for Recruitment
+        </h2>
+        <div class="rdx-separator-outer ">
+            <div class="rdx-separator bg-primary style-liner"></div>
+        </div>
+        
+        
+    </div>
+    <div class="app-main-panel ">
+        <div class="app-panel-heading">
+            <h3 class="app-panel-title">Personal Details</h3>
+        </div>
+    
+        <div class="app-panel-body">
+            <div class="app-row">
+                <div class="app-subdetail">
+                    <label class="app-head-name">Apply For Designation</label><span class="app-text-danger">*</span>
+                    <select name="ctl00$MainContent$ARegStaff$ddlDesignation" id="MainContent_ARegStaff_ddlDesignation" class="app-form-control" required>
+                        <option value="" disabled selected>-- Select Designation --</option>
+                        <option value="1">HR Executive</option>
+                        <option value="2">Assistant Teacher</option>
+                        <option value="3">Admin</option>
+                        <option value="4">Graphics Designer</option>
+                        <option value="5">Faculty</option>
+                        <option value="6">Telecaller</option>
+                        <option value="7">Counsellor</option>
+                        <option value="8">Accountant</option>
+                        <option value="9">Manager</option>
+                        <option value="10">Marketing</option>
+                    </select>
+                </div>
+            </div>
+            <div class="app-row">
+                <div class="app-subdetail">
+                    <label class="app-head-name">Surname</label><span class="app-text-danger">*</span>
+                    <input name="ctl00$MainContent$ARegStaff$txtLastName" type="text" maxlength="100" id="MainContent_ARegStaff_txtLastName" class="app-form-control app-text-uppar" placeholder="Enter Surname" required />
+                </div>
+                <div class="app-subdetail">
+                    <label class="app-head-name">First Name</label><span class="app-text-danger">*</span>
+                    <input name="ctl00$MainContent$ARegStaff$txtFirstName" type="text" maxlength="100" id="MainContent_ARegStaff_txtFirstName" class="app-form-control app-text-uppar" placeholder="Enter First Name" required />
+                </div>
+                <div class="app-subdetail">
+                    <label class="app-head-name">Father/Husband Name</label><span class="app-text-danger">*</span>
+                    <input name="ctl00$MainContent$ARegStaff$txtFatherName" type="text" maxlength="100" id="MainContent_ARegStaff_txtFatherName" class="app-form-control app-text-uppar" placeholder="Enter Father/Husband Name" required />
+                </div>
+            </div>
+            <div class="app-row">
+                <div class="app-subdetail">
+                    <label class="app-head-name">Gender</label><span class="app-text-danger">*</span>
+                    <div>
+                        <label class="app-checkbox-inline app-radio-inline pt0">
+                            <input id="MainContent_ARegStaff_rdoMale" type="radio" name="ctl00$MainContent$ARegStaff$rdoGender" value="rdoMale" required />
+                            <span class="app-rdio-text">Male</span>
+                        </label>
+                        <label class="app-checkbox-inline app-radio-inline pt0">
+                            <input id="MainContent_ARegStaff_rdoFemale" type="radio" name="ctl00$MainContent$ARegStaff$rdoGender" value="rdoFemale" required />
+                            <span class="app-rdio-text">Female</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="app-subdetail">
+                    <label class="app-head-name">Date of Birth</label><span class="app-text-danger">*</span>
+                    <input name="ctl00$MainContent$ARegStaff$txtBirthDate" type="date" id="MainContent_ARegStaff_txtBirthDate" class="app-form-control app-datepicker app-text-uppar" placeholder="Enter Birth Date (dd-mm-yyyy)" required />
+                </div>
+                <div class="app-subdetail">
+                    <label class="app-head-name">Category</label><span class="app-text-danger">*</span>
+                    <select name="ctl00$MainContent$ARegStaff$ddlCategory" id="MainContent_ARegStaff_ddlCategory" class="app-form-control" required>
+                        <option value="" disabled selected>-- Select Category --</option>
+                        <option value="1">Open</option>
+                        <option value="2">EWS</option>
+                        <option value="3">OBC</option>
+                        <option value="4">SC</option>
+                        <option value="5">ST</option>
+                    </select>
+                </div>
+            </div>
+            <div class="app-row">
+                <div class="app-subdetail">
+                    <label class="app-head-name">Area/Village</label>
+                    <input name="ctl00$MainContent$ARegStaff$txtVillage" type="text" maxlength="50" id="MainContent_ARegStaff_txtVillage" class="app-form-control app-text-uppar" placeholder="Enter Village" />
+                </div>
+                <div class="app-subdetail">
+                    <label class="app-head-name">Taluka</label>
+                    <input name="ctl00$MainContent$ARegStaff$txtTaluka" type="text" maxlength="50" id="MainContent_ARegStaff_txtTaluka" class="app-form-control app-text-uppar" placeholder="Enter Taluka" />
+                </div>
+                <div class="app-subdetail">
+                    <label class="app-head-name">District</label>
+                    <input name="ctl00$MainContent$ARegStaff$txtDistrict" type="text" maxlength="50" id="MainContent_ARegStaff_txtDistrict" class="app-form-control app-text-uppar" placeholder="Enter District" />
+                </div>
+            </div>
+            <div class="app-row">
+                <div class="app-subdetail">
+                    <label class="app-head-name">State</label>
+                    <input name="ctl00$MainContent$ARegStaff$txtState" type="text" maxlength="50" id="MainContent_ARegStaff_txtState" class="app-form-control app-text-uppar" placeholder="Enter State" />
+                </div>
+                <div class="app-subdetail" style="flex: 0 0 66.666667%; max-width: 66.666667%;">
+                    <label class="app-head-name">Full Address</label>
+                    <textarea name="ctl00$MainContent$ARegStaff$txtAddress" rows="1" cols="20" id="MainContent_ARegStaff_txtAddress" class="app-form-control app-text-uppar" placeholder="Enter Address"></textarea>
+                </div>
+            </div>
+            <div class="app-row">
+                <div class="app-subdetail">
+                    <label class="app-head-name">Mobile No</label><span class="app-text-danger">*</span>
+                    <input name="ctl00$MainContent$ARegStaff$txtMobileNo" type="tel" maxlength="10" id="MainContent_ARegStaff_txtMobileNo" class="app-form-control app-text-uppar" placeholder="Enter Mobile No" pattern="\d{10}" required />
+                </div>
+                <div class="app-subdetail">
+                    <label class="app-head-name">WhatsApp No</label>
+                    <input name="ctl00$MainContent$ARegStaff$txtWhatsAppNo" type="tel" maxlength="10" id="MainContent_ARegStaff_txtWhatsAppNo" class="app-form-control app-text-uppar" placeholder="Enter WhatsApp No" pattern="\d{10}" />
+                </div>
+                <div class="app-subdetail">
+                    <label class="app-head-name">Email Id</label><span class="app-text-danger">*</span>
+                    <input name="ctl00$MainContent$ARegStaff$txtEmailId" type="email" id="MainContent_ARegStaff_txtEmailId" class="app-form-control app-txtEmailId" placeholder="Enter Email Id" required />
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <div class="app2-body mt-5">
+            <div class="app2-main-panel">
+                <div class="app2-panel-heading">
+                    <h3 class="app2-panel-title">Educational Details</h3>
+                </div>
+                <div class="app2-panel-body">
+                    <!-- First Section: Educational Details -->
+                    <div class="app2-row">
+                        <div class="app2-subdetail">
+                            <label class="app2-head-name">Section</label>
+                            <span class="app2-text-danger">*</span>
+                            <select name="ctl00$MainContent$ARegStaff$ddlSection" id="MainContent_ARegStaff_ddlSection" class="app2-form-control">
+                                <option value="0">-- Select Section --</option>
+                                <option value="1">HR</option>
+                                <option value="2">Account</option>
+                                <option value="3">Academic</option>
+                                <option value="4">Non Academic</option>
+                            </select>
+                        </div>
+                        <div class="app2-subdetail">
+                            <label class="app2-head-name">Medium (YOU CAN SELECT MULTIPLE)</label>
+                            <span class="app2-text-danger">*</span>
+                            <select name="ctl00$MainContent$ARegStaff$ddlMedium" id="MainContent_ARegStaff_ddlMedium" class="app2-form-control" data-placeholder="Select Medium" multiple>
+                                <option value="0">-- Select Medium --</option>
+                                <option value="1">Gujarati</option>
+                                <option value="2">English</option>
+                                <option value="3">Hindi</option>
+                                <option value="4">Marathi</option>
+                                <option value="5">Odia</option>
+                                <option value="6">Urdu</option>
+                                <option value="7">Telugu</option>
+                                <option value="8">Other</option>
+                            </select>
+                        </div>
+                        <div class="app2-subdetail">
+                            <label class="app2-head-name">Teaching (YOU CAN SELECT MULTIPLE)</label>
+                            <span class="app2-text-danger">*</span>
+                            <select name="ctl00$MainContent$ARegStaff$ddlTeaching" id="MainContent_ARegStaff_ddlTeaching" class="app2-form-control" data-placeholder="Select Teaching" multiple>
+                                <option value="0">-- Select Teaching --</option>
+                                <option value="1">Board</option>
+                                <option value="2">JEE</option>
+                                <option value="3">NEET</option>
+                            </select>
+                        </div>
+                    </div>
+            
+                    <!-- Second Section: Subject to Teach -->
+                    <div class="app2-row">
+                        <div class="app2-subdetail">
+                            <label class="app2-head-name">Subject to Teach</label>
+                            <span class="app2-text-danger">*</span>
+                            <input name="ctl00$MainContent$ARegStaff$txtSubject1" type="text" maxlength="50" id="MainContent_ARegStaff_txtSubject1" class="app2-form-control" placeholder="Enter Subject1" autocomplete="off" />
+                        </div>
+                        <div class="app2-subdetail">
+                            <label class="app2-head-name">&nbsp;</label>
+                            <input name="ctl00$MainContent$ARegStaff$txtSubject2" type="text" maxlength="50" id="MainContent_ARegStaff_txtSubject2" class="app2-form-control" placeholder="Enter Subject2" autocomplete="off" />
+                        </div>
+                        <div class="app2-subdetail">
+                            <label class="app2-head-name">&nbsp;</label>
+                            <input name="ctl00$MainContent$ARegStaff$txtSubject3" type="text" maxlength="50" id="MainContent_ARegStaff_txtSubject3" class="app2-form-control" placeholder="Enter Subject3" autocomplete="off" />
+                        </div>
+                    </div>
+            
+                    <!-- Third Section: Salary and Additional Information -->
+                    <div class="app2-row">
+                        <div class="app2-subdetail">
+                            <label class="app2-head-name">Expected Salary<span class="app2-text-danger">*</span></label>
+                            <div class="app2-input-group">
+                                <input name="ctl00$MainContent$ARegStaff$txtExpectedSalary" type="text" maxlength="7" id="MainContent_ARegStaff_txtExpectedSalary" class="app2-form-control" placeholder="Enter Expected Salary" autocomplete="off" />
+                                <span class="app2-input-group-addon">Per Month</span>
+                            </div>
+                        </div>
+                        <div id="MainContent_ARegStaff_divCurrentSalary" class="app2-subdetail">
+                            <label class="app2-head-name">Current Salary</label>
+                            <div class="app2-input-group">
+                                <input name="ctl00$MainContent$ARegStaff$txtCurrentSalary" type="text" maxlength="7" id="MainContent_ARegStaff_txtCurrentSalary" class="app2-form-control" placeholder="Enter Current Salary" autocomplete="off" />
+                                <span class="app2-input-group-addon">Per Month</span>
+                            </div>
+                        </div>
+                        <div class="app2-subdetail">
+                            <label class="app2-head-name">Why you want to join our Institute?</label>
+                            <textarea name="ctl00$MainContent$ARegStaff$txtWhyYouWantToJoin" rows="2" cols="20" id="MainContent_ARegStaff_txtWhyYouWantToJoin" class="app2-form-control" placeholder="Why you want to join our Institute..." autocomplete="off"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="app3-main-panel ">
+                    <div class="app3-panel-heading">
+                        <h3 class="app3-heading">Education Qualification Details (શૈક્ષણિક લાયકાત)</h3>
+                    </div>
+                    <div class="app3-panel-body app3-div-check-Qualification" style="overflow: auto;">
+                        <table class="app3-table app3-table-striped app3-table-bordered app3-mb0">
+                            <tr class="app3-input-sm">
+                                <th class="app3-font12 app3-text-center">No</th>
+                                <th class="app3-font12 app3-text-center">Name of Qualification</th>
+                                <th class="app3-font12 app3-text-center">Passing Year</th>
+                                <th class="app3-font12 app3-text-center">Board / University</th>
+                                <th class="app3-font12 app3-text-center">Num of Trials</th>
+                                <th class="app3-font12 app3-text-center app3-hide">Total Marks</th>
+                                <th class="app3-font12 app3-text-center app3-hide">Obtained Marks</th>
+                                <th class="app3-font12 app3-text-center">Percentage</th>
+                                <th class="app3-font12 app3-text-center">MarkSheet/Certificate Upload</th>
+                                <th id="app3-thQualificationDelete" class="app3-font12 app3-text-center">
+                                    <i title="Action" data-toggle="tooltip" class="fa fa-bolt app3-tooltips"></i>
+                                </th>
+                            </tr>
+                            <div class="app3-divScroll">
+                                <!-- <span id="app3_lblMarkSheetSrNo_0" class="app3-lblMarkSheetNos app3-hidden">1</span> -->
+                                <span id="app3_lblMarkSheetId_0" class="app3-lblMarkSheetIds app3-hidden"></span>
+                                <tr class="app3-input-sm">
+                                    <td class="app3-font-black">1.</td>
+                                    <td class="app3-font-black">
+                                        <input name="app3_txtExamName_0" type="text" maxlength="100" id="app3_txtExamName_0" class="app3-form-control app3-text-uppar" placeholder="Name of Qualification" autocomplete="off" />
+                                    </td>
+                                    <td>
+                                        <input name="app3_txtPassingYear_0" type="text" maxlength="4" id="app3_txtPassingYear_0" class="app3-form-control app3-text-uppar" placeholder="Passing Year" autocomplete="off" zvalidation="e=blur|v=IsNullNumber|m=Passing Year" />
+                                    </td>
+                                    <td>
+                                        <input name="app3_txtBoardName_0" type="text" maxlength="100" id="app3_txtBoardName_0" class="app3-form-control app3-text-uppar" placeholder="Board / University" autocomplete="off" />
+                                    </td>
+                                    <td>
+                                        <input name="app3_txtAttemptCount_0" type="text" maxlength="2" id="app3_txtAttemptCount_0" class="app3-form-control app3-text-uppar" placeholder="Num of Trials" autocomplete="off" zvalidation="e=blur|v=IsNullNumber|m=Num of Trials" />
+                                    </td>
+                                    <td class="app3-hide">
+                                        <input name="app3_txtTotalMarks_0" type="text" id="app3_txtTotalMarks_0" class="app3-form-control app3-txtTotalMarks app3-text-uppar" placeholder="Total Marks" autocomplete="off" zvalidation="e=blur|v=IsNullNumber|m=Total Marks" />
+                                    </td>
+                                    <td class="app3-hide">
+                                        <input name="app3_txtObtainedMarks_0" type="text" id="app3_txtObtainedMarks_0" class="app3-form-control app3-txtObtainedMarks app3-text-uppar" placeholder="Obtained Marks" autocomplete="off" zvalidation="e=blur|v=IsNullNumber|m=Obtained Marks" />
+                                    </td>
+                                    <td>
+                                        <!-- <input name="app3_txtPercentageHide_0" type="text" id="app3_txtPercentageHide_0" class="app3-txtPercentageHide app3-hidden" /> -->
+                                        <input name="app3_txtPercentage_0" type="text" maxlength="5" id="app3_txtPercentage_0" class="app3-form-control app3-txtPercentage app3-text-uppar" placeholder="Percentage" zvalidation="e=blur|v=IsNullNumber|m=Percentage" />
+                                    </td>
+                                    <td>
+                                        <input type="file" name="app3_fuMarkSheet_0" id="app3_fuMarkSheet_0" class="app3-form-control app3-fuMarkSheet" />
+                                        <span id="app3_spnmarkSheetMsg_0" class="app3-spnMarkSheetMsg app3-spn-error"></span>
+                                    </td>
+                                    <td id="app3_tdMArtksheet_0" class="app3-text-center app3-widthLinkButton">
+                                        <a onclick="" id="app3_lnkDeleteMarkSheetDetail_0" title="Delete" class="app3-lnkDeleteExpDetail app3-tooltips app3-trash app3-pr20 app3-font16" data-toggle="tooltip" href="javascript:void(0);" style="font-size: 16px;">
+                                            <span class="fa fa-trash"></span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <!-- <span id="app3_lblMarkSheetSrNo_1" class="app3-lblMarkSheetNos app3-hidden">2</span> -->
+                                <span id="app3_lblMarkSheetId_1" class="app3-lblMarkSheetIds app3-hidden"></span>
+                                <tr class="app3-input-sm">
+                                    <td class="app3-font-black">2.</td>
+                                    <td class="app3-font-black">
+                                        <input name="app3_txtExamName_1" type="text" maxlength="100" id="app3_txtExamName_1" class="app3-form-control app3-text-uppar" placeholder="Name of Qualification" autocomplete="off" />
+                                    </td>
+                                    <td>
+                                        <input name="app3_txtPassingYear_1" type="text" maxlength="4" id="app3_txtPassingYear_1" class="app3-form-control app3-text-uppar" placeholder="Passing Year" autocomplete="off" zvalidation="e=blur|v=IsNullNumber|m=Passing Year" />
+                                    </td>
+                                    <td>
+                                        <input name="app3_txtBoardName_1" type="text" maxlength="100" id="app3_txtBoardName_1" class="app3-form-control app3-text-uppar" placeholder="Board / University" autocomplete="off" />
+                                    </td>
+                                    <td>
+                                        <input name="app3_txtAttemptCount_1" type="text" maxlength="2" id="app3_txtAttemptCount_1" class="app3-form-control app3-text-uppar" placeholder="Num of Trials" autocomplete="off" zvalidation="e=blur|v=IsNullNumber|m=Num of Trials" />
+                                    </td>
+                                    <td class="app3-hide">
+                                        <input name="app3_txtTotalMarks_1" type="text" id="app3_txtTotalMarks_1" class="app3-form-control app3-txtTotalMarks app3-text-uppar" placeholder="Total Marks" autocomplete="off" zvalidation="e=blur|v=IsNullNumber|m=Total Marks" />
+                                    </td>
+                                    <td class="app3-hide">
+                                        <input name="app3_txtObtainedMarks_1" type="text" id="app3_txtObtainedMarks_1" class="app3-form-control app3-txtObtainedMarks app3-text-uppar" placeholder="Obtained Marks" autocomplete="off" zvalidation="e=blur|v=IsNullNumber|m=Obtained Marks" />
+                                    </td>
+                                    <td>
+                                        <!-- <input name="app3_txtPercentageHide_1" type="text" id="app3_txtPercentageHide_1" class="app3-txtPercentageHide app3-hidden" /> -->
+                                        <input name="app3_txtPercentage_1" type="text" maxlength="5" id="app3_txtPercentage_1" class="app3-form-control app3-txtPercentage app3-text-uppar" placeholder="Percentage" zvalidation="e=blur|v=IsNullNumber|m=Percentage" />
+                                    </td>
+                                    <td>
+                                        <input type="file" name="app3_fuMarkSheet_1" id="app3_fuMarkSheet_1" class="app3-form-control app3-fuMarkSheet" />
+                                        <span id="app3_spnmarkSheetMsg_1" class="app3-spnMarkSheetMsg app3-spn-error"></span>
+                                    </td>
+                                    <td id="app3_tdMArtksheet_1" class="app3-text-center app3-widthLinkButton">
+                                        <a onclick="" id="app3_lnkDeleteMarkSheetDetail_1" title="Delete" class="app3-lnkDeleteExpDetail app3-tooltips app3-trash app3-pr20 app3-font16" data-toggle="tooltip" href="javascript:void(0);" style="font-size: 16px;">
+                                            <span class="fa fa-trash"></span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <!-- Additional rows can be added here similarly -->
+                            </div>
+                        </table>
+                    </div>
+                </div>
+                <div class="app4-main-panel">
+                    <div class="app4-panel-heading">
+                        <h3 class="app4-head-name">Experience Details (અનુભવ)</h3>
+                    </div>
+                    <div class="app4-panel-body div-check-Experience" style="overflow: auto;">
+                        <table class="app4-table app4-table-striped app4-table-bordered app4-mb0">
+                            <tr class="input-sm">
+                                <th class="app4-font12 app4-text-center">No</th>
+                                <th class="app4-font12 app4-text-center">Organization Name</th>
+                                <th class="app4-font12 app4-text-center">Designation</th>
+                                <th class="app4-font12 app4-text-center">Start Date</th>
+                                <th class="app4-font12 app4-text-center">End Date</th>
+                                <th class="app4-font12 app4-text-center">Duration</th>
+                                <th class="app4-font12 app4-text-center">
+                                    <i title="Action" data-toggle="tooltip" class="fa fa-bolt app4-tooltips"></i>
+                                </th>
+                            </tr>
+                            <div class="app4-divScroll">
+                                <tr class="input-sm">
+                                    <td class="app4-text-black">1.</td>
+                                    <td>
+                                        <input name="ctl00$MainContent$ARegStaff$rptExperience$ctl00$txtOrganizationName" type="text" maxlength="100" id="MainContent_ARegStaff_rptExperience_txtOrganizationName_0" class="app4-form-control app4-text-uppar" placeholder="Organization Name" autocomplete="off" />
+                                    </td>
+                                    <td>
+                                        <input name="ctl00$MainContent$ARegStaff$rptExperience$ctl00$txtDesignation" type="text" maxlength="50" id="MainContent_ARegStaff_rptExperience_txtDesignation_0" class="app4-form-control app4-text-uppar" placeholder="Designation" autocomplete="off" />
+                                    </td>
+                                    <td>
+                                        <input name="ctl00$MainContent$ARegStaff$rptExperience$ctl00$txtStartDate" type="text" id="MainContent_ARegStaff_rptExperience_txtStartDate_0" class="app4-form-control app4-datepicker app4-txtStartDate app4-text-uppar app4-txtDate" placeholder="Start Date (dd-mm-yyyy)" autocomplete="off" zvalidation="e=blur|v=IsNullDate|m=Start Date" />
+                                    </td>
+                                    <td>
+                                        <input name="ctl00$MainContent$ARegStaff$rptExperience$ctl00$txtEndDate" type="text" id="MainContent_ARegStaff_rptExperience_txtEndDate_0" class="app4-form-control app4-datepicker app4-txtEndDate app4-text-uppar app4-txtDate" placeholder="End Date (dd-mm-yyyy)" autocomplete="off" zvalidation="e=blur|v=IsNullDate|m=End Date" />
+                                        <label class="app4-checkbox-inline app4-radio-inline app4-pt0"></label>
+                                    </td>
+                                    <td>
+                                        <span id="MainContent_ARegStaff_rptExperience_lblDuration_0" class="app4-form-control app4-lblDuration"></span>
+                                    </td>
+                                    <td class="app4-text-center app4-widthLinkButton">
+                                        <a onclick="" id="MainContent_ARegStaff_rptExperience_lnkDeleteExpDetail_0" title="Delete" class="app4-lnkDeleteExpDetail app4-tooltips app4-trash app4-pr20 app4-font16" data-toggle="tooltip" href="javascript:__doPostBack(&#39;ctl00$MainContent$ARegStaff$rptExperience$ctl00$lnkDeleteExpDetail&#39;,&#39;&#39;)" style="font-size: 16px;">
+                                            <span class="fa fa-trash"></span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <!-- Repeat for each experience entry -->
+                                <tr class="input-sm">
+                                    <td class="app4-text-black">2.</td>
+                                    <td>
+                                        <input name="ctl00$MainContent$ARegStaff$rptExperience$ctl01$txtOrganizationName" type="text" maxlength="100" id="MainContent_ARegStaff_rptExperience_txtOrganizationName_1" class="app4-form-control app4-text-uppar" placeholder="Organization Name" autocomplete="off" />
+                                    </td>
+                                    <td>
+                                        <input name="ctl00$MainContent$ARegStaff$rptExperience$ctl01$txtDesignation" type="text" maxlength="50" id="MainContent_ARegStaff_rptExperience_txtDesignation_1" class="app4-form-control app4-text-uppar" placeholder="Designation" autocomplete="off" />
+                                    </td>
+                                    <td>
+                                        <input name="ctl00$MainContent$ARegStaff$rptExperience$ctl01$txtStartDate" type="text" id="MainContent_ARegStaff_rptExperience_txtStartDate_1" class="app4-form-control app4-datepicker app4-txtStartDate app4-text-uppar app4-txtDate" placeholder="Start Date (dd-mm-yyyy)" autocomplete="off" zvalidation="e=blur|v=IsNullDate|m=Start Date" />
+                                    </td>
+                                    <td>
+                                        <input name="ctl00$MainContent$ARegStaff$rptExperience$ctl01$txtEndDate" type="text" id="MainContent_ARegStaff_rptExperience_txtEndDate_1" class="app4-form-control app4-datepicker app4-txtEndDate app4-text-uppar app4-txtDate" placeholder="End Date (dd-mm-yyyy)" autocomplete="off" zvalidation="e=blur|v=IsNullDate|m=End Date" />
+                                        <label class="app4-checkbox-inline app4-radio-inline app4-pt0"></label>
+                                    </td>
+                                    <td>
+                                        <span id="MainContent_ARegStaff_rptExperience_lblDuration_1" class="app4-form-control app4-lblDuration"></span>
+                                    </td>
+                                    <td class="app4-text-center app4-widthLinkButton">
+                                        <a onclick="" id="MainContent_ARegStaff_rptExperience_lnkDeleteExpDetail_1" title="Delete" class="app4-lnkDeleteExpDetail app4-tooltips app4-trash app4-pr20 app4-font16" data-toggle="tooltip" href="javascript:__doPostBack(&#39;ctl00$MainContent$ARegStaff$rptExperience$ctl01$lnkDeleteExpDetail&#39;,&#39;&#39;)" style="font-size: 16px;">
+                                            <span class="fa fa-trash"></span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4"></td>
+                                    <td>
+                                        <label class="app4-checkbox-inline app4-radio-inline app4-pt0">
+                                            <span onchange=""><input id="MainContent_ARegStaff_Chkruning" type="checkbox" name="ctl00$MainContent$ARegStaff$Chkruning" onclick="" /></span>
+                                            <span id="MainContent_ARegStaff_spnrunning" class="app4-rdio-text app4-font-bold">Running</span>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </div>
+                            <tr class="app4-table app4-table-condensed app4-table-responsive">
+                                <td colspan="7" class="app4-col-md-12 app4-addItem">
+                                    <a id="MainContent_ARegStaff_lnkAddNewExp" title="Add" class="app4-lnkAddNewExp app4-tooltips" href="javascript:__doPostBack(&#39;ctl00$MainContent$ARegStaff$lnkAddNewExp&#39;,&#39;&#39;)">
+                                        <i class="fa fa-plus"></i>Add 
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="app5-container">
+                    <div class="app5-header">
+                        <h3 class="app5-title">Certificate</h3>
+                    </div>
+                    <div class="app5-body" style="overflow: auto;">
+                        <span id="MainContent_ARegStaff_lblCertificateDelete"></span>
+                        
+                        <span id="MainContent_ARegStaff_rptCertificate_lblCertificateSrNo_0" class="app5-hidden">1</span>
+                        <span id="MainContent_ARegStaff_rptCertificate_lblCertificateId_0" class="app5-hidden"></span>
+                        <div class="app5-form-group app5-mb0">
+                            <div class="app5-subdetail">
+                                <label class="app5-head-name" style="font-weight: 700; font-size: 15px;">
+                                    (1)
+                                </label>
+                            </div>
+                            <div class="app5-subdetail">
+                                <label class="app5-head-name">Title</label>
+                                <input name="ctl00$MainContent$ARegStaff$rptCertificate$ctl00$txtCertificateTitle" type="text" maxlength="100" id="MainContent_ARegStaff_rptCertificate_txtCertificateTitle_0" class="app5-form-control app5-text-uppar" placeholder="Enter Title" autocomplete="off" />
+                            </div>
+                            <div class="app5-subdetail">
+                                <label class="app5-head-name">File</label>
+                                <input type="file" name="ctl00$MainContent$ARegStaff$rptCertificate$ctl00$fuCertificate" id="MainContent_ARegStaff_rptCertificate_fuCertificate_0" class="app5-form-control" />
+                            </div>
+                            <div class="app5-subdetail">
+                                <label class="app5-head-name" style="padding-bottom: 45px;"></label>
+                                <a id="MainContent_ARegStaff_rptCertificate_lnkDeleteCertificate_0" title="Delete" class="app5-tooltips app5-trash" href="javascript:__doPostBack(&#39;ctl00$MainContent$ARegStaff$rptCertificate$ctl00$lnkDeleteCertificate&#39;,&#39;&#39;)" style="font-size: 16px;">
+                                    <span class="fa fa-trash"></span>
+                                </a>
+                            </div>
+                            <div class="app5-subdetail">
+                                <span id="MainContent_ARegStaff_rptCertificate_spnCertificateMsg_0"></span>
+                            </div>
+                        </div>
+                        <hr style="margin-bottom: 10px; margin-top: 5px;">
+                        
+                        <span id="MainContent_ARegStaff_rptCertificate_lblCertificateSrNo_1" class="app5-hidden">2</span>
+                        <span id="MainContent_ARegStaff_rptCertificate_lblCertificateId_1" class="app5-hidden"></span>
+                        <div class="app5-form-group app5-mb0">
+                            <div class="app5-subdetail">
+                                <label class="app5-head-name" style="font-weight: 700; font-size: 15px;">
+                                    (2)
+                                </label>
+                            </div>
+                            <div class="app5-subdetail">
+                                <label class="app5-head-name">Title</label>
+                                <input name="ctl00$MainContent$ARegStaff$rptCertificate$ctl01$txtCertificateTitle" type="text" maxlength="100" id="MainContent_ARegStaff_rptCertificate_txtCertificateTitle_1" class="app5-form-control app5-text-uppar" placeholder="Enter Title" autocomplete="off" />
+                            </div>
+                            <div class="app5-subdetail">
+                                <label class="app5-head-name">File</label>
+                                <input type="file" name="ctl00$MainContent$ARegStaff$rptCertificate$ctl01$fuCertificate" id="MainContent_ARegStaff_rptCertificate_fuCertificate_1" class="app5-form-control" />
+                            </div>
+                            <div class="app5-subdetail">
+                                <label class="app5-head-name" style="padding-bottom: 45px;"></label>
+                                <a id="MainContent_ARegStaff_rptCertificate_lnkDeleteCertificate_1" title="Delete" class="app5-tooltips app5-trash" href="javascript:__doPostBack(&#39;ctl00$MainContent$ARegStaff$rptCertificate$ctl01$lnkDeleteCertificate&#39;,&#39;&#39;)" style="font-size: 16px;">
+                                    <span class="fa fa-trash"></span>
+                                </a>
+                            </div>
+                            <div class="app5-subdetail">
+                                <span id="MainContent_ARegStaff_rptCertificate_spnCertificateMsg_1"></span>
+                            </div>
+                        </div>
+                        <hr style="margin-bottom: 10px; margin-top: 5px;">
+                        
+                        <div class="app5-form-group app5-mb0">
+                            <div class="app5-full-width">
+                                <a id="MainContent_ARegStaff_lnkAddNewCertificate" title="Add" class="app5-tooltips app5-add-new" href="javascript:__doPostBack(&#39;ctl00$MainContent$ARegStaff$lnkAddNewCertificate&#39;,&#39;&#39;)">
+                                    <i class="fa fa-plus"></i>Add 
+                                </a>
+                                <a id="MainContent_ARegStaff_lnkUploadCertificate" class="app5-upload-button" href="javascript:__doPostBack(&#39;ctl00$MainContent$ARegStaff$lnkUploadCertificate&#39;,&#39;&#39;)">Upload Certificates</a>
+                            </div>
+                            <div class="app5-full-width">
+                                <span id="MainContent_ARegStaff_spnAllCertificateMsg" class="app5-error-message"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- App6 Section -->
+                <div class="app6-container">
+    <div class="app6-half">
+        <div class="app6-panel">
+            <div class="app6-header">
+                <h3 class="app6-title">Upload Signature</h3>
+            </div>
+            <div class="app6-body">
+                <span id="MainContent_ARegStaff_lblRegisterStaffSignId" class="app6-hidden"></span>
+                <div class="app6-table">
+                    <div class="app6-table-row">
+                        <div class="app6-table-cell">
+                            <div class="app6-form-group">
+                                <div class="app6-col">
+                                    <input type="file" name="ctl00$MainContent$ARegStaff$fuSign" id="MainContent_ARegStaff_fuSign" class="app6-form-control" />
+                                    <a id="MainContent_ARegStaff_lnkUploadSign" class="app6-upload-button" href="javascript:__doPostBack(&#39;ctl00$MainContent$ARegStaff$lnkUploadSign&#39;,&#39;&#39;)">Upload</a>
+                                </div>
+                                <div class="app6-col app6-textcenter">
+                                    <!-- Empty column for alignment -->
+                                </div>
+                            </div>
+                            <span id="MainContent_ARegStaff_lblSign" class="app6-error-message"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="app6-half">
+        <div class="app6-panel">
+            <div class="app6-header">
+                <h3 class="app6-title">Upload Resume</h3>
+            </div>
+            <div class="app6-body">
+                <span id="MainContent_ARegStaff_lblRegisterStaffResume" class="app6-hidden"></span>
+                <div class="app6-table">
+                    <div class="app6-table-row">
+                        <div class="app6-table-cell">
+                            <div class="app6-form-group">
+                                <div class="app6-col">
+                                    <input type="file" name="ctl00$MainContent$ARegStaff$fuResume" id="MainContent_ARegStaff_fuResume" class="app6-form-control" />
+                                    <a id="MainContent_ARegStaff_lnlUploadResume" class="app6-upload-button" href="javascript:__doPostBack(&#39;ctl00$MainContent$ARegStaff$lnlUploadResume&#39;,&#39;&#39;)">Upload</a>
+                                </div>
+                                <div class="app6-col app6-textcenter">
+                                    <!-- Empty column for alignment -->
+                                </div>
+                            </div>
+                            <span id="MainContent_ARegStaff_lblResume" class="app6-error-message"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                </div>
+                <!-- App7 Section -->
+                <div class="app7-panel">
+    <div class="app7-header">
+        <h3 class="app7-title">Declaration</h3>
+    </div>
+    <div class="app7-body app7-bold">
+        <div class="app7-form-group">
+            <div class="app7-col" style="font-size: 15px; color: black;">
+                <label class="app7-inline app7-checkbox">
+                    <input id="MainContent_ARegStaff_chkAgreeMentYes" type="checkbox" name="ctl00$MainContent$ARegStaff$chkAgreeMentYes" />
+                    <span class="app7-text app7-bold">I endorse that, all the details mentioned above are true 
+                        <br />
+                        ઉપર દર્શાવેલ તમામ વિગતો સાચી છે, જેની હું બાંહેધરી આપું છું.
+                    </span>
+                </label>
+            </div>
+        </div>
+    </div>
+                </div>
+                <!-- App8 Section -->
+                <div class="app8-panel">
+    <div class="app8-form-group app8-font-bold">
+        <div class="app8-col" style="font-size: 15px; color: black;">
+            
+            Registration Fees: 0.00/- (Non Transferable and Non Refundable)
+            <br />
+            Transaction Charges may Apply.
+        </div>
+    </div>
+    <div class="app8-form-group">
+        <div class="app8-col">
+            <a id="MainContent_ARegStaff_lnkSave" class="app8-button" href="javascript:__doPostBack(&#39;ctl00$MainContent$ARegStaff$lnkSave&#39;,&#39;&#39;)">Save</a>
+        </div>
+    </div>
+    <div class="app8-form-group" style="margin-top: 5px; font-size: 17px;">
+        <div class="app8-col">
+            <span id="MainContent_ARegStaff_spnCompulsory" class="app8-error"></span>
+        </div>
+    </div>
+                </div>
+
+ 
+                
+            </div>
+            
+            
+            
+            <!-- Add other form groups as needed -->
+         
+
+        </div>
+    </div>
+</section>
+
+    
+</body>
+</html>
+

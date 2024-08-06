@@ -1,0 +1,1338 @@
+/* Container and border styles */
+.app-main-panel {
+    border: 1px solid #337ab7;
+    border-radius: 4px;
+    padding: 0; /* Remove padding to ensure heading and content are aligned properly */
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%; /* Use a percentage to ensure responsiveness */
+    max-width: 1200px; /* Maximum width for larger screens */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    /* display: flex; */
+    flex-wrap: wrap;
+}
+
+/* Heading styles */
+.app-panel-heading {
+    background-color: #337ab7; /* Light blue background */
+    border-color: #337ab7;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    width: 100%; /* Ensure the heading spans the full width of its container */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    margin: 0; /* Ensure no extra margin is applied */
+}
+
+/* Panel body padding */
+.app-panel-body {
+    padding: 15px;
+    border-top: 1px solid #ccc; /* Add border to separate body from heading */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+/* Flexbox for responsive rows */
+.app-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+/* Responsive column styles */
+.app-subdetail {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    flex: 1;
+    box-sizing: border-box; /* Ensure padding and border are included in width/height */
+}
+
+/* Ensure columns take equal width and are responsive */
+@media (min-width: 576px) {
+    .app-subdetail {
+        /* flex: 0 0 50%;
+        max-width: 50%; */
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) {
+    .app-subdetail {
+        /* flex: 0 0 33.333333%;
+        max-width: 33.333333%; */
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 992px) {
+    .app-subdetail {
+        /* flex: 0 0 25%;
+        max-width: 25%; */
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+/* Stack columns in one column on extra small screens */
+@media (max-width: 575.98px) {
+    .app-subdetail {
+        /* flex: 0 0 100%;
+        max-width: 100%; */
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+/* Style for labels and required asterisk */
+.app-head-name {
+    font-weight: bold;
+}
+
+.app-text-danger {
+    color: #a94442;
+}
+
+/* Form control styles */
+.app-form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.app-radio-inline {
+    margin-right: 10px;
+}
+
+.app-rdio-text {
+    margin-left: 5px;
+}
+
+.app-datepicker {
+    background: #fff url('calendar-icon.png') no-repeat right 10px center;
+    cursor: pointer;
+}
+
+.app-text-uppar {
+    text-transform: uppercase;
+}
+
+.app-text-uppar::placeholder {
+    text-transform: none;
+}
+
+.app-checkbox-inline {
+    padding-left: 20px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.app-checkbox-inline input {
+    position: absolute;
+    margin-top: 4px;
+    margin-left: -20px;
+}
+
+.app-mb0 {
+    margin-bottom: 0;
+}   
+
+.app-pt0 {
+    padding-top: 0;
+}
+
+.app-placeholder {
+    color: #999;
+}
+
+.app-rows {
+    resize: none;
+}
+
+.app-txtEmailId {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.other_app{
+    border: 1px solid #337ab7;
+    border-radius: 4px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width:  100%;
+    /* max-width: 1200px; */
+    box-sizing: border-box;
+
+}
+/* Container and border styles */
+.app2-main-panel {
+    border: 1px solid #337ab7;
+    border-radius: 4px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+/* Heading styles */
+.app2-panel-heading {
+    background-color: #337ab7;
+    border-color: #337ab7;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Panel body padding */
+.app2-panel-body {
+    padding: 15px;
+    border-top: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Flexbox for responsive rows */
+.app2-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+/* Responsive column styles */
+.app2-subdetail {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+/* Ensure columns take equal width and are responsive */
+@media (min-width: 576px) {
+    .app2-subdetail {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) {
+    .app2-subdetail {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 992px) {
+    .app2-subdetail {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+/* Stack columns in one column on extra small screens */
+@media (max-width: 575.98px) {
+    .app2-subdetail {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+/* Style for labels and required asterisk */
+.app2-head-name {
+    font-weight: bold;
+}
+
+.app2-text-danger {
+    color: #a94442;
+}
+
+/* Form control styles */
+.app2-form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Input group styles */
+.app2-input-group {
+    position: relative;
+    width: 100%;
+}
+
+.app2-form-control {
+    width: 100%;
+    padding-right: 110px; /* Space for the addon text */
+    box-sizing: border-box;
+}
+
+.app2-input-group-addon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 0 4px 4px 0; /* Round only the right corners */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+/* Extra styles */
+.app2-radio-inline {
+    margin-right: 10px;
+}
+
+.app2-rdio-text {
+    margin-left: 5px;
+}
+
+.app2-datepicker {
+    background: #fff url('calendar-icon.png') no-repeat right 10px center;
+    cursor: pointer;
+}
+
+.app2-text-uppar {
+    text-transform: uppercase;
+}
+
+.app2-text-uppar::placeholder {
+    text-transform: none;
+}
+
+.app2-checkbox-inline {
+    padding-left: 20px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.app2-checkbox-inline input {
+    position: absolute;
+    margin-top: 4px;
+    margin-left: -20px;
+}
+
+.app2-mb0 {
+    margin-bottom: 0;
+}   
+
+.app2-pt0 {
+    padding-top: 0;
+}
+
+.app2-placeholder {
+    color: #999;
+}
+
+.app2-rows {
+    resize: none;
+}
+
+.app2-txtEmailId {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Styles for Education and Experience sections */
+.app2-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.app2-table th, .app2-table td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.app2-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.app2-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.app2-table .font-black {
+    font-weight: bold;
+}
+
+.app2-table .hide {
+    display: none;
+}
+
+.app2-widthLinkButton {
+    width: 100%;
+    text-align: center;
+}
+
+.app2-lnkAddNewQuali, .app2-lnkUploadMarksheet, .app2-lnkAddNewExp {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #5bc0de;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.app2-lnkAddNewQuali:hover, .app2-lnkUploadMarksheet:hover, .app2-lnkAddNewExp:hover {
+    background-color: #31b0d5;
+}
+
+.app2-addItem {
+    padding: 15px;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+.app2-panel-body divScroll {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+
+/* Container and border styles */
+.app3-main-panel {  
+    border: 1px solid #337ab7;
+    border-radius: 4px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    margin:3%;
+}
+
+/* Heading styles */
+.app3-panel-heading {
+    background-color: #337ab7;
+    border-color: #337ab7;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Panel body padding */
+.app3-panel-body {
+    padding: 15px;
+    border-top: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Flexbox for responsive rows */
+.app3-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+/* Responsive column styles */
+.app3-subdetail {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+/* Ensure columns take equal width and are responsive */
+@media (min-width: 576px) {
+    .app3-subdetail {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) {
+    .app3-subdetail {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 992px) {
+    .app3-subdetail {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+/* Stack columns in one column on extra small screens */
+@media (max-width: 575.98px) {
+    .app3-subdetail {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+/* Style for labels and required asterisk */
+.app3-head-name {
+    font-weight: bold;
+}
+
+.app3-text-danger {
+    color: #a94442;
+}
+
+/* Form control styles */
+.app3-form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.app3-radio-inline {
+    margin-right: 10px;
+}
+
+.app3-rdio-text {
+    margin-left: 5px;
+}
+
+.app3-datepicker {
+    background: #fff url('calendar-icon.png') no-repeat right 10px center;
+    cursor: pointer;
+}
+
+.app3-text-uppar {
+    text-transform: uppercase;
+}
+
+.app3-text-uppar::placeholder {
+    text-transform: none;
+}
+
+.app3-checkbox-inline {
+    padding-left: 20px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.app3-checkbox-inline input {
+    position: absolute;
+    margin-top: 4px;
+    margin-left: -20px;
+}
+
+.app3-mb0 {
+    margin-bottom: 0;
+}
+
+.app3-pt0 {
+    padding-top: 0;
+}
+
+.app3-placeholder {
+    color: #999;
+}
+
+.app3-rows {
+    resize: none;
+}
+
+.app3-txtEmailId {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Additional styles specific to app3 */
+.app3-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.app3-table th,
+.app3-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.app3-table th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+}
+
+.app3-table td {
+    background-color: #fff;
+}
+
+.app3-hide {
+    display: none;
+}
+
+.app3-text-black {
+    color: #000;
+}
+
+.app3-text-right {
+    text-align: right;
+}
+
+.app3-text-center {
+    text-align: center;
+}
+
+.app3-tooltips {
+    position: relative;
+    cursor: pointer;
+}
+
+.app3-tooltips:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+    
+
+/* App4 Main Panel */
+.app4-main-panel {
+    border: 1px solid #337ab7;
+    border-radius: 4px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    margin:3%;
+}
+
+/* Heading styles */
+.app4-panel-heading {
+    background-color: #337ab7;
+    border-color: #337ab7;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Panel body padding */
+.app4-panel-body {
+    padding: 15px;
+    border-top: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Flexbox for responsive rows */
+.app4-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+/* Responsive column styles */
+.app4-subdetail {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+/* Responsive column width */
+.app4-subdetail {
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+/* Ensure columns take equal width and are responsive */
+@media (min-width: 576px) {
+    .app4-subdetail {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) {
+    .app4-subdetail {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 992px) {
+    .app4-subdetail {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+/* Stack columns in one column on extra small screens */
+@media (max-width: 575.98px) {
+    .app4-subdetail {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+/* Style for labels and required asterisk */
+.app4-head-name {
+    font-weight: bold;
+}
+
+.app4-text-danger {
+    color: #a94442;
+}
+
+/* Form control styles */
+.app4-form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.app4-radio-inline {
+    margin-right: 10px;
+}
+
+.app4-rdio-text {
+    margin-left: 5px;
+}
+
+.app4-datepicker {
+    background: #fff url('calendar-icon.png') no-repeat right 10px center;
+    cursor: pointer;
+}
+
+.app4-text-uppar {
+    text-transform: uppercase;
+}
+
+.app4-text-uppar::placeholder {
+    text-transform: none;
+}
+
+.app4-checkbox-inline {
+    padding-left: 20px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.app4-checkbox-inline input {
+    position: absolute;
+    margin-top: 4px;
+    margin-left: -20px;
+}
+
+.app4-mb0 {
+    margin-bottom: 0;
+}
+
+.app4-pt0 {
+    padding-top: 0;
+}
+
+.app4-placeholder {
+    color: #999;
+}
+
+.app4-rows {
+    resize: none;
+}
+
+.app4-txtEmailId {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Additional styles specific to app4 */
+.app4-table {
+    width: 100%;
+    border-collapse: collapse;
+}   
+
+.app4-table th,
+.app4-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    /* text-align: center; */
+    
+}
+
+.app4-table th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+}
+
+.app4-table td {
+    background-color: #fff;
+}
+
+.app4-hide {
+    display: none;
+}
+
+.app4-text-black {
+    color: #000;
+}
+
+.app4-text-right {
+    text-align: right;
+}
+
+.app4-text-center {
+    text-align: center;
+}
+
+.app4-tooltips {
+    position: relative;
+    cursor: pointer;
+}
+
+.app4-tooltips:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+
+
+/* App5 Main Panel */
+.app5-container {
+    border: 1px solid #337ab7;
+    border-radius: 4px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    margin:3%;
+}
+
+/* Heading styles */
+.app5-header {
+    background-color: #337ab7;
+    border-color: #337ab7;
+    color:#fff;
+    padding: 10px 15px;
+    border-radius: 4px;     
+    margin: 0;
+}
+
+/* Panel body padding */
+.app5-body {
+    padding: 15px;
+    border-top: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Responsive column styles */
+.app5-form-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+/* Responsive column width */
+.app5-subdetail {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    /* flex: 1; */
+    box-sizing: border-box;
+}
+
+/* Responsive column layout adjustments */
+@media (min-width: 576px) {
+    .app5-subdetail {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) {
+    .app5-subdetail {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 992px) {
+    .app5-subdetail {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .app5-subdetail {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+/* Style for labels and required asterisk */
+.app5-title {
+    font-weight: bold;
+}
+
+.app5-text-danger {
+    color: #a94442;
+}
+
+/* Form control styles */
+.app5-form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.app5-text-uppar {
+    text-transform: uppercase;
+}
+
+.app5-text-uppar::placeholder {
+    text-transform: none;
+}
+
+.app5-tooltips {
+    position: relative;
+    cursor: pointer;
+}
+
+.app5-tooltips:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* Additional styles */
+.app5-trash {
+    color: red;
+}
+
+.app5-hidden {
+    display: none;
+}
+
+.app5-add-new {
+    background-color: #337ab7;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin:0 10px;
+}
+
+.app5-upload-button {
+    background-color: #337ab7;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    /* float: right; */
+    text-decoration: none;
+}
+
+.app5-error-message {
+    color: red;
+}
+
+.app5-mb0 {
+    margin-bottom: 0;
+}
+
+.app5-full-width {
+    width: 100%;
+}
+
+/* App6 Main Container */
+.app6-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Half width columns */
+.app6-half {
+    flex: 1;
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+/* Panel styles */
+.app6-panel {
+    
+    border: 1px solid #337ab7;
+    border-radius: 4px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    margin:3%;
+}
+
+/* Heading styles */
+.app6-header {
+    background-color: #337ab7;
+    color: #fff;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.app6-title {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* Body styles */
+.app6-body {
+    padding: 15px;
+    min-height: 150px;
+    box-sizing: border-box;
+}
+
+/* Table styles */
+.app6-table {
+    width: 100%;
+    margin-bottom: 0;
+    border-collapse: collapse;
+}
+
+.app6-table-row {
+    display: flex;
+    width: 100%;
+}
+
+.app6-table-cell {
+    flex: 1;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Form group styles */
+.app6-form-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+/* Column styles */
+.app6-col {
+    flex: 1;
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .app6-half {
+        width: 100%;
+    }
+}
+
+/* Form control styles */
+.app6-form-control {
+    width: 100%;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Error message styles */
+.app6-error-message {
+    color: red;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Hidden elements */
+.app6-hidden {
+    display: none;
+}
+
+/* Button styles */
+.app6-upload-button {
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    background-color: #337ab7;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.app6-upload-button:hover {
+    background-color: #286090;
+}
+
+/* Text center alignment */
+.app6-textcenter {
+    text-align: center;
+}
+
+
+/* App7 Panel */
+.app7-panel {
+    overflow: hidden;
+    border: 1px solid #337ab7;
+    border-radius: 4px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    margin:3%;
+}
+
+/* Header styles */
+.app7-header {
+    background-color: #337ab7;
+    color: #fff;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.app7-title {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* Body styles */
+.app7-body {
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.app7-bold {
+    font-weight: bold;
+}
+
+/* Form group styles */
+.app7-form-group {
+    display: flex;
+    margin: 0;
+}
+
+/* Column styles */
+.app7-col {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Checkbox styles */
+.app7-inline {
+    display: flex;
+    align-items: center;
+}
+
+.app7-checkbox input {
+    margin-right: 10px;
+}
+
+.app7-text {
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .app7-panel {
+        width: 100%;
+    }
+}
+
+/* App8 Panel */
+.app8-panel {
+    overflow: hidden;
+    /* border: 1px solid #337ab7;
+    border-radius: 4px; */
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    margin:3%;
+}
+
+/* Form group styles */
+.app8-form-group {
+    display: flex;
+    margin: 5px 0;
+}
+
+/* Column styles */
+.app8-col {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Font bold */
+.app8-font-bold {
+    font-weight: bold;
+}
+
+/* Button styles */
+.app8-button {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+}
+
+/* Error message styles */
+.app8-error {
+    color: red;
+    float: right;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .app8-panel {
+        width: 100%;
+    }
+}

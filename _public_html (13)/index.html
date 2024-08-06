@@ -25,7 +25,7 @@
   </head>
 
   <body>
-      <div id="overlay  my_popup">
+      <div id="overlay my_popup">
          <div class="popup">
         <button class="close" >&times;</button>
         <!-- <img src="assets/images/POPUP 2.jpg" alt=""/> -->
@@ -33,7 +33,7 @@
     </div> 
       </div>
          
-    <section class="navsec">
+    <section class="navsec ">
       <nav class="navbar ">
         <div class="hamburger" id="hamburger"></div>
         <div class="nav-logo">
@@ -129,7 +129,7 @@
       <!-- note 
         Always create a image 
       -->
-      <div id="carouselExampleInterval" class="carousel slide " data-bs-ride="carousel">
+      <div id="carouselExampleInterval" class="carousel slide ccancel" data-bs-ride="carousel">
         <div class="carousel-inner ">
           <div class="carousel-item active" data-bs-interval="1000">
             <img src="images/new pn banner.png" class="d-block w-100" alt="...">
@@ -852,6 +852,14 @@ document.querySelector(".close").addEventListener("click", function(){
         popup.style.display = 'none';
       }
     });
+
+    let my_marzi=document.querySelector('.popup');
+    my_cancel=document.querySelector('.ccancel');
+
+    my_cancel.addEventListener('click',()=>{
+      my_marzi.style.display='none';
+    })
+
 
 
 
