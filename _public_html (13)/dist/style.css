@@ -1860,7 +1860,7 @@ a:visited {
     .positions .positions__container {
         display: grid;
         gap: 2em;
-        grid-template-columns: 1fr 1fr
+        grid-template-columns: 1fr 
     }
 }
 
@@ -1917,7 +1917,7 @@ a:visited {
     .positions .positions__container .positions-right .car-form .basic-info {
         display: grid;
         gap: 1.5em;
-        grid-template-columns: 1fr 1fr
+        grid-template-columns: 1fr 
     }
 }
 
