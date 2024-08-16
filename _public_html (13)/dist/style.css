@@ -44,7 +44,7 @@
     position: absolute;
     transform: translate(-50%,-50%);
     left: 50%;
-    top: 5%;
+    top: 4%;
     border-radius: 8px;
     font-family: "Poppins",sans-serif;
     display: none;
@@ -2032,7 +2032,7 @@ a:visited {
 .carousel1 {
     background: url(../assets/images/success/topper-bg.png), var(--some-background);
     background-size: cover;
-    padding: 4em 0
+    padding: 6em 0
 }
 
 .carousel1 .carousel__container img {
