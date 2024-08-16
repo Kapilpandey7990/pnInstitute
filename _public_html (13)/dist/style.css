@@ -1668,12 +1668,18 @@ a:visited {
 .president-message .logos {
     display: flex;
     flex-wrap: wrap;
+    
     gap: 20px; /* Adjust the gap between logos */
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    margin: 20px 0;
+
 }
 
 .president-message .logos img {
-    max-width: 100px;
+    /* max-width: 100px; */
+    height:auto;
+    width: 200px;
+    margin-left: -58px;
 }
 
 .president-message .social-icons {
