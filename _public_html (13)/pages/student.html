@@ -223,7 +223,7 @@ input[type=submit]:hover {
     </div>
     <div class="loginPopup1">
       <div class="formPopup1" id="popupForm1">
-        <form action="https://formsubmit.co/kp894855@gmail.com" method="POST" class="formContainer">
+        <form id="contactForm" action="https://formsubmit.co/kp894855@gmail.com" method="POST" class="formContainer">
           <i class="fa fa-close" onclick="closeForm1()"style="font-size:38px;color:red ; float: right;"></i>
           <h2>Get in Touch</h2>
           <label >
@@ -263,7 +263,7 @@ input[type=submit]:hover {
     </div>
     <div class="loginPopup2">
       <div class="formPopup2" id="popupForm2">
-        <form action="https://formsubmit.co/kp894855@gmail.com"  method="POST" class="formContainer">
+        <form id="contactForm" action="https://formsubmit.co/kp894855@gmail.com"  method="POST" class="formContainer">
           <i class="fa fa-close" onclick="closeForm2()"style="font-size:38px;color:red ; float: right;"></i>
           <h2>Get in Touch</h2>
          
@@ -305,7 +305,7 @@ input[type=submit]:hover {
     </div>
     <div class="loginPopup3">
       <div class="formPopup3" id="popupForm3">
-        <form action="https://formsubmit.co/kp894855@gmail.com"  method="POST" class="formContainer">
+        <form id="contactForm" action="https://formsubmit.co/kp894855@gmail.com"  method="POST" class="formContainer">
           <i class="fa fa-close" onclick="closeForm3()"style="font-size:38px;color:red ; float: right;"></i>
           <h2>Get in Touch</h2>
          
@@ -347,7 +347,7 @@ input[type=submit]:hover {
     </div>
     <div class="loginPopup4">
       <div class="formPopup4" id="popupForm4">
-        <form action="https://formsubmit.co/kp894855@gmail.com"  method="POST" class="formContainer">
+        <form id="contactForm" action="https://formsubmit.co/kp894855@gmail.com"  method="POST" class="formContainer">
           <i class="fa fa-close" onclick="closeForm4()"style="font-size:38px;color:red ; float: right;"></i>
           <h2>Get in Touch</h2>
          
@@ -391,7 +391,7 @@ input[type=submit]:hover {
     </div>
     <div class="loginPopup5">
       <div class="formPopup5" id="popupForm5">
-        <form action="https://formsubmit.co/kp894855@gmail.com"  method="POST" class="formContainer">
+        <form id="contactForm" action="https://formsubmit.co/kp894855@gmail.com"  method="POST" class="formContainer">
           <i class="fa fa-close" onclick="closeForm5()"style="font-size:38px;color:red ; float: right;"></i>
           <h2>Get in Touch</h2>
          
@@ -434,7 +434,7 @@ input[type=submit]:hover {
     </div>
     <div class="loginPopup6">
       <div class="formPopup6" id="popupForm6">
-        <form action="https://formsubmit.co/kp894855@gmail.com"  method="POST" class="formContainer">
+        <form id="contactForm" action="https://formsubmit.co/kp894855@gmail.com"  method="POST" class="formContainer">
           <i class="fa fa-close" onclick="closeForm6()"style="font-size:38px;color:red ; float: right;"></i>
           <h2>Get in Touch</h2>
          
@@ -477,7 +477,7 @@ input[type=submit]:hover {
     </div>
     <div class="loginPopup7">
       <div class="formPopup7" id="popupForm7">
-        <form action="https://formsubmit.co/kp894855@gmail.com"  method="POST" class="formContainer">
+        <form id="contactForm" action="https://formsubmit.co/kp894855@gmail.com"  method="POST" class="formContainer">
           <i class="fa fa-close" onclick="closeForm7()"style="font-size:38px;color:red ; float: right;"></i>
           <h2>Get in Touch</h2>
          
@@ -1292,6 +1292,12 @@ input[type=submit]:hover {
   window.onload = function() {
     document.getElementById('contactForm').reset();
   };
+  
+  let mm= document.querySelector('.loginPopup');
+  mm.window.onload.reset(); 
+  let mm1= document.querySelector('.loginPopup2');
+  mm2.window.onload.reset(); 
+
 
   
   $(document).ready(function(){
