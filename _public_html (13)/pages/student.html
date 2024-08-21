@@ -1230,6 +1230,7 @@ input[type=submit]:hover {
     <script src="../dist/script.js"></script>
   </body>
 </html>
+
 <script>
   function openForm() {
     document.getElementById("popupForm").style.display = "block";
@@ -1288,18 +1289,19 @@ input[type=submit]:hover {
 
   let email = document.getElementById('email');
   let number = document.getElementById('number');
-  
-  window.onload = function() {
-    document.getElementById('contactForm').reset();
-  };
-  
-  let mm= document.querySelector('.loginPopup');
-  mm.window.onload.reset(); 
-  let mm1= document.querySelector('.loginPopup2');
-  mm2.window.onload.reset(); 
+
+  // it reloads the page everytime when you come back to the page 
+  if (performance.navigation.type === 1) {
+            console.log('This is a page reload.');
+        } else {
+            location.reload();
+        }
 
 
-  
+    function closeForm() {
+        document.getElementById('popupForm').style.display = 'none';
+    }
+    
   $(document).ready(function(){
        $('#download').click(function(e){
          e.preventDefault()
