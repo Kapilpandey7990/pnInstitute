@@ -1169,7 +1169,7 @@ input[type=submit]:hover {
               <p class="addressline">
                 <i class="fas fa-phone-alt"></i><a href="tel:+917433986083">&nbsp&nbsp+91 7433986083 </a>
               </p>
-              <p class="addressline">
+              <p class="addressline"> 
                 <i class="fas fa-envelope"></i>
                 <a href="mailto:admission@pninstitute.in">&nbsp&nbspadmission@pninstitute.in </a>
               </p>
@@ -1288,16 +1288,17 @@ input[type=submit]:hover {
     document.getElementById("popupForm8").style.display = "none";
   }
 
-  let email = document.getElementById('email');
-  let number = document.getElementById('number');
+  
 
   // it reloads the page everytime when you come back to the page 
   if (performance.navigation.type === 1) {
             console.log('This is a page reload.');
-        } else {
+        } else { 
             location.reload();
         }
+        
 
+        
 
     function closeForm() {
         document.getElementById('popupForm').style.display = 'none';
