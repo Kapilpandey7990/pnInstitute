@@ -1,10 +1,13 @@
 {
     "version": 2,
-      "type": "static",
+    
       "builds": [
-        { "src": "index.html", "use": "@vercel/static" }
+        { "src": "server.js", "use": "@vercel/node" }
+      ],
+      "routes": [
+        { "src": "/(.*)", "dest": "/server.js" }
       ]
-  ,
+    ,
     "routes": [
       {
         "src": "/(.*)",
