@@ -1,6 +1,7 @@
 {
   "name": "gulp-sass-boilerplate",
   "version": "1.0.0",
+  "main": "server.js",
   "description": "Minimal Gulp workflow to compile Sass",
   "keywords": [],
   "author": "Jessica Chan (Coder Coder)",
@@ -32,7 +33,7 @@
     "IE 11",
     "> 1%"
   ],
-  "main": "gulpfile.js",
+  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
