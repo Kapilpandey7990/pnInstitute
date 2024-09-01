@@ -1,7 +1,7 @@
 {
-  "name": "gulp-sass-boilerplate",
+  "name": "my-app",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "Server.js",
   "description": "Minimal Gulp workflow to compile Sass",
   "keywords": [],
   "author": "Jessica Chan (Coder Coder)",
