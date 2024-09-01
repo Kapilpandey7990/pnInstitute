@@ -3,3 +3,4 @@ changes/
 dist/style.css.map
 dist/script.js.map
 not_to_publish/
+.vercel

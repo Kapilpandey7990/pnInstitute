@@ -145,33 +145,30 @@
 
     <section class="contact-form">
       <div class="container contact-form__container">
-        <form action="https://formsubmit.co/iam980551@gmail.com" method="POST"  enctype="multipart/form-data" class="registration-form" data-aos="fade-left">
-        <h2 class="section__title">Get in touch</h2>
+        <form action="/submit-contact" method="POST" class="registration-form" data-aos="fade-left">
+          <h2 class="section__title">Get in touch</h2>
           <p class="section__description">WE ARE ALWAYS OPEN TO YOUR IDEAS</p>
           <input type="text" placeholder="Name" name="name" id="name" required />
-          <input type="email" name="email" id="email" placeholder="Email"  required />
-          <input type="tel" name="contact" id="contact" placeholder="Contact number"  required/>
-        <!-- <input type="text" placeholder="Subject" /> -->
-        <select class="form-class" name="Select_Class" id="form-class" required> 
-          <option value>Select Class</option>
-          <option value="class6">Class 6</option>
-          <option value="class7">Class 7</option>
-          <option value="class8">Class 8</option>
-          <option value="class9">Class 9</option>
-          <option value="class10">Class 10</option>
-        
-          <option value="class11C">Class 11 Commerce</option>
-          <option value="class11S">Class 11 Science</option>
-          
-          <option value="class12C">Class 12 Commerce</option>
-          <option value="class12S">Class 12 Science</option>
-        </select>
-        <!-- <input type="text" placeholder="Message" /> -->
-        <textarea name="message" placeholder="Message" id="message" cols="30" rows="5" required></textarea>
-        <button type="submit" class="button">Send Message</button> 
-      </form>
+          <input type="email" name="email" id="email" placeholder="Email" required />
+          <input type="tel" name="number" id="contact" placeholder="Contact number" required />
+          <select class="form-class" name="selectClass" id="form-class" required>
+            <option value="">Select Class</option>
+            <option value="class6">Class 6</option>
+            <option value="class7">Class 7</option>
+            <option value="class8">Class 8</option>
+            <option value="class9">Class 9</option>
+            <option value="class10">Class 10</option>
+            <option value="class11C">Class 11 Commerce</option>
+            <option value="class11S">Class 11 Science</option>
+            <option value="class12C">Class 12 Commerce</option>
+            <option value="class12S">Class 12 Science</option>
+          </select>
+          <textarea name="subject" placeholder="Message" id="message" cols="30" rows="5" required></textarea>
+          <button type="submit" id="sub" class="button">Send Message</button>
+        </form>
       </div>
     </section>
+    
 
     <section class="success">
       <div class="testi_container">
@@ -410,6 +407,11 @@
     <section class="copyright">
       <div class="container">&copy; Copyright 2024. All Rights Reserved by PN Institute</div>
     </section>
+    <script>
+      document.getElementById('sub').addEventListener('click',()=>{
+        document.getElementById('name').style.display="none";
+      })
+    </script>
 
     <script src="../dist/jquery.min.js"></script>
     <script src="../dist/jquery-migrate.min.js"></script>
