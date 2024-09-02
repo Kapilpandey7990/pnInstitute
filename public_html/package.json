@@ -1,7 +1,7 @@
 {
-  "name": "my-app",
+  "name": "gulp-sass-boilerplate",
   "version": "1.0.0",
-  "main": "Server.js",
+  "main": "server.js",
   "description": "Minimal Gulp workflow to compile Sass",
   "keywords": [],
   "author": "Jessica Chan (Coder Coder)",
@@ -33,11 +33,11 @@
     "IE 11",
     "> 1%"
   ],
-    
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node Server.js"
-  },
+    "start": "node server.js" 
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abhi-sawant/pn.git"
