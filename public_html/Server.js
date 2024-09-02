@@ -13,7 +13,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Serve static files from the directory
-app.use(express.static(path.join(__dirname, 'index.html')));
+app.use(express.static(path.join(__dirname)));
+
 
 // MongoDB connection (not used for file storage in this version)
 const mongoURI = 'mongodb://localhost:27017/formDataDB';

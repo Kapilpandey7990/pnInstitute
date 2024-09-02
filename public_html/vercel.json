@@ -6,19 +6,15 @@
         "use": "@vercel/node"
       },
       {
-        "src": "public_html/index.html",
-        "use": "@vercel/static-build"
-      }
+      "src": "public_html/index.html",
+      "use": "@vercel/static-build"
+    }
     ],
     "routes": [
       {
         "src": "/(.*)",
         "dest": "/Server.js"
-      },
-      {
-      "src": "/(.*)",
-      "dest": "/public_html/index.html"
-    }
+      }
     ]
   }
   
