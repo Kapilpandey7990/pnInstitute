@@ -209,7 +209,7 @@ app.post('/submit-contact', async (req, res) => {
         await transporter.sendMail(mailOptions);
 
         // Redirect to thank you page or send a success response
-        res.redirect('/pages/thank.html');
+        res.redirect('/pages/contact_thank.html');
     } catch (error) {
         console.error('Error sending email:', error);
         res.status(500).send('An error occurred while sending the email.');
@@ -237,7 +237,7 @@ app.post('/submit-contact-main', async (req, res) => {
 
         // Redirect to thank you page or send a success response
         
-        res.redirect('/pages/thank.html');
+        res.redirect('/pages/index_thank.html');
     } catch (error) {
         console.error('Error sending email:', error);
         res.status(500).send('An error occurred while sending the email.');
@@ -249,8 +249,11 @@ app.post('/submit-contact-main', async (req, res) => {
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
-app.get('/pages/index_thank',(req,res)=>{
-    res.sendFile(path.join(__dirname,'pages','thank.html'));
+app.get('/pages/index_thank.html',(req,res)=>{
+    res.sendFile(path.join(__dirname,'pages','index_thank.html'));
+})
+app.get('/pages/contact_thank.html',(req,res)=>{
+    res.sendFile(path.join(__dirname,'pages','contact_thank.html'));
 })
 
 // Serve additional pages
