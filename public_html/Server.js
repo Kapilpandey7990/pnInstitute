@@ -246,9 +246,9 @@ app.post('/submit-contact-main', async (req, res) => {
 
 
 // Serve the HTML form
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public_html', 'index.html'));
-  });
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
 app.get('/pages/index_thank.html',(req,res)=>{
     res.sendFile(path.join(__dirname,'pages','index_thank.html'));
 })
