@@ -1315,7 +1315,9 @@ input[type=submit]:hover {
     document.getElementById("popupForm8").style.display = "none";
   }
 
-  
+  window.onpopstate = function(event) {
+  document.getElementById("contactForm").reset();
+};
 
   // it reloads the page everytime when you come back to the page 
   if (performance.navigation.type === 1) {
