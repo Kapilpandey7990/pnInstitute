@@ -182,7 +182,7 @@ input[type=submit]:hover {
     <div class="loginPopup">
       <div class="formPopup" id="popupForm">
         
-        <form id="contactForm" action="/submit-form"  method="POST" onsubmit="this.reset();" class="formContainer">
+        <form id="contactForm" action="/submit-form"  method="POST" onsubmit="handleSubmit(event)" class="formContainer">
           <i class="fa fa-close" onclick="closeForm()"style="font-size:38px;color:red ; float: right;"></i>
           <h2>Get in Touch</h2>
           <input type="hidden" name="formType" value="loginPopup">
@@ -1256,6 +1256,32 @@ input[type=submit]:hover {
     <script src="../dist/slick.min.js"></script>
     <script src="../dist/slick-slide.js"></script>
     <script src="../dist/script.js"></script>
+    <script>
+      function handleSubmit(event) {
+        event.preventDefault(); // Prevent default form submission
+    
+        const form = event.target;
+        const formData = new FormData(form);
+    
+        fetch(form.action, {
+          method: 'POST',
+          body: formData
+        }).then(response => {
+          if (response.ok) {
+            // Handle success
+            console.log('Form submitted successfully');
+            
+            // Reset the form
+            form.reset();
+          } else {
+            // Handle error
+            console.error('Form submission failed');
+          }
+        }).catch(error => {
+          console.error('An error occurred:', error);
+        });
+      }
+    </script>
   </body>
 </html>
 

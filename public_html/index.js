@@ -16,6 +16,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname)));
 
 
+// MongoDB connection (not used for file storage in this version)
+const mongoURI = 'mongodb://localhost:27017/formDataDB';
+mongoose.connect(mongoURI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 
 // Multer setup
 const storage = multer.memoryStorage();
