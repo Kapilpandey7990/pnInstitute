@@ -1256,33 +1256,7 @@ input[type=submit]:hover {
     <script src="../dist/slick.min.js"></script>
     <script src="../dist/slick-slide.js"></script>
     <script src="../dist/script.js"></script>
-    <script>
-      document.getElementById('contactForm').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent default form submission
-
-  // Create a FormData object and submit the form via fetch or XMLHttpRequest
-  const formData = new FormData(this);
-
-  fetch('/submit-form', {
-    method: 'POST',
-    body: formData
-  }).then(response => {
-    if (response.ok) {
-      // Handle the response as needed, e.g., show a success message
-      console.log('Form submitted successfully');
-      
-      // Reset the form fields
-      this.reset();
-    } else {
-      // Handle errors
-      console.error('Form submission failed');
-    }
-  }).catch(error => {
-    console.error('An error occurred:', error);
-  });
-});
-
-    </script>
+    
     
   </body>
 </html>

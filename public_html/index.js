@@ -16,13 +16,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname)));
 
 
-// MongoDB connection (not used for file storage in this version)
-const mongoURI = 'mongodb://localhost:27017/formDataDB';
-mongoose.connect(mongoURI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
-
 // Multer setup
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
@@ -36,17 +29,7 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-// Define Mongoose schema and model for form submissions
-const formSchema = new mongoose.Schema({
-    name: String,
-    email: String,
-    number: String,
-    selectClass: String,
-    message: String,
-    attachment: String // Storing file URL or path
-});
 
-const FormData = mongoose.model('FormData', formSchema);
 
 // Handle form submission for reviews
 app.post('/submit-review', upload.single('attachment'), async (req, res) => {
@@ -73,18 +56,7 @@ app.post('/submit-review', upload.single('attachment'), async (req, res) => {
 
         await transporter.sendMail(mailOptions);
 
-        // Create a new document
-        const formData = new FormData({
-            name,
-            email: req.body.email,
-            number: contact,
-            selectClass,
-            message: subject,
-            attachment: req.file ? req.file.originalname : null
-        });
-
-        // Save the document (optional, if you want to store data in MongoDB)
-        // await formData.save();
+        
 
         // Redirect to thank you page
         res.redirect('/pages/thank.html');
