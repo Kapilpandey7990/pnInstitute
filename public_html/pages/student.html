@@ -215,7 +215,7 @@ input[type=submit]:hover {
           </select><br><br>
           <input type="hidden" name="_captcha" value="false">     
           <input type="hidden" name="_next" value="https://drive.google.com/file/d/10G4zjuid0f7pe0_jUb1I5TWBrxpjmt-2/view?usp=sharing">
-          <button type="submit" class="dwn">Submit</button>
+          <button type="submit" id="sub"  class="dwn">Submit</button>
           <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
          <!-- <a href="" id="download"><button class="dwn"> Download</button></a> -->
         </form>
@@ -1315,9 +1315,19 @@ input[type=submit]:hover {
     document.getElementById("popupForm8").style.display = "none";
   }
 
-  window.onpopstate = function(event) {
-  document.getElementById("contactForm").reset();
-};
+  document.getElementById('sub').addEventListener('click',()=>{
+    console.log(document.getElementById('name').value) 
+  })
+
+  document.getElementById('sub').addEventListener('click',(event)=>{
+    event.preventDefault(); // Prevent default form submission behavior
+
+      document.getElementById('name').value='';
+      document.getElementById('email').value='';   
+      document.getElementById('number').value='';
+      document.getElementById('form-class').value='';   
+
+  })
 
   // it reloads the page everytime when you come back to the page 
   if (performance.navigation.type === 1) {
