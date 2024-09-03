@@ -182,7 +182,7 @@ input[type=submit]:hover {
     <div class="loginPopup">
       <div class="formPopup" id="popupForm">
         
-        <form id="contactForm" action="/submit-form"  method="POST" class="formContainer">
+        <form id="contactForm" action="/submit-form"  method="POST" onsubmit="this.reset();" class="formContainer">
           <i class="fa fa-close" onclick="closeForm()"style="font-size:38px;color:red ; float: right;"></i>
           <h2>Get in Touch</h2>
           <input type="hidden" name="formType" value="loginPopup">
@@ -1319,15 +1319,15 @@ input[type=submit]:hover {
     console.log(document.getElementById('name').value) 
   })
 
-  document.getElementById('sub').addEventListener('click',(event)=>{
-    event.preventDefault(); // Prevent default form submission behavior
+  // document.getElementById('sub').addEventListener('click',(event)=>{
+  //   event.preventDefault(); // Prevent default form submission behavior
 
-      document.getElementById('name').value='';
-      document.getElementById('email').value='';   
-      document.getElementById('number').value='';
-      document.getElementById('form-class').value='';   
+  //     document.getElementById('name').value='';
+  //     document.getElementById('email').value='';   
+  //     document.getElementById('number').value='';
+  //     document.getElementById('form-class').value='';   
 
-  })
+  // })
 
   // it reloads the page everytime when you come back to the page 
   if (performance.navigation.type === 1) {
