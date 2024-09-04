@@ -1256,6 +1256,8 @@ input[type=submit]:hover {
     <script src="../dist/slick.min.js"></script>
     <script src="../dist/slick-slide.js"></script>
     <script src="../dist/script.js"></script>
+    
+    <!-- it is reseting the form when user is coming back to the same page using browser navigation button -->
     <script>
       window.addEventListener('pageshow', function(event) {
     if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
