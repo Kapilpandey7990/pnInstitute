@@ -1257,31 +1257,13 @@ input[type=submit]:hover {
     <script src="../dist/slick-slide.js"></script>
     <script src="../dist/script.js"></script>
     <script>
-      document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
-        
-        // Submit the form using Fetch API
-        fetch('/submit-form', {
-          method: 'POST',
-          body: new FormData(this),
-        }).then(response => {
-          if (response.ok) {
-            // Redirect to Google Drive after successful form submission
-            window.location.href = 'https://drive.google.com/file/d/10G4zjuid0f7pe0_jUb1I5TWBrxpjmt-2/view?usp=sharing';
-            
-            // Clear the form fields
-            document.getElementById('name').value='';
-            document.getElementById('email').value='';
-            document.getElementById('number').value='';
-            document.getElementById('form-class').value='';
-          } else {
-            // Handle errors if needed
-            console.error('Form submission failed');
-          }
-        }).catch(error => {
-          console.error('Error:', error);
-        });
-      });
+      window.addEventListener('pageshow', function(event) {
+    if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
+        // Clear form fields
+        document.getElementById('contactForm').reset();
+    }
+});
+
     </script>
     
     
