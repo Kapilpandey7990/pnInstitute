@@ -223,7 +223,7 @@ input[type=submit]:hover {
     </div>
     <div class="loginPopup1">
       <div class="formPopup1" id="popupForm1">
-        <form id="contactForm" action="/submit-form" method="POST" class="formContainer">
+        <form id="contactForm1" action="/submit-form" method="POST" class="formContainer">
           <i class="fa fa-close" onclick="closeForm1()"style="font-size:38px;color:red ; float: right;"></i>
           <h2>Get in Touch</h2>
           <input type="hidden" name="formType" value="loginPopup1">
@@ -264,7 +264,7 @@ input[type=submit]:hover {
     </div>
     <div class="loginPopup2">
       <div class="formPopup2" id="popupForm2">
-        <form id="contactForm" action="/submit-form"  method="POST" class="formContainer">
+        <form id="contactForm2" action="/submit-form"  method="POST" class="formContainer">
           <i class="fa fa-close" onclick="closeForm2()"style="font-size:38px;color:red ; float: right;"></i>
           <h2>Get in Touch</h2>
          <input type="hidden" name="formType" value="loginPopup2">
@@ -306,7 +306,7 @@ input[type=submit]:hover {
     </div>
     <div class="loginPopup3">
       <div class="formPopup3" id="popupForm3">
-        <form id="contactForm" action="/submit-form"  method="POST" class="formContainer">
+        <form id="contactForm3" action="/submit-form"  method="POST" class="formContainer">
           <i class="fa fa-close" onclick="closeForm3()"style="font-size:38px;color:red ; float: right;"></i>
           <h2>Get in Touch</h2>
          <input type="hidden" name="formType" value="loginPopup3">
@@ -348,7 +348,7 @@ input[type=submit]:hover {
     </div>
     <div class="loginPopup4">
       <div class="formPopup4" id="popupForm4">
-        <form id="contactForm" action="/submit-form"  method="POST" class="formContainer">
+        <form id="contactForm4" action="/submit-form"  method="POST" class="formContainer">
           <i class="fa fa-close" onclick="closeForm4()"style="font-size:38px;color:red ; float: right;"></i>
           <h2>Get in Touch</h2>
          <input type="hidden" name="formType" value="loginPopup4">
@@ -392,7 +392,7 @@ input[type=submit]:hover {
     </div>
     <div class="loginPopup5">
       <div class="formPopup5" id="popupForm5">
-        <form id="contactForm" action="/submit-form"  method="POST" class="formContainer">
+        <form id="contactForm5" action="/submit-form"  method="POST" class="formContainer">
           <i class="fa fa-close" onclick="closeForm5()"style="font-size:38px;color:red ; float: right;"></i>
           <h2>Get in Touch</h2>
          <input type="hidden" name="formType" value="loginPopup5">
@@ -435,7 +435,7 @@ input[type=submit]:hover {
     </div>
     <div class="loginPopup6">
       <div class="formPopup6" id="popupForm6">
-        <form id="contactForm" action="/submit-form"  method="POST" class="formContainer">
+        <form id="contactForm6" action="/submit-form"  method="POST" class="formContainer">
           <i class="fa fa-close" onclick="closeForm6()"style="font-size:38px;color:red ; float: right;"></i>
           <h2>Get in Touch</h2>
          <input type="hidden" name="formType" value="loginPopup6">
@@ -478,7 +478,7 @@ input[type=submit]:hover {
     </div>
     <div class="loginPopup7">
       <div class="formPopup7" id="popupForm7">
-        <form id="contactForm" action="/submit-form"  method="POST" class="formContainer">
+        <form id="contactForm7" action="/submit-form"  method="POST" class="formContainer">
           <i class="fa fa-close" onclick="closeForm7()"style="font-size:38px;color:red ; float: right;"></i>
           <h2>Get in Touch</h2>
           <input type="hidden" name="formType" value="loginPopup7">
@@ -1261,6 +1261,13 @@ input[type=submit]:hover {
     if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
         // Clear form fields
         document.getElementById('contactForm').reset();
+        document.getElementById('contactForm1').reset();
+        document.getElementById('contactForm2').reset();
+        document.getElementById('contactForm3').reset();
+        document.getElementById('contactForm4').reset();
+        document.getElementById('contactForm5').reset();
+        document.getElementById('contactForm6').reset();
+        document.getElementById('contactForm7').reset();
     }
 });
 
