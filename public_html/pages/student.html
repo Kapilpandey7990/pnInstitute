@@ -1270,7 +1270,10 @@ input[type=submit]:hover {
             window.location.href = 'https://drive.google.com/file/d/10G4zjuid0f7pe0_jUb1I5TWBrxpjmt-2/view?usp=sharing';
             
             // Clear the form fields
-            this.reset();
+            document.getElementById('name').value='';
+            document.getElementById('email').value='';
+            document.getElementById('number').value='';
+            document.getElementById('form-class').value='';
           } else {
             // Handle errors if needed
             console.error('Form submission failed');
