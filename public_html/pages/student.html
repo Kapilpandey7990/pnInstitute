@@ -1257,7 +1257,34 @@ input[type=submit]:hover {
     <script src="../dist/slick-slide.js"></script>
     <script src="../dist/script.js"></script>
     
-    
+    <script>
+      const contactForm = document.getElementById('contactForm');
+
+contactForm.addEventListener('submit', async (event) => {
+  event.preventDefault();   
+ // Prevent default form submission
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: contactForm.method,
+      body: new FormData(contactForm) // Send form data to server
+    });
+
+    if (response.ok) {
+      // Successfully submitted the form, clear the fields here
+      contactForm.reset();
+      // Optionally, display a success message using alert() or similar
+    } else {
+      // Handle errors (e.g., display an error message)
+      console.error('Error submitting form:', response.statusText);
+    }
+  } catch (error) {
+    // Handle network or other errors
+    console.error('Error submitting form:', error);   
+
+  }
+});
+    </script>
   </body>
 </html>
 
