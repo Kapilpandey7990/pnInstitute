@@ -2002,8 +2002,11 @@ a:visited {
 .contact-form .contact-form__container input,
 .contact-form .contact-form__container select,
 .contact-form .contact-form__container textarea {
-    border: none;
+    /* border: none; */
+    border: 0.5px solid ;
     border-radius: 0 20px 0 20px;
+    border-color: #000;
+    background-color: var(--some-background);
     display: block;
     margin: 1em 0;
     padding: 1em 2em;
@@ -2013,13 +2016,13 @@ a:visited {
 .contact-form .contact-form__container input:hover,
 .contact-form .contact-form__container select:hover,
 .contact-form .contact-form__container textarea:hover {
-    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .2)
+    /* box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .2) */
 }
 
 .contact-form .contact-form__container input:focus,
 .contact-form .contact-form__container select:focus,
 .contact-form .contact-form__container textarea:focus {
-    outline: 2px solid var(--blue)
+    /* outline: 2px solid var(--blue) */
 }
 
 .contact-form .contact-form__container .button {

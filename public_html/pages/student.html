@@ -100,6 +100,7 @@
       #form-class{
         width: 250px;
       }
+      
       /* review form */
       input[type=text], select, textarea {
   width: 100%;
@@ -193,11 +194,11 @@ input[type=submit]:hover {
           <label>
             <strong>E-mail</strong>
           </label>
-          <input type="text" id="email" placeholder="Your Email" name="email" required>
+          <input type="email" id="email" placeholder="Your Email" name="email" required>
           <label>
             <strong>Contact</strong>
           </label>
-          <input type="text" id="number" placeholder="Your contact number" name="number" required>
+          <input type="tel" id="number" placeholder="Your contact number" name="number" required>
           
           <select class="form-class" name="selectClass" id="form-class"  required>
             <option value>Select Class</option>
@@ -234,11 +235,11 @@ input[type=submit]:hover {
           <label>
             <strong>E-mail</strong>
           </label>
-          <input type="text" id="email" placeholder="Your Email" name="email" required>
+          <input type="email" id="email" placeholder="Your Email" name="email" required>
           <label>
             <strong>Contact</strong>
           </label>
-          <input type="text" id="number" placeholder="Your contact number" name="number" required>
+          <input type="tel" id="number" placeholder="Your contact number" name="number" required>
           
           <select class="form-class" name="selectClass" id="form-class" required>
             <option value>Select Class</option>
@@ -275,11 +276,11 @@ input[type=submit]:hover {
           <label>
             <strong>E-mail</strong>
           </label>
-          <input type="text" id="email" placeholder="Your Email" name="email" required>
+          <input type="email" id="email" placeholder="Your Email" name="email" required>
           <label>
             <strong>Contact</strong>
           </label>
-          <input type="text" id="number" placeholder="Your contact number" name="number" required>
+          <input type="tel" id="number" placeholder="Your contact number" name="number" required>
           
           <select class="form-class" name="selectClass" id="form-class">
             <option value>Select Class</option>
@@ -317,11 +318,11 @@ input[type=submit]:hover {
           <label>
             <strong>E-mail</strong>
           </label>
-          <input type="text" id="email" placeholder="Your Email" name="email" required>
+          <input type="email" id="email" placeholder="Your Email" name="email" required>
           <label>
             <strong>Contact</strong>
           </label>
-          <input type="text" id="number" placeholder="Your contact number" name="number" required>
+          <input type="tel" id="number" placeholder="Your contact number" name="number" required>
           
           <select class="form-class" name="selectClass" id="form-class">
             <option value>Select Class</option>
@@ -359,11 +360,11 @@ input[type=submit]:hover {
           <label>
             <strong>E-mail</strong>
           </label>
-          <input type="text" id="email" placeholder="Your Email" name="email" required>
+          <input type="email" id="email" placeholder="Your Email" name="email" required>
           <label>
             <strong>Contact</strong>
           </label>
-          <input type="text" id="number" placeholder="Your contact number" name="number" required>
+          <input type="tel" id="number" placeholder="Your contact number" name="number" required>
           
           <select class="form-class" name="selectClass" id="form-class">
             <option value>Select Class</option>
@@ -403,11 +404,11 @@ input[type=submit]:hover {
           <label>
             <strong>E-mail</strong>
           </label>
-          <input type="text" id="email" placeholder="Your Email" name="email" required>
+          <input type="email" id="email" placeholder="Your Email" name="email" required>
           <label>
             <strong>Contact</strong>
           </label>
-          <input type="text" id="number" placeholder="Your contact number" name="number" required>
+          <input type="tel" id="number" placeholder="Your contact number" name="number" required>
           
           <select class="form-class" name="selectClass" id="form-class">
             <option value>Select Class</option>
@@ -446,11 +447,11 @@ input[type=submit]:hover {
           <label>
             <strong>E-mail</strong>
           </label>
-          <input type="text" id="email" placeholder="Your Email" name="email" required>
+          <input type="email" id="email" placeholder="Your Email" name="email" required>
           <label>
             <strong>Contact</strong>
           </label>
-          <input type="text" id="number" placeholder="Your contact number" name="number" required>
+          <input type="tel" id="number" placeholder="Your contact number" name="number" required>
           
           <select class="form-class" name="selectClass" id="form-class">
             <option value>Select Class</option>
@@ -489,11 +490,11 @@ input[type=submit]:hover {
           <label>
             <strong>E-mail</strong>
           </label>
-          <input type="text" id="email" placeholder="Your Email" name="email" required>
+          <input type="email" id="email" placeholder="Your Email" name="email" required>
           <label>
             <strong>Contact</strong>
           </label>
-          <input type="text" id="number" placeholder="Your contact number" name="number" required>
+          <input type="tel" id="number" placeholder="Your contact number" name="number" required>
           
           <select class="form-class" name="selectClass" id="form-class">
             <option value>Select Class</option>
@@ -586,9 +587,9 @@ input[type=submit]:hover {
           <a href="overview.html">
             <li class="nav__link">Overview</li>
           </a>
-          <a href="admission.html">
+          <!-- <a href="admission.html">
             <li class="nav__link">Admissions</li>
-          </a>
+          </a> -->
           <a href="courses.html">
             <li class="nav__link">Courses</li>
           </a>
@@ -870,7 +871,21 @@ input[type=submit]:hover {
 
       <h2>Association with PN</h2>
       <div>
-        <input type="text" name="class" placeholder="Class" required />
+        <!-- <input type="text" name="class" placeholder="Class" required /> -->
+        <select class="form-class" name="class" >
+          <option value>Select Class</option>
+          <option value="class6">Class 6</option>
+          <option value="class7">Class 7</option>
+          <option value="class8">Class 8</option>
+          <option value="class9">Class 9</option>
+          <option value="class10">Class 10</option>
+         
+          <option value="class11C">Class 11 Commerce</option>
+          <option value="class11S">Class 11 Science</option>
+          
+          <option value="class12C">Class 12 Commerce</option>
+          <option value="class12S">Class 12 Science</option>
+        </select>
         <input type="text" name="year" placeholder="Year" required />
       </div>
 
@@ -913,7 +928,21 @@ input[type=submit]:hover {
           <label for="class">Class</label>
         </div>
         <div class="col-75">
-          <input type="text" id="class" name="selectClass" placeholder="Class" required />
+          <!-- <input type="text" id="class" name="selectClass" placeholder="Class" required /> -->
+          <select class="form-class" name="selectClass" >
+            <option value>Select Class</option>
+            <option value="class6">Class 6</option>
+            <option value="class7">Class 7</option>
+            <option value="class8">Class 8</option>
+            <option value="class9">Class 9</option>
+            <option value="class10">Class 10</option>
+           
+            <option value="class11C">Class 11 Commerce</option>
+            <option value="class11S">Class 11 Science</option>
+            
+            <option value="class12C">Class 12 Commerce</option>
+            <option value="class12S">Class 12 Science</option>
+          </select>
         </div>
       </div>
       <div class="row">
