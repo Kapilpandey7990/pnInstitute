@@ -575,11 +575,13 @@
           <h2 class="reg__title">Register Now</h2>
           <img src="assets/images/half-student.webp" alt="" />
         </div> -->
-        <form action="/submit-contact-main" method="POST" class="registration-form" data-aos="fade-left">
+        <form action="/submit-contact-main" method="POST" class="registration-form" data-aos="fade-left" id="enrollForm">
           <h2 class="section__title">Enroll Now</h2>
           <input type="text" name="name" class="form-name" id="form-name" placeholder="Name"  required />
           <input type="email" name="email" class="form-email" id="form-email" placeholder="Email"  required />
+          <span class="error" id="emailError" style="color: red; display: none;">Please enter a valid Gmail address (example@gmail.com).</span>
           <input type="tel" name="number" class="form-phone" id="form-phone" placeholder="Contact Number"  required />
+          <span class="error" id="phoneError" style="color: red; display: none;">Please enter a valid 10-digit phone number starting with 6-9.</span>
           <select class="form-class" name="selectClass" id="form-class" required>
             <option value>Select Class</option>
             <option value="class6">Class 6</option>
@@ -863,6 +865,46 @@
     <script src="dist/slick.min.js"></script>
     <script src="dist/slick-slide.js"></script>
     <script src="dist/aos.js"></script>
+    <script>
+      function validateEnrollForm() {
+          const form = document.getElementById('enrollForm');
+          const emailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+          const phonePattern = /^[6-9]\d{9}$/;
+
+          form.addEventListener('submit', function(event) {
+              const emailInput = document.getElementById('form-email').value;
+              const phoneInput = document.getElementById('form-phone').value;
+
+              const emailError = document.getElementById('emailError');
+              const phoneError = document.getElementById('phoneError');
+
+              let isValid = true;
+
+              // Validate Gmail email address
+              if (!emailPattern.test(emailInput)) {
+                  event.preventDefault();
+                  emailError.style.display = 'block';
+                  isValid = false;
+              } else {
+                  emailError.style.display = 'none';
+              }
+
+              // Validate Phone number
+              if (!phonePattern.test(phoneInput)) {
+                  event.preventDefault();
+                  phoneError.style.display = 'block';
+                  isValid = false;
+              } else {
+                  phoneError.style.display = 'none';
+              }
+
+              return isValid;
+          });
+      }
+
+      // Apply validation when the page loads
+      validateEnrollForm();
+  </script>
     <script>
       AOS.init({
         duration: 800,

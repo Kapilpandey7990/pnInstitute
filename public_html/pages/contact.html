@@ -145,12 +145,14 @@
 
     <section class="contact-form">
       <div class="container contact-form__container">
-        <form action='/submit-contact' method="POST" class="registration-form" data-aos="fade-left">
+        <form action='/submit-contact' method="POST" class="registration-form" data-aos="fade-left" id="contactForm">
           <h2 class="section__title">Get in touch</h2>
           <p class="section__description">WE ARE ALWAYS OPEN TO YOUR IDEAS</p>
           <input type="text" placeholder="Name" name="name" id="name" required />
           <input type="email" name="email" id="email" placeholder="Email" required />
+          <span class="error" id="emailError" style="color: red; display: none;">Please enter a valid Gmail address (example@gmail.com).</span>
           <input type="tel" name="number" id="contact" placeholder="Contact number" required />
+          <span class="error" id="phoneError" style="color: red; display: none;">Please enter a valid 10-digit phone number starting with 6-9.</span>
           <select class="form-class" name="selectClass" id="form-class" required>
             <option value="">Select Class</option>
             <option value="class6">Class 6</option>
@@ -407,11 +409,46 @@
     <section class="copyright">
       <div class="container">&copy; Copyright 2024. All Rights Reserved by PN Institute</div>
     </section>
-    <!-- <script>
-      document.getElementById('sub').addEventListener('click',()=>{
-        document.getElementById('name').style.display="none";
-      })
-    </script> -->
+    <script>
+      function validateContactForm() {
+          const form = document.getElementById('contactForm');
+          const emailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+          const phonePattern = /^[6-9]\d{9}$/;
+
+          form.addEventListener('submit', function(event) {
+              const emailInput = document.getElementById('email').value;
+              const phoneInput = document.getElementById('contact').value;
+
+              const emailError = document.getElementById('emailError');
+              const phoneError = document.getElementById('phoneError');
+
+              let isValid = true;
+
+              // Validate Gmail email address
+              if (!emailPattern.test(emailInput)) {
+                  event.preventDefault();
+                  emailError.style.display = 'block';
+                  isValid = false;
+              } else {
+                  emailError.style.display = 'none';
+              }
+
+              // Validate Phone number
+              if (!phonePattern.test(phoneInput)) {
+                  event.preventDefault();
+                  phoneError.style.display = 'block';
+                  isValid = false;
+              } else {
+                  phoneError.style.display = 'none';
+              }
+
+              return isValid;
+          });
+      }
+
+      // Apply validation when the page loads
+      validateContactForm();
+  </script>
 
     <script src="../dist/jquery.min.js"></script>
     <script src="../dist/jquery-migrate.min.js"></script>
