@@ -22,6 +22,7 @@
       <link rel="stylesheet" href="dist/style.css" />
       <link rel="stylesheet" href="dist/gallery.css">
       <link rel="stylesheet" href="dist/testimonial.css">
+      <link rel="stylesheet" href="dist/pns.css">
   </head>
 
   <body>
@@ -136,7 +137,7 @@
       <img src="assets/imgs1/Always opt for best.jpg" alt="" />
     </section> -->
     <section class="hero">
-    <div id="carouselExampleInterval" class="carousel slide ccancel" data-bs-ride="carousel">
+    <!-- <div id="carouselExampleInterval" class="carousel slide ccancel" data-bs-ride="carousel">
       <div class="carousel-inner ">
         <div class="carousel-item active" data-bs-interval="1000">
           <img src="images/new pn banner.png" class="d-block w-100" alt="...">
@@ -159,6 +160,18 @@
           <span class="visually-hidden">Next</span>
         </button></span>
       </div>
+      </div> -->
+      <div class="mmhero-carousel ccancel">
+        <div class="mmhero-carousel-images">
+            <img src="images/new pn banner.png" alt="Image 1" class="mmhero-carousel-image">
+            <img src="images/new pn banner 2.png" alt="Image 2" class="mmhero-carousel-image">
+            <img src="images/new pn banner 3.png" alt="Image 3" class="mmhero-carousel-image">
+            <img src="images/new pn banner 4.png" alt="Image 4" class="mmhero-carousel-image">
+        </div>
+        <button class="mmhero-prev mmbutton " onclick="changeSlide(-1)">&#10094;</button>
+        <button class="mmhero-next mmbutton " onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
     </section>
       <section class="hero-mobile">
         <div id="carouselExampleInterval" class="carousel slide ccancel" data-bs-ride="carousel">
@@ -283,7 +296,7 @@
           PN Institute is an established name in IIT | JEE | NEET | FOUNDATION | BOARD preparation, guiding students of
           6 | 7 | 8 | 9 | 10 | 11 – 12 A & B Group Science since 2012.
         </p>
-        
+<!--         
         <div class="container standards__container">
           <div class="standards__standard">
             <p class="standard__image">Class 7</p>
@@ -320,7 +333,81 @@
           <button class="prev-standards myarrow" ><i class="fa-sharp fa-solid fa-arrow-left"></i></button>
           <button class="next-standards myarrow"><i class="fa-sharp fa-solid fa-arrow-right"></i></button>
         </div>
-      </div>
+      </div> -->
+      <div class="clpn-slider-container">
+        <button class="clpn-prev" onclick="prevSlide()">&#10094;</button>
+        <div class="clpn-slider">
+            <div class="clpn-slider-wrapper">
+                <!-- Card 1 -->
+                <div class="clpn-card">
+                    <div class="clpn-card-upper">
+                        <div class="clpn-circle">Class 7</div>
+                    </div>
+                    <div class="clpn-card-lower">
+                        <h2>Class VII</h2>
+                      
+                        <a href="pages/admission.html" class="clpn-read-more">Read More</a>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="clpn-card">
+                    <div class="clpn-card-upper">
+                        <div class="clpn-circle">Class 8</div>
+                    </div>
+                    <div class="clpn-card-lower">
+                        <h2>Class VIII</h2>
+                       
+                        <a href="pages/admission.html" class="clpn-read-more">Read More</a>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="clpn-card">
+                    <div class="clpn-card-upper">
+                        <div class="clpn-circle">Class 9</div>
+                    </div>
+                    <div class="clpn-card-lower">
+                        <h2>Class IX</h2>
+                     
+                        <a href="pages/admission.html" class="clpn-read-more">Read More</a>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="clpn-card">
+                    <div class="clpn-card-upper">
+                        <div class="clpn-circle">Class 10</div>
+                    </div>
+                    <div class="clpn-card-lower">
+                        <h2>Class X</h2>
+                    
+                        <a href="pages/admission.html" class="clpn-read-more">Read More</a>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="clpn-card">
+                    <div class="clpn-card-upper">
+                        <div class="clpn-circle">Class 11</div>
+                    </div>
+                    <div class="clpn-card-lower">
+                        <h2>Class XI</h2>
+                     
+                        <a href="pages/admission.html" class="clpn-read-more">Read More</a>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="clpn-card">
+                    <div class="clpn-card-upper">
+                        <div class="clpn-circle">Class 12</div>
+                    </div>
+                    <div class="clpn-card-lower">
+                        <h2>Class XII</h2>
+                      
+                        <a href="pages/admission.html" class="clpn-read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="clpn-next" onclick="nextSlide()">&#10095;</button>
+    </div>
     </section>
     
 
@@ -863,6 +950,7 @@
     <script src="dist/slick.min.js"></script>
     <script src="dist/slick-slide.js"></script>
     <script src="dist/aos.js"></script>
+    <script src="dist/sliss.js"></script>
     <script>
       AOS.init({
         duration: 800,
@@ -895,12 +983,32 @@ document.querySelector(".close").addEventListener("click", function(){
 
     my_cancel.addEventListener('click',()=>{
       my_marzi.style.display='none';
-    })
+    });
+    </script>
+    <script>
+      let currentIndex = 0;
+const images = document.querySelectorAll('.mmhero-carousel-image');
 
+function changeSlide(direction) {
+    currentIndex += direction;
+    if (currentIndex < 0) {
+        currentIndex = images.length - 1;
+    } else if (currentIndex >= images.length) {
+        currentIndex = 0;
+    }
+    updateCarousel();
+}
 
+function updateCarousel() {
+    const offset = -currentIndex * 100;
+    document.querySelector('.mmhero-carousel-images').style.transform = `translateX(${offset}%)`;
+}
 
+// Automatic carousel
+setInterval(() => {
+    changeSlide(1);
+}, 3000); // Change image every 3 seconds
 
-  
     </script>
   </body>
 </html>

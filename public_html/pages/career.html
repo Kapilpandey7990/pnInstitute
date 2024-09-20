@@ -601,7 +601,7 @@
   </div>
   <div class="app-main-panel ">
       <div class="app-panel-heading">
-          <h3 class="app-panel-title">Personal Details</h3>
+          <h3 class="app-panel-title" name="app1">Personal Details</h3>
       </div>
   
       <div class="app-panel-body">
@@ -711,7 +711,7 @@
       <div class="app2-body mt-5">
           <div class="app2-main-panel">
               <div class="app2-panel-heading">
-                  <h3 class="app2-panel-title">Educational Details</h3>
+                  <h3 class="app2-panel-title" name="app2">Educational Details</h3>
               </div>
               <div class="app2-panel-body">
                   <!-- First Section: Educational Details -->
@@ -1043,16 +1043,16 @@
                       <hr style="margin-bottom: 10px; margin-top: 5px;">
                       
                       <div class="app5-form-group app5-mb0">
-                          <div class="app5-full-width">
-                              <a id="MainContent_ARegStaff_lnkAddNewCertificate" title="Add" class="app5-tooltips app5-add-new" href="javascript:__doPostBack(&#39;ctl00$MainContent$ARegStaff$lnkAddNewCertificate&#39;,&#39;&#39;)">
-                                  <i class="fa fa-plus"></i>Add 
-                              </a>
-                              <a id="MainContent_ARegStaff_lnkUploadCertificate" class="app5-upload-button" href="javascript:__doPostBack(&#39;ctl00$MainContent$ARegStaff$lnkUploadCertificate&#39;,&#39;&#39;)">Upload Certificates</a>
-                          </div>
-                          <div class="app5-full-width">
-                              <span id="MainContent_ARegStaff_spnAllCertificateMsg" class="app5-error-message"></span>
-                          </div>
-                      </div>
+                        <div class="app5-full-width">
+                            <a id="add-certificate" title="Add" class="app5-tooltips app5-add-new" href="javascript:void(0);">
+                                <i class="fa fa-plus"></i>Add 
+                            </a>
+                            <a id="upload-certificate" class="app5-upload-button" href="javascript:void(0);">Upload Certificates</a>
+                        </div>
+                        <div class="app5-full-width">
+                            <span id="MainContent_ARegStaff_spnAllCertificateMsg" class="app5-error-message"></span>
+                        </div>
+                    </div>
                   </div>
               </div>
               <!-- App6 Section -->
@@ -1412,5 +1412,57 @@
     <script src="../dist/slick.min.js"></script>
     <script src="../dist/slick-slide.js"></script>
     <script src="../dist/script.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+    let certificateCounter = 2;
+
+    document.getElementById('add-certificate').addEventListener('click', function () {
+        certificateCounter++;
+
+        // Create a new certificate form group
+        let newCertificateGroup = document.createElement('div');
+        newCertificateGroup.className = 'app5-form-group app5-mb0';
+        newCertificateGroup.innerHTML = `
+            <span id="MainContent_ARegStaff_rptCertificate_lblCertificateSrNo_${certificateCounter}" class="app5-hidden">${certificateCounter + 1}</span>
+            <span id="MainContent_ARegStaff_rptCertificate_lblCertificateId_${certificateCounter}" class="app5-hidden"></span>
+            <div class="app5-subdetail">
+                <label class="app5-head-name" style="font-weight: 700; font-size: 15px;">
+                    (${certificateCounter + 1})
+                </label>
+            </div>
+            <div class="app5-subdetail">
+                <label class="app5-head-name">Title</label>
+                <input name="ctl00$MainContent$ARegStaff$rptCertificate$ctl${certificateCounter}$txtCertificateTitle" type="text" maxlength="100" id="MainContent_ARegStaff_rptCertificate_txtCertificateTitle_${certificateCounter}" class="app5-form-control app5-text-uppar" placeholder="Enter Title" autocomplete="off" />
+            </div>
+            <div class="app5-subdetail">
+                <label class="app5-head-name">File</label>
+                <input type="file" name="ctl00$MainContent$ARegStaff$rptCertificate$ctl${certificateCounter}$fuCertificate" id="MainContent_ARegStaff_rptCertificate_fuCertificate_${certificateCounter}" class="app5-form-control" />
+            </div>
+            <div class="app5-subdetail">
+                <label class="app5-head-name" style="padding-bottom: 45px;"></label>
+                <a id="MainContent_ARegStaff_rptCertificate_lnkDeleteCertificate_${certificateCounter}" title="Delete" class="app5-tooltips app5-trash" href="javascript:void(0);" onclick="deleteCertificate(${certificateCounter})" style="font-size: 16px;">
+                    <span class="fa fa-trash"></span>
+                </a>
+            </div>
+            <div class="app5-subdetail">
+                <span id="MainContent_ARegStaff_rptCertificate_spnCertificateMsg_${certificateCounter}"></span>
+            </div>
+            <hr style="margin-bottom: 10px; margin-top: 5px;">
+        `;
+
+        // Append the new certificate group to the container
+        document.getElementById('certificate-container').appendChild(newCertificateGroup);
+    });
+
+    window.deleteCertificate = function (index) {
+        let certificateGroup = document.getElementById(`MainContent_ARegStaff_rptCertificate_lblCertificateSrNo_${index}`);
+        if (certificateGroup) {
+            certificateGroup.parentElement.remove();  // Remove the certificate group
+        }
+    };
+});
+
+    </script>
   </body>
 </html>

@@ -442,7 +442,6 @@
     overflow-y: auto;
 }
 
-
 /* Container and border styles */
 .app3-main-panel {  
     border: 1px solid #337ab7;
@@ -454,7 +453,7 @@
     max-width: 1200px;
     box-sizing: border-box;
     flex-wrap: wrap;
-    margin:3%;
+    margin: 3%;
 }
 
 /* Heading styles */
@@ -902,7 +901,6 @@
 }
 
 
-
 /* App5 Main Panel */
 .app5-container {
     border: 1px solid #337ab7;
@@ -914,14 +912,14 @@
     max-width: 1200px;
     box-sizing: border-box;
     flex-wrap: wrap;
-    margin:3%;
+    margin: 3%;
 }
 
 /* Heading styles */
 .app5-header {
     background-color: #337ab7;
     border-color: #337ab7;
-    color:#fff;
+    color: #fff;
     padding: 10px 15px;
     border-radius: 4px;     
     margin: 0;
@@ -947,7 +945,6 @@
     padding-right: 15px;
     padding-left: 15px;
     margin-bottom: 15px;
-    /* flex: 1; */
     box-sizing: border-box;
 }
 
@@ -1045,7 +1042,7 @@
     padding: 8px;
     border-radius: 5px;
     text-decoration: none;
-    margin:0 10px;
+    margin: 0 10px;
 }
 
 .app5-upload-button {
@@ -1053,7 +1050,6 @@
     color: white;
     padding: 8px;
     border-radius: 5px;
-    /* float: right; */
     text-decoration: none;
 }
 
@@ -1068,7 +1064,6 @@
 .app5-full-width {
     width: 100%;
 }
-
 /* App6 Main Container */
 .app6-container {
     display: flex;
@@ -1087,17 +1082,13 @@
 
 /* Panel styles */
 .app6-panel {
-    
     border: 1px solid #337ab7;
     border-radius: 4px;
     padding: 0;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 3% auto;
     width: 95%;
     max-width: 1200px;
     box-sizing: border-box;
-    flex-wrap: wrap;
-    margin:3%;
 }
 
 /* Heading styles */
@@ -1120,44 +1111,11 @@
     box-sizing: border-box;
 }
 
-/* Table styles */
-.app6-table {
-    width: 100%;
-    margin-bottom: 0;
-    border-collapse: collapse;
-}
-
-.app6-table-row {
-    display: flex;
-    width: 100%;
-}
-
-.app6-table-cell {
-    flex: 1;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Form group styles */
 .app6-form-group {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
-}
-
-/* Column styles */
-.app6-col {
-    flex: 1;
-    padding: 0 15px;
-    box-sizing: border-box;
-    margin-bottom: 15px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .app6-half {
-        width: 100%;
-    }
 }
 
 /* Form control styles */
@@ -1201,6 +1159,31 @@
 /* Text center alignment */
 .app6-textcenter {
     text-align: center;
+}
+
+/* Table styles */
+.app6-table {
+    width: 100%;
+    margin-bottom: 0;
+    border-collapse: collapse;
+}
+
+.app6-table-row {
+    display: flex;
+    width: 100%;
+}
+
+.app6-table-cell {
+    flex: 1;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .app6-half {
+        width: 100%;
+    }
 }
 
 

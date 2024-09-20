@@ -1,0 +1,276 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+.pns-slide-container{
+  max-width: 1120px;
+  width: 100%;
+  padding: 40px 0;
+}
+.pns-slide-content{
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.pns-card{
+  border-radius: 25px;
+  background-color: #FFF;
+}
+.pns-image-content,
+.pns-card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+.pns-image-content{
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+.pns-overlay{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #4070F4;
+  border-radius: 25px 25px 0 25px;
+}
+.pns-overlay::before,
+.pns-overlay::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #4070F4;
+}
+.pns-overlay::after{
+  border-radius: 0 25px 0 0;
+  background-color: #FFF;
+}
+.pns-card-image{
+  position: relative;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background: #FFF;
+  padding: 3px;
+}
+.pns-card-image .pns-card-img{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #4070F4;
+}
+.pns-name{
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.pns-description{
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+}
+.pns-button{
+  border: none;
+  font-size: 16px;
+  color: #FFF;
+  padding: 8px 16px;
+  background-color: #4070F4;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.pns-button:hover{
+  background: #265DF2;
+}
+
+.pns-swiper-navBtn{
+  color: #6E93f7;
+  transition: color 0.3s ease;
+}
+.pns-swiper-navBtn:hover{
+  color: #4070F4;
+}
+.pns-swiper-navBtn::before,
+.pns-swiper-navBtn::after{
+  font-size: 35px;
+}
+.swiper-button-next{
+  right: 0;
+}
+
+.swiper-button-prev{
+  left: 0;
+}
+.swiper-pagination-bullet{
+  background-color: #6E93f7;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active{
+  background-color: #4070F4;
+}
+
+@media screen and (max-width: 768px) {
+  .pns-slide-content{
+    margin: 0 10px;
+  }
+  .pns-swiper-navBtn{
+    display: none;
+  }
+}
+
+
+/* hero carausel  */
+
+.mmhero-carousel {
+    position: relative;
+    width: 100%;
+    height: 527px;
+    overflow: hidden;
+}
+
+.mmhero-carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.mmhero-carousel-image {
+    min-width: 100%;
+    height: 527px;
+    object-fit: cover;
+}
+
+.mmbutton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.mmhero-prev {
+    left: 10px;
+}
+
+.mmhero-next {
+    right: 10px;
+}
+
+
+/* slider  */
+
+.clpn-slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.clpn-slider {
+    display: flex;
+    overflow: hidden;
+}
+
+.clpn-slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.clpn-card {
+    flex: 0 0 25%; /* 3 cards visible at once */
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+    
+.clpn-card-upper {
+    background: linear-gradient(to bottom, #0072ff, #00c6ff);
+    padding: 20px;
+    border-radius: 8px 8px 0 0;
+}
+
+.clpn-circle {
+    background-color: white;
+    color: #0072ff;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.clpn-card-lower {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+}
+
+.clpn-card-lower h2 {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.clpn-card-lower p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.clpn-read-more {
+    background-color: #0072ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.clpn-read-more:hover {
+    background-color: #005bb5;
+}
+
+.clpn-prev, .clpn-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    border: none;
+    cursor: pointer;
+    background: none;
+    font-size: 40px;
+    z-index: 1;
+}
+
+.clpn-prev {
+    left: -6px; /* Positioning buttons inside the slider */
+}
+
+.clpn-next {
+    right: -6px; /* Positioning buttons inside the slider */
+}
+
+@media screen and (max-width: 768px) {
+    .clpn-card {
+        flex: 1 0 auto;
+    }
+}
+
+ 
