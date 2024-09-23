@@ -134,7 +134,7 @@
 .mmhero-carousel {
     position: relative;
     width: 100%;
-    height: 527px;
+    height: 550px;
     overflow: hidden;
 }
 
@@ -144,8 +144,9 @@
 }
 
 .mmhero-carousel-image {
-    min-width: 100%;
-    height: 527px;
+    /* min-width: 100%; */
+    width: 100%;
+    height: 550px;
     object-fit: cover;
 }
 

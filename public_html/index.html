@@ -26,7 +26,7 @@
   </head>
 
   <body>
-      <div id="overlay my_popup">
+      <div id="overlay my_popup" >
          <div class="popup">
         <button class="close" >&times;</button>
         <!-- <img src="assets/images/POPUP 2.jpg" alt=""/> -->
@@ -39,10 +39,9 @@
         <div class="carousel-item" data-bs-interval="2000">
           <a href="./pages/contact.html"><img src="images/POPUP 2.jpg" class="d-block w-100" alt="..."></a>
         </div>
-        
-        
       </div>
-    </div> 
+      </div> 
+      </div>
       </div>
          
     <section class="navsec ">
@@ -168,7 +167,7 @@
             <img src="images/new pn banner.png" alt="Image 1" class="mmhero-carousel-image">
             <img src="images/new pn banner 2.png" alt="Image 2" class="mmhero-carousel-image">
             <img src="images/new pn banner 3.png" alt="Image 3" class="mmhero-carousel-image">
-            <img src="images/new pn banner 4.png" alt="Image 4" class="mmhero-carousel-image">
+            <!-- <img src="images/new pn banner 4.png" alt="Image 4" class="mmhero-carousel-image"> -->
         </div>
         <button class="mmhero-prev mmbutton " onclick="changeSlide(-1)">&#10094;</button>
         <button class="mmhero-next mmbutton " onclick="changeSlide(1)">&#10095;</button>
@@ -348,7 +347,7 @@
                     <div class="clpn-card-lower">
                         <h2>Class VII</h2>
                       
-                        <a href="pages/admission.html" class="clpn-read-more">Read More</a>
+                        <a href="pages/courses.html#cla_7" class="clpn-read-more">Read More</a>
                     </div>
                 </div>
                 <!-- Card 2 -->
@@ -359,7 +358,7 @@
                     <div class="clpn-card-lower">
                         <h2>Class VIII</h2>
                        
-                        <a href="pages/admission.html" class="clpn-read-more">Read More</a>
+                        <a href="pages/courses.html#cla_8" class="clpn-read-more">Read More</a>
                     </div>
                 </div>
                 <!-- Card 3 -->
@@ -370,7 +369,7 @@
                     <div class="clpn-card-lower">
                         <h2>Class IX</h2>
                      
-                        <a href="pages/admission.html" class="clpn-read-more">Read More</a>
+                        <a href="pages/courses.html#cla_9" class="clpn-read-more">Read More</a>
                     </div>
                 </div>
                 <!-- Card 4 -->
@@ -381,7 +380,7 @@
                     <div class="clpn-card-lower">
                         <h2>Class X</h2>
                     
-                        <a href="pages/admission.html" class="clpn-read-more">Read More</a>
+                        <a href="pages/courses.html#cla_10" class="clpn-read-more">Read More</a>
                     </div>
                 </div>
                 <!-- Card 5 -->
@@ -390,20 +389,40 @@
                         <div class="clpn-circle">Class 11</div>
                     </div>
                     <div class="clpn-card-lower">
-                        <h2>Class XI</h2>
+                        <h2>Class XI - Commerce</h2>
                      
-                        <a href="pages/admission.html" class="clpn-read-more">Read More</a>
+                        <a href="pages/courses.html#cla_11_com" class="clpn-read-more">Read More</a>
                     </div>
                 </div>
                 <!-- Card 6 -->
                 <div class="clpn-card">
                     <div class="clpn-card-upper">
+                        <div class="clpn-circle">Class 11</div>
+                    </div>
+                    <div class="clpn-card-lower">
+                        <h2>Class XI - Science</h2>
+                      
+                        <a href="pages/courses.html#cla_11_sci" class="clpn-read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="clpn-card">
+                    <div class="clpn-card-upper">
                         <div class="clpn-circle">Class 12</div>
                     </div>
                     <div class="clpn-card-lower">
-                        <h2>Class XII</h2>
+                        <h2>Class XII - Commerce</h2>
                       
-                        <a href="pages/admission.html" class="clpn-read-more">Read More</a>
+                        <a href="pages/courses.html#cla_12_com" class="clpn-read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="clpn-card">
+                    <div class="clpn-card-upper">
+                        <div class="clpn-circle">Class 12</div>
+                    </div>
+                    <div class="clpn-card-lower">
+                        <h2>Class XII - Science</h2>
+                      
+                        <a href="pages/courses.html#cla_12_sci" class="clpn-read-more">Read More</a>
                     </div>
                 </div>
             </div>
@@ -955,6 +974,8 @@
     <script src="dist/slick-slide.js"></script>
     <script src="dist/aos.js"></script>
     <script src="dist/sliss.js"></script>
+    
+    
     <script>
       function validateEnrollForm() {
           const form = document.getElementById('enrollForm');
