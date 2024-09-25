@@ -151,7 +151,7 @@ html {
 }
 
 body {
-    text-rendering: optimizeSpeed;
+    /* text-rendering: optimizeSpeed; */
     color: #414141;
     line-height: 1.4;
     min-height: 100vh;
@@ -571,7 +571,13 @@ a:visited {
         grid-template-columns: 1fr 1fr 1fr
     }
 }
-
+.pn_font{
+    font-weight: bold;
+    /* font-size: 30px; */
+}
+.pn_font1 {
+    font-weight: 600;
+}
 .about {
     padding: 2em 0
 }
@@ -705,6 +711,18 @@ a:visited {
     display: inline-block;
     margin: 1em 0 1em 1em
 }
+.mycards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.one{
+    height: 200px;
+    width: 200px;
+    border: 1px solid;
+    border-radius: 50px;
+    
+    /* background-image: url('../images//pn_newimages/Box\ 1.png'); */
+}
 
 .real {
     background: #ecedfb;
@@ -713,16 +731,18 @@ a:visited {
 
 .real .section__title {
     line-height: 1;
-    margin-bottom: 1em
+    margin-bottom: 1.5em
 }
 
 .real .real__container .realcat {
     background: #fff;
+    /* background-image: url('./images/gallery/g1.webp'); */
     border-radius: 5px;
     box-shadow: 3px 3px 10px 3px rgba(50, 50, 50, .2);
     margin-bottom: 1em;
     padding: 2em
 }
+
 
 .real .real__container .realcat:hover {
     background: linear-gradient(to right, var(--blue), var(--light-blue));
