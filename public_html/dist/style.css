@@ -1597,6 +1597,38 @@ a:visited {
         margin-bottom: 0
     }
 }
+
+.glowing_button {
+    
+    -webkit-animation: glowing 1300ms infinite;
+    -moz-animation: glowing 1300ms infinite;
+    -o-animation: glowing 1300ms infinite;
+    animation: glowing 1300ms infinite;
+  }
+  @-webkit-keyframes glowing {
+    0% {
+      background-color: #0068bd;
+      -webkit-box-shadow: 0 0 3px #0068bd;
+    }
+    25% {
+      background-color: #0b74ca;
+      -webkit-box-shadow: 0 0 3px #0b74ca;
+    }
+    50% {
+      background-color: #015ca7;
+      -webkit-box-shadow: 0 0 15px #015ca7;
+    }
+    75% {
+      background-color: #0269be;
+      -webkit-box-shadow: 0 0 15px #0269be;
+    }
+    100% {
+      background-color: #0477d4;
+      -webkit-box-shadow: 0 0 3px #0477d4;
+    }
+  }
+  
+
 /* 
 .president {
     background: var(--some-background);
@@ -1632,6 +1664,7 @@ a:visited {
         grid-template-columns: 1fr 1fr
     }
 } */
+
 
 .president-message {
     background-color: #f0f8ff; /* Adjust the background color as needed */

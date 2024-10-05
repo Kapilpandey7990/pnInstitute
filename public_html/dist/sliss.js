@@ -4,6 +4,11 @@
     grabCursor: true,
     spaceBetween: 30,
     
+    // Autoplay with 2-second interval
+    autoplay: {
+      delay: 2000, // 2 seconds
+      disableOnInteraction: false, // Allows autoplay to continue after user interaction
+    },
 
     // Pagination bullets
     pagination: {
@@ -74,7 +79,7 @@ function showSlide(index) {
 }
 
 // Auto slide every 3 seconds
-// setInterval(autoSlide, 2000);
+setInterval(autoSlide, 2000);
 
 // Adjust the slide on window resize
 window.addEventListener('resize', () => {
