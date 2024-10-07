@@ -1667,7 +1667,7 @@ a:visited {
 
 
 .president-message {
-    background-color: #f0f8ff; /* Adjust the background color as needed */
+    background-color: #fff; /* Adjust the background color as needed */
     padding: 60px 0;
 }
 
@@ -1730,8 +1730,8 @@ a:visited {
 .president-message .logos img {
     /* max-width: 100px; */
     height:auto;
-    width: 200px;
-    margin-left: -58px;
+    width: 100px;
+    /* margin-left: -58px; */
 }
 
 .president-message .social-icons {
@@ -2304,7 +2304,7 @@ a:visited {
     }
 }
 
-.course .card__container .card {
+.course .card__container .ccard {
     background: var(--white);
     border: 1px solid rgba(50, 50, 50, .1);
     border-radius: 10px;
@@ -2317,59 +2317,59 @@ a:visited {
     padding-bottom: 1em
 }
 
-.course .card__container .card .image-container {
+.course .card__container .ccard .image-container {
     max-width: 100%;
     overflow: hidden
 }
 
-.course .card__container .card .image-container .image {
+.course .card__container .ccard .image-container .image {
     transition: all .25s
 }
 
-.course .card__container .card .image-container .image:hover {
+.course .card__container .ccard .image-container .image:hover {
     -webkit-transform: scale(1.125);
     transform: scale(1.125);
     transition: all .25s
 }
 
-.course .card__container .card .description-container {
+.course .card__container .ccard .description-container {
     background: var(--white);
     padding: 1em
 }
 
-.course .card__container .card .description-container .card-title {
+.course .card__container .ccard .description-container .card-title {
     color: var(--blue);
     font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: .8em
 }
 
-.course .card__container .card .description-container .languages {
+.course .card__container .ccard .description-container .languages {
     font-weight: 800;
     letter-spacing: .1em;
     margin-bottom: .8em
 }
 
-.course .card__container .card .description-container .languages .html {
+.course .card__container .ccard .description-container .languages .html {
     color: #212121;
     margin-right: .5em
 }
 
-.course .card__container .card .description-container .description {
+.course .card__container .ccard .description-container .description {
     color: #666;
     font-family: var(--font-body);
     font-size: .95rem;
     margin-bottom: 1em
 }
 
-.course .card__container .card .action-buttons {
+.course .card__container .ccard .action-buttons {
     background: var(--white);
     margin-bottom: 1em;
     padding: 0 1em
 }
 
 @media (min-width:40em) {
-    .course .card__container .card {
+    .course .card__container .ccard {
         margin-bottom: 0
     }
 }
