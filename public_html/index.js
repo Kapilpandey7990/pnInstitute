@@ -36,7 +36,7 @@ app.post("/submit-review", upload.single("attachment"), async (req, res) => {
     // Send email
     const mailOptions = {
       from: "kp3446085@gmail.com", // Replace with your email
-      to: "kp894855@gmail.com", // Replace with the recipient email
+      to: "principal@pninstitute.in", // Replace with the recipient email
       subject: "New Review Submission",
       html: `
                 <p><strong>Name:</strong> ${name}</p>
@@ -73,7 +73,7 @@ app.post("/submit-form", async (req, res) => {
     // Send email
     const mailOptions = {
       from: "kp3446085@gmail.com", // Replace with your email
-      to: "kp894855@gmail.com", // Replace with the recipient email
+      to: "principal@pninstitute.in", // Replace with the recipient email
       subject: "New Form Submission",
       html: `
                 <p><strong>Name:</strong> ${name}</p>
@@ -152,7 +152,7 @@ app.post("/submit-alumni", async (req, res) => {
     // Send email
     const mailOptions = {
       from: "kp3446085@gmail.com", // Replace with your email
-      to: "kp894855@gmail.com", // Replace with the recipient email
+      to: "principal@pninstitute.in", // Replace with the recipient email
       subject: "New Alumni Registration",
       html: `
                 <p><strong>First Name:</strong> ${firstName}</p>
@@ -187,7 +187,7 @@ app.post("/submit-contact", async (req, res) => {
     // Send email
     const mailOptions = {
       from: "kp3446085@gmail.com", // Replace with your email
-      to: "kp894855@gmail.com", // Replace with the recipient email
+      to: "admission@pninstitute.in", // Replace with the recipient email
       subject: "New Contact Form Submission",
       html: `
                 <p><strong>Name:</strong> ${name}</p>
@@ -214,7 +214,7 @@ app.post("/submit-contact-main", async (req, res) => {
     // Send email
     const mailOptions = {
       from: "kp3446085@gmail.com", // Replace with your email
-      to: "kp894855@gmail.com", // Replace with the recipient email
+      to: "admission@pninstitute.in", // Replace with the recipient email
       subject: "New Contact Form Submission",
       html: `
                 <p><strong>Name:</strong> ${name}</p>
