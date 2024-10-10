@@ -31,12 +31,12 @@ const transporter = nodemailer.createTransport({
 // Handle form submission for reviews
 app.post("/submit-review", upload.single("attachment"), async (req, res) => {
   try {
-    const { name, selectClass, contact, year, subjec } = req.body;
+    const { name, selectClass, contact, year, subject } = req.body;
 
     // Send email
     const mailOptions = {
       from: "kp3446085@gmail.com", // Replace with your email
-      to: "principal@pninstitute.in", // Replace with the recipient email
+      to: "kp894855@gmail.com", // Replace with the recipient email
       subject: "New Review Submission",
       html: `
                 <p><strong>Name:</strong> ${name}</p>
